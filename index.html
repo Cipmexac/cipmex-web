@@ -6,194 +6,67 @@
 <title>CIPMEX · Centro de Investigación para la Paz México</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --azul: #1E3A5F;
-    --gris: #3D3D3D;
-    --terracota: #C97B4A;
-    --verde: #4A7C6F;
-    --morado: #7B5EA7;
-    --azul-claro: #5B8DB8;
-    --fondo: #FFFFFF;
-    --fondo-card: #F7F6F3;
-    --fondo-calido: #FBF0E9;
-    --texto-muted: #8A8A85;
-    --borde: #E5E3DD;
-  }
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: 'Inter', sans-serif; color: var(--gris); background: var(--fondo); line-height: 1.6; }
-  .mono { font-family: 'Roboto Mono', monospace; }
-  .contenedor { max-width: 1040px; margin: 0 auto; padding: 0 24px; }
-
-  header { display: flex; align-items: center; justify-content: space-between; padding: 20px 0; border-bottom: 0.5px solid var(--borde); }
-  .logo { display: flex; align-items: center; gap: 10px; font-weight: 600; font-size: 15px; color: var(--azul); }
-  nav ul { list-style: none; display: flex; gap: 28px; }
-  nav a { text-decoration: none; color: var(--gris); font-size: 14px; }
-  nav a:hover { color: var(--azul); }
-
-  .hero { text-align: center; padding: 80px 24px 64px; }
-  .hero .kicker { font-family: 'Roboto Mono', monospace; font-size: 13px; letter-spacing: 0.03em; color: var(--terracota); margin-bottom: 16px; }
-  .hero h1 { font-size: 32px; font-weight: 600; max-width: 640px; margin: 0 auto 18px; color: var(--azul); }
-  .hero p { font-size: 16px; color: var(--texto-muted); max-width: 520px; margin: 0 auto 28px; }
-  .btn { display: inline-block; background: var(--azul); color: white; border: none; padding: 13px 28px; border-radius: 6px; font-size: 14px; font-weight: 500; cursor: pointer; text-decoration: none; }
-  .btn:hover { background: #17304d; }
-
-  section { padding: 56px 0; }
-  section h2 { font-size: 22px; font-weight: 600; margin-bottom: 20px; color: var(--gris); }
-
-  .quienes-somos { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 40px; align-items: center; }
-  .quienes-somos p { color: var(--texto-muted); font-size: 15px; }
-  .foto-placeholder { background: var(--fondo-card); border-radius: 12px; aspect-ratio: 4/3; display: flex; align-items: center; justify-content: center; color: var(--texto-muted); font-size: 13px; }
-
-  .grid-servicios { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-  .servicio { background: var(--fondo-card); border-radius: 10px; padding: 22px; }
-  .servicio .icono { width: 36px; height: 36px; border-radius: 8px; background: var(--azul); margin-bottom: 14px; }
-  .servicio h3 { font-size: 15px; font-weight: 600; margin-bottom: 6px; }
-  .servicio p { font-size: 13px; color: var(--texto-muted); }
-
-  .cifras { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
-  .cifra { background: var(--fondo-card); border-radius: 10px; padding: 24px; text-align: center; }
-  .cifra .numero { font-family: 'Roboto Mono', monospace; font-size: 32px; font-weight: 500; color: var(--azul); }
-  .cifra .etiqueta { font-size: 13px; color: var(--texto-muted); margin-top: 6px; }
-
-  .pub-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 20px; }
-  .pub-header a { font-size: 13px; color: var(--azul); text-decoration: none; }
-  .lista-publicaciones { display: flex; gap: 16px; overflow-x: auto; padding-bottom: 8px; }
-  .publicacion { min-width: 220px; flex-shrink: 0; }
-  .publicacion .foto-placeholder { aspect-ratio: 16/10; margin-bottom: 10px; }
-  .publicacion .etiqueta { font-family: 'Roboto Mono', monospace; font-size: 11px; display: inline-block; padding: 2px 8px; border-radius: 4px; margin-bottom: 6px; }
-  .etiqueta.columna { background: #FBF0E9; color: var(--terracota); }
-  .etiqueta.investigacion { background: #F1EBF5; color: var(--morado); }
-  .etiqueta.riesgo { background: #E8EFF4; color: var(--azul-claro); }
-  .publicacion .fecha { font-family: 'Roboto Mono', monospace; font-size: 12px; color: var(--texto-muted); display: block; margin-bottom: 4px; }
-  .publicacion h4 { font-size: 14px; font-weight: 500; }
-
-  .equipo-lista { display: flex; gap: 20px; overflow-x: auto; padding-bottom: 8px; }
-  .persona { text-align: center; min-width: 90px; }
-  .persona .avatar { width: 68px; height: 68px; border-radius: 50%; background: var(--fondo-card); margin: 0 auto 8px; }
-  .persona .nombre { font-size: 13px; font-weight: 500; }
-  .persona .rol { font-size: 11px; color: var(--texto-muted); }
-
-  .redes { display: flex; justify-content: center; gap: 24px; padding: 32px 0; border-top: 0.5px solid var(--borde); }
-  .redes a { color: var(--gris); text-decoration: none; font-size: 13px; }
-
-  .cta-final { background: var(--fondo-calido); border-radius: 14px; padding: 48px 24px; text-align: center; margin: 24px 0 48px; }
-  .cta-final p { font-size: 18px; font-weight: 500; color: var(--azul); max-width: 480px; margin: 0 auto 22px; }
-
-  footer { text-align: center; padding: 24px 0; font-size: 12px; color: var(--texto-muted); border-top: 0.5px solid var(--borde); }
-
-  @media (max-width: 720px) {
-    nav ul { display: none; }
-    .quienes-somos { grid-template-columns: 1fr; }
-    .grid-servicios { grid-template-columns: 1fr 1fr; }
-    .cifras { grid-template-columns: 1fr; }
-  }
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-
 <div class="contenedor">
   <header>
-    <div class="logo">
+    <a href="index.html" class="logo">
       <svg width="26" height="26" viewBox="0 0 26 26"><circle cx="13" cy="13" r="12" fill="none" stroke="#1E3A5F" stroke-width="1.5"/><circle cx="13" cy="13" r="6" fill="#3D3D3D"/><circle cx="13" cy="3" r="1.6" fill="#3D3D3D"/><circle cx="21" cy="8" r="1.6" fill="#3D3D3D"/><circle cx="23" cy="17" r="1.6" fill="#3D3D3D"/><circle cx="16" cy="24" r="1.6" fill="#3D3D3D"/><circle cx="7" cy="23" r="1.6" fill="#3D3D3D"/><circle cx="2" cy="15" r="1.6" fill="#3D3D3D"/><circle cx="4" cy="6" r="1.6" fill="#3D3D3D"/></svg>
       CIPMEX
-    </div>
+    </a>
     <nav>
       <ul>
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#publicaciones">Publicaciones</a></li>
-        <li><a href="#case-studies">Case studies</a></li>
-        <li><a href="#equipo">Equipo</a></li>
-        <li><a href="#contacto">Contacto</a></li>
+        <li><a href="index.html" class="activo">Inicio</a></li>
+        <li><a href="quienes-somos.html">Quiénes somos</a></li>
+        <li><a href="publicaciones.html">Publicaciones</a></li>
+        <li><a href="case-studies.html">Case studies</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
       </ul>
     </nav>
   </header>
 
-  <section class="hero" id="inicio">
-    <p class="kicker">Paz que se piensa, paz que se construye</p>
-    <h1>Investigación de campo rigurosa sobre la falta de paz en México</h1>
-    <p>Asociación civil fundada en 2015. Once años trabajando entre la investigación y la acción.</p>
-    <a href="#contacto" class="btn">Contactar</a>
-  </section>
-
-  <section class="quienes-somos">
-    <div>
-      <h2>Quiénes somos</h2>
-      <p>Somos uno de los pocos centros en México dedicados de forma específica a la investigación de la falta de paz y su construcción. Contamos con un equipo de investigadoras e investigadores de distintas disciplinas, con vínculos institucionales activos con el Senado de la República, ONU Mujeres, el PNUD, y universidades como el Tecnológico de Monterrey, la Ibero y la Anáhuac.</p>
-    </div>
-    <div class="foto-placeholder">Foto del equipo</div>
+  <section class="hero-inicio">
+    <p class="kicker">Asociación Civil. Investigación de Campo. Rigor Académico.</p>
+    <h1>Durante once años hemos traducido la investigación sobre la falta de paz en México en decisiones concretas para gobiernos, empresas y organizaciones.</h1>
   </section>
 
   <section>
-    <h2>Qué hacemos</h2>
+    <p class="etiqueta-seccion">Nuestras áreas de trabajo</p>
     <div class="grid-servicios">
-      <div class="servicio"><div class="icono"></div><h3>Investigación</h3><p>Documental y de campo, sobre conflicto, violencia y construcción de paz.</p></div>
-      <div class="servicio"><div class="icono"></div><h3>Consultoría estratégica</h3><p>Diagnósticos y recomendaciones para gobierno, empresas y sociedad civil.</p></div>
-      <div class="servicio"><div class="icono"></div><h3>Talleres y capacitaciones</h3><p>Negociación, resolución de conflictos y escucha compasiva.</p></div>
-      <div class="servicio"><div class="icono"></div><h3>Educación para la paz</h3><p>Programas sobre paz y derechos humanos para primaria.</p></div>
-      <div class="servicio"><div class="icono"></div><h3>Eventos y conferencias</h3><p>Mesas de diálogo en México y el extranjero.</p></div>
-      <div class="servicio"><div class="icono"></div><h3>Riesgo geopolítico</h3><p>Análisis y acompañamiento estratégico para organizaciones.</p></div>
+      <div class="servicio"><p class="titulo">Investigación</p><p class="desc">Documental y de campo</p></div>
+      <div class="servicio"><p class="titulo">Consultoría estratégica</p><p class="desc">Diagnósticos y recomendaciones</p></div>
+      <div class="servicio"><p class="titulo">Talleres</p><p class="desc">Negociación y resolución</p></div>
+      <div class="servicio"><p class="titulo">Educación para la paz</p><p class="desc">Programas para primaria</p></div>
+      <div class="servicio"><p class="titulo">Eventos</p><p class="desc">Mesas de diálogo</p></div>
+      <div class="servicio"><p class="titulo">Riesgo geopolítico</p><p class="desc">Análisis y acompañamiento</p></div>
     </div>
   </section>
 
   <section>
-    <div class="cifras">
-      <div class="cifra"><div class="numero mono">11 años</div><div class="etiqueta">De trayectoria</div></div>
-      <div class="cifra"><div class="numero mono">14</div><div class="etiqueta">Publicaciones revisadas por pares</div></div>
-    </div>
-  </section>
-
-  <section id="publicaciones">
-    <div class="pub-header">
-      <h2>Publicaciones recientes</h2>
-      <a href="#">Ver todas →</a>
-    </div>
-    <div class="lista-publicaciones">
-      <div class="publicacion">
-        <div class="foto-placeholder">Foto</div>
-        <span class="etiqueta columna">Columna</span>
-        <span class="fecha">14 ago 2026</span>
-        <h4>Por qué se repiten las crisis</h4>
+    <p class="etiqueta-seccion">Publicaciones recientes</p>
+    <div class="pub-lista">
+      <div class="pub-item">
+        <div class="foto"></div>
+        <div><span class="meta" style="color: var(--terracota);">Columna · 14 ago 2026</span><p class="titulo">Por qué se repiten las crisis</p></div>
       </div>
-      <div class="publicacion">
-        <div class="foto-placeholder">Foto</div>
-        <span class="etiqueta investigacion">Investigación</span>
-        <span class="fecha">2024</span>
-        <h4>Género y privación de la libertad</h4>
+      <div class="pub-item">
+        <div class="foto"></div>
+        <div><span class="meta" style="color: var(--morado);">Investigación · 2024</span><p class="titulo">Género y privación de la libertad</p></div>
       </div>
-      <div class="publicacion">
-        <div class="foto-placeholder">Foto</div>
-        <span class="etiqueta columna">Columna</span>
-        <span class="fecha">07 ago 2026</span>
-        <h4>De la cancha al algoritmo</h4>
+      <div class="pub-item">
+        <div class="foto"></div>
+        <div><span class="meta" style="color: var(--terracota);">Columna · 07 ago 2026</span><p class="titulo">De la cancha al algoritmo</p></div>
       </div>
     </div>
   </section>
 
-  <section id="equipo">
-    <h2>Equipo</h2>
-    <div class="equipo-lista">
-      <div class="persona"><div class="avatar"></div><div class="nombre">Mauricio M.</div><div class="rol">Director</div></div>
-      <div class="persona"><div class="avatar"></div><div class="nombre">Daniela M.</div><div class="rol">Coord. operativa</div></div>
-      <div class="persona"><div class="avatar"></div><div class="nombre">Thali K.</div><div class="rol">Coord. investigación</div></div>
-      <div class="persona"><div class="avatar"></div><div class="nombre">Alejandra N.</div><div class="rol">Coord. dirección</div></div>
-    </div>
-  </section>
-
-  <div class="redes">
-    <a href="#">Instagram</a>
-    <a href="#">LinkedIn</a>
-    <a href="#">Facebook</a>
-    <a href="#">X</a>
-  </div>
-
-  <section class="cta-final" id="contacto">
+  <section class="cta-final">
     <p>Buscas evidencia sólida para tomar decisiones sobre paz y seguridad. Hablemos.</p>
-    <a href="mailto:contacto@cipmex.org" class="btn">Escríbenos</a>
+    <a href="contacto.html" class="btn">Contactar</a>
   </section>
 
   <footer>CIPMEX · Centro de Investigación para la Paz México, A.C.</footer>
 </div>
-
 </body>
 </html>
