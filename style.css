@@ -17,7 +17,8 @@ body { font-family: 'Inter', sans-serif; color: var(--gris); background: var(--f
 .contenedor { max-width: 1040px; margin: 0 auto; padding: 0 24px; }
 
 header { display: flex; align-items: center; justify-content: space-between; padding: 20px 0; border-bottom: 0.5px solid var(--borde); }
-.logo { display: flex; align-items: center; gap: 10px; font-weight: 600; font-size: 15px; color: var(--azul); text-decoration: none; }
+.logo { display: flex; align-items: center; text-decoration: none; }
+.logo img { height: 26px; display: block; }
 nav ul { list-style: none; display: flex; gap: 28px; }
 nav a { text-decoration: none; color: var(--gris); font-size: 14px; }
 nav a:hover, nav a.activo { color: var(--azul); }
