@@ -72,6 +72,9 @@ footer { text-align: center; padding: 24px 0; font-size: 12px; color: var(--text
 .aliados { display: flex; flex-wrap: wrap; gap: 10px 12px; margin-top: 14px; }
 .aliado { font-family: 'Roboto Mono', monospace; font-size: 12px; color: var(--gris); background: var(--fondo-card); padding: 8px 14px; border-radius: 6px; }
 
+.foto-banda img { width: 100%; display: block; border-radius: 14px; object-fit: cover; }
+.foto-banda .caption { font-family: 'Roboto Mono', monospace; font-size: 12px; color: var(--texto-muted); margin-top: 10px; }
+
 @media (max-width: 720px) {
   nav ul { display: none; }
   .grid-servicios { grid-template-columns: 1fr 1fr; }
