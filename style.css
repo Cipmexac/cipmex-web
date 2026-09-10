@@ -77,10 +77,17 @@ footer img { height: 38px; }
 .foto-banda img { width: 100%; display: block; border-radius: 14px; object-fit: cover; }
 .foto-banda .caption { font-family: 'Roboto Mono', monospace; font-size: 12px; color: var(--texto-muted); margin-top: 10px; }
 
+.equipo-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px 20px; margin-top: 20px; }
+.miembro { text-align: center; }
+.miembro .foto { width: 88px; height: 88px; border-radius: 50%; background: var(--fondo-card); margin: 0 auto 12px; }
+.miembro .nombre { font-size: 14px; font-weight: 600; color: var(--gris); margin: 0 0 4px; }
+.miembro .rol { font-family: 'Roboto Mono', monospace; font-size: 11px; color: var(--terracota); margin: 0; }
+
 @media (max-width: 720px) {
   nav ul { display: none; }
   .grid-servicios { grid-template-columns: 1fr 1fr; }
   .mision-vision { grid-template-columns: 1fr; }
   .valores-grid { grid-template-columns: 1fr; }
   .cifras-banda { gap: 28px; }
+  .equipo-grid { grid-template-columns: 1fr 1fr; }
 }
