@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Equipo · CIPMEX</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="contenedor">
+  <header>
+    <a href="index.html" class="logo">
+      <img src="img/logo-cipmex-header.png" alt="CIPMEX">
+    </a>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="quienes-somos.html">Quiénes somos</a></li>
+        <li><a href="equipo.html" class="activo">Equipo</a></li>
+        <li><a href="publicaciones.html">Publicaciones</a></li>
+        <li><a href="case-studies.html">Case studies</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section>
+    <span class="kicker">EL EQUIPO</span>
+    <h1>Nuestro equipo</h1>
+    <p class="texto-parrafo">Contamos con un equipo de investigadoras e investigadores de distintas disciplinas, dedicados a traducir la falta de paz en México en decisiones concretas.</p>
+  </section>
+
+  <section style="padding-top: 0;">
+    <div class="equipo-grid">
+      <div class="miembro">
+        <div class="foto"></div>
+        <p class="nombre">Mauricio Meschoulam</p>
+        <p class="rol">Director y Fundador</p>
+      </div>
+      <div class="miembro">
+        <div class="foto"></div>
+        <p class="nombre">Thali Kleinfinger</p>
+        <p class="rol">Coordinadora Académica</p>
+      </div>
+      <div class="miembro">
+        <div class="foto"></div>
+        <p class="nombre">Daniela Manzanarez</p>
+        <p class="rol">Coordinadora Operativa</p>
+      </div>
+      <div class="miembro">
+        <div class="foto"></div>
+        <p class="nombre">Alejandra Nurko</p>
+        <p class="rol">Coordinadora de Dirección</p>
+      </div>
+      <div class="miembro">
+        <div class="foto"></div>
+        <p class="nombre">Fernando de la Parra</p>
+        <p class="rol">Investigador</p>
+      </div>
+      <div class="miembro">
+        <div class="foto"></div>
+        <p class="nombre">Goretty Espíndola</p>
+        <p class="rol">Investigadora</p>
+      </div>
+      <div class="miembro">
+        <div class="foto"></div>
+        <p class="nombre">María Paula Flores</p>
+        <p class="rol">Investigadora</p>
+      </div>
+      <div class="miembro">
+        <div class="foto"></div>
+        <p class="nombre">Alexa Munguía</p>
+        <p class="rol">Investigadora</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <img src="img/logo-cipmex-completo.png" alt="CIPMEX, Centro de Investigación para la Paz México, A.C.">
+  </footer>
+</div>
+</body>
+</html>
