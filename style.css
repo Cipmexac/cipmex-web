@@ -79,7 +79,7 @@ footer img { height: 38px; }
 
 .equipo-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px 20px; margin-top: 20px; }
 .miembro { text-align: center; }
-.miembro .foto { width: 88px; height: 88px; border-radius: 50%; background: var(--fondo-card); margin: 0 auto 12px; }
+.miembro .foto { width: 88px; height: 88px; border-radius: 50%; background: var(--fondo-card); object-fit: cover; display: block; margin: 0 auto 12px; }
 .miembro .nombre { font-size: 14px; font-weight: 600; color: var(--gris); margin: 0 0 4px; }
 .miembro .rol { font-family: 'Roboto Mono', monospace; font-size: 11px; color: var(--terracota); margin: 0; }
 
