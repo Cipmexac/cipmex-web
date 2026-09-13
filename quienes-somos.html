@@ -6,7 +6,7 @@
 <title>Quiénes somos · CIPMEX</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=6">
+<link rel="stylesheet" href="style.css?v=8">
 </head>
 <body>
 <div class="contenedor">
@@ -17,8 +17,14 @@
     <nav>
       <ul>
         <li><a href="index.html">Inicio</a></li>
-        <li><a href="quienes-somos.html" class="activo">Quiénes somos</a></li>
-        <li><a href="equipo.html">Equipo</a></li>
+        <li class="nav-item-dropdown activo">
+          <span>Sobre nosotros</span>
+          <div class="dropdown-menu">
+            <a href="quienes-somos.html">Quiénes somos</a>
+            <a href="equipo.html">Equipo</a>
+            <a href="que-es-la-paz.html">¿Qué es la paz?</a>
+          </div>
+        </li>
         <li><a href="publicaciones.html">Publicaciones</a></li>
         <li><a href="case-studies.html">Case studies</a></li>
         <li><a href="contacto.html">Contacto</a></li>
@@ -30,6 +36,7 @@
     <span class="kicker">SOBRE NOSOTROS</span>
     <h1>Quiénes somos</h1>
     <p class="texto-parrafo">El Centro de Investigación para la Paz México es una asociación civil fundada en 2015 por el Dr. Mauricio Meschoulam, y uno de los pocos centros en el país dedicados de forma específica a la investigación de la falta de paz y su construcción. Contamos con un equipo de investigadoras e investigadores de distintas disciplinas, con vínculos institucionales activos con el Senado de la República, ONU Mujeres, el Programa de las Naciones Unidas para el Desarrollo, y universidades como el Tecnológico de Monterrey, la Universidad Iberoamericana y la Universidad Anáhuac. Traducimos ese conocimiento en consultoría estratégica, talleres, educación para la paz y espacios de diálogo dirigidos a gobiernos, empresas, academia y sociedad civil.</p>
+    <a href="que-es-la-paz.html" class="enlace-relacionado">Conoce cómo entendemos la paz →</a>
   </section>
 
   <section style="padding-top: 0;">
@@ -48,11 +55,6 @@
   <section>
     <h2>Nuestra historia</h2>
     <p class="texto-parrafo">Nacimos en 2015, fundados por el Dr. Mauricio Meschoulam, a partir de una lectura que hicimos de nuestro contexto. Ante el aumento de la violencia en México hacía falta más investigación que permitiera comprender ese fenómeno de manera sistematizada, y hacía falta también un puente que tradujera ese conocimiento en propuestas concretas para las tomadoras y tomadores de decisiones. Once años después, seguimos trabajando desde ese mismo punto de partida.</p>
-  </section>
-
-  <section>
-    <h2>Por qué existimos</h2>
-    <p class="texto-parrafo">Entendemos la paz como algo que va más allá de la ausencia de violencia directa. La integran también factores políticos, económicos, sociales, culturales y psicológicos que determinan si una sociedad logra cohesionarse o se fractura. Buscamos que ese conocimiento se traduzca en una disminución real de la violencia estructural y en la construcción de condiciones de paz.</p>
   </section>
 
   <section>
@@ -114,10 +116,10 @@
 <footer class="rico">
   <div class="contenedor">
     <div class="footer-grid">
-   <div class="footer-logo-col">
-  <img src="img/logo-cipmex-completo.png" alt="CIPMEX">
-  <p>Paz que se piensa,<br>paz que se construye</p>
-</div>
+      <div class="footer-logo-col">
+        <img src="img/logo-cipmex-completo.png" alt="CIPMEX">
+        <p>Paz que se piensa,<br>paz que se construye</p>
+      </div>
       <div class="footer-sep"></div>
       <div>
         <h5>Enlaces</h5>
