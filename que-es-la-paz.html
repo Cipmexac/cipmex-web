@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.33.0/dist/tabler-icons.min.css">
-<link rel="stylesheet" href="style.css?v=26">
+<link rel="stylesheet" href="style.css?v=27">
 </head>
 <body>
 
@@ -361,34 +361,14 @@
 </div>
 
 <div class="mini-grid">
-  <div class="contenedor" style="max-width: 760px;">
+  <div class="contenedor">
     <span class="label">LABORATORIO DE CASOS</span>
-    <p class="texto-parrafo" style="max-width: none; margin-bottom: 20px;">Pon el marco a prueba con casos documentados de la historia reciente, no necesariamente ligados al trabajo de CIPMEX. Ubica cada caso en el espectro entre paz negativa y paz positiva, y compara tu lectura con cómo lo documentan las fuentes. Cada caso enlaza a un archivo donde puedes profundizar.</p>
+    <p class="texto-parrafo" style="max-width: none; margin-bottom: 20px;">Pon el marco a prueba con casos documentados de la historia reciente, no necesariamente ligados al trabajo de CIPMEX. En cada tarjeta, ubica el caso en el espectro entre paz negativa y paz positiva, y compara tu lectura con cómo lo documentan las fuentes.</p>
 
-    <div class="escenario-caja">
-      <span class="escenario-kicker">CASO <span class="escenario-num">1</span> DE <span class="escenario-total">4</span></span>
-      <p class="escenario-contexto"></p>
+    <div class="casos-grid" id="casosGrid"></div>
 
-      <div class="escenario-espectro">
-        <div class="escenario-espectro-etiquetas">
-          <span>Paz negativa</span>
-          <span>Paz positiva</span>
-        </div>
-        <div class="escenario-espectro-puntos">
-          <button class="espectro-punto" type="button" data-valor="1" title="Paz negativa clara"></button>
-          <button class="espectro-punto" type="button" data-valor="2" title="Sobre todo paz negativa"></button>
-          <button class="espectro-punto" type="button" data-valor="3" title="Mixta o en transición"></button>
-          <button class="espectro-punto" type="button" data-valor="4" title="Sobre todo paz positiva"></button>
-          <button class="espectro-punto" type="button" data-valor="5" title="Paz positiva clara"></button>
-        </div>
-      </div>
-
-      <div class="escenario-respuesta">
-        <span class="escenario-veredicto"></span>
-        <p class="escenario-explicacion"></p>
-        <p class="escenario-profundiza"></p>
-      </div>
-      <button class="escenario-siguiente" type="button">Ver otro caso →</button>
+    <div style="text-align: center; margin-top: 28px;">
+      <button class="btn" type="button" id="casosVerMas">Ver más casos</button>
     </div>
   </div>
 </div>
@@ -533,90 +513,146 @@ window.addEventListener('scroll', function () {
   });
 })();
 
-/* Herramienta "Pon a prueba lo que aprendiste": casos reales, paz negativa vs. positiva */
+/* Laboratorio de casos: tarjetas reales, cada una con su propio espectro paz negativa/positiva */
 (function () {
   var etiquetasEspectro = ['Paz negativa clara', 'Sobre todo paz negativa', 'Mixta o en transición', 'Sobre todo paz positiva', 'Paz positiva clara'];
 
-  var escenarios = [
+  var casos = [
     {
-      contexto: 'Guerra Fría (1947–1991): durante más de cuatro décadas, Estados Unidos y la Unión Soviética evitaron una guerra directa entre ellas, aunque la tensión y la carrera armamentista definieron buena parte del siglo XX.',
+      titulo: 'Guerra Fría (1947–1991)',
+      resumen: 'Estados Unidos y la URSS evitaron una guerra directa entre ellas durante más de cuatro décadas, aunque la carrera armamentista y las guerras por delegación definieron buena parte del siglo XX.',
       valorDocumentado: 2,
       explicacion: 'No hubo guerra directa entre las dos potencias, pero coexistieron con una carrera armamentista, guerras por delegación en otros países y una desconfianza estructural que nunca se resolvió. Se contuvo la violencia directa; las causas de fondo, no.',
       fuenteUrl: 'https://www.wilsoncenter.org/publication-series/cwihp-bulletin',
-      fuenteNombre: 'Cold War International History Project, Wilson Center'
+      fuenteNombre: 'Cold War International History Project, Wilson Center',
+      videoUrl: 'https://www.youtube.com/playlist?list=PLS9FS1vnEoRB_nBhACVVtax9hKnTUBy6A',
+      videoNombre: 'Ver video (TED-Ed)',
+      accent: 'var(--terracota)'
     },
     {
-      contexto: 'Acuerdo de Viernes Santo, Irlanda del Norte (1998): tras casi tres décadas de conflicto armado conocido como "The Troubles", este acuerdo detuvo la violencia y además creó un gobierno compartido entre comunidades, impulsó el desarme y abrió reformas sociales.',
+      titulo: 'Acuerdo de Viernes Santo (1998)',
+      resumen: 'Tras casi tres décadas del conflicto conocido como "The Troubles" en Irlanda del Norte, este acuerdo detuvo la violencia y creó un gobierno compartido entre comunidades.',
       valorDocumentado: 4,
       explicacion: 'El acuerdo no solo detuvo la violencia armada: también repartió el poder político y atendió parte de las causas de exclusión que alimentaban el conflicto. Persisten tensiones hasta hoy, pero cambió la estructura, no solo el nivel de violencia.',
       fuenteUrl: 'https://cain.ulster.ac.uk/events/peace/pp9899.htm',
-      fuenteNombre: 'CAIN Archive, Ulster University'
+      fuenteNombre: 'CAIN Archive, Ulster University',
+      videoUrl: 'https://www.youtube.com/watch?v=5ESQSxoIsKI',
+      videoNombre: 'Ver video (BBC)',
+      accent: 'var(--morado)'
     },
     {
-      contexto: 'Fin del apartheid y Comisión de la Verdad y la Reconciliación, Sudáfrica (1994–1998): el fin legal del apartheid vino acompañado de una nueva constitución, garantías de derechos y un proceso público para procesar los abusos del pasado.',
+      titulo: 'Fin del apartheid y TRC (1994–1998)',
+      resumen: 'El fin legal del apartheid en Sudáfrica vino acompañado de una nueva constitución y un proceso público para procesar los abusos del pasado.',
       valorDocumentado: 4,
       explicacion: 'Se atacaron las estructuras legales que sostenían la desigualdad racial, no solo los episodios de violencia directa. Las brechas económicas heredadas, sin embargo, siguen siendo un reto hasta hoy: la paz positiva es un proceso, no un punto final.',
       fuenteUrl: 'https://sahistory.org.za/article/truth-and-reconciliation-commission-trc-0',
-      fuenteNombre: 'South African History Online'
+      fuenteNombre: 'South African History Online',
+      videoUrl: 'https://www.youtube.com/watch?v=YY-ee1hhghQ',
+      videoNombre: 'Ver video (60 Minutes)',
+      accent: 'var(--azul)'
     },
     {
-      contexto: 'Acuerdos de Bicesse, Angola (1991): tras años de guerra civil, este acuerdo de paz detuvo los combates y llevó a elecciones en 1992, pero no fue acompañado de reformas de fondo en la distribución del poder. Cuando la oposición rechazó los resultados, la guerra se reanudó y duró otra década.',
+      titulo: 'Acuerdos de Bicesse (1991)',
+      resumen: 'En Angola, este acuerdo detuvo la guerra civil y llevó a elecciones en 1992, pero sin reformas de fondo: la guerra se reanudó poco después y duró otra década.',
       valorDocumentado: 2,
       explicacion: 'Se logró el objetivo más inmediato, detener la violencia, pero al no resolver las causas estructurales del conflicto, este tipo de paz resultó inestable y el conflicto se reactivó poco después.',
       fuenteUrl: 'https://peaceaccords.nd.edu/accord/bicesse-accords',
-      fuenteNombre: 'Peace Accords Matrix, Kroc Institute'
+      fuenteNombre: 'Peace Accords Matrix, Kroc Institute',
+      accent: 'var(--verde)'
+    },
+    {
+      titulo: 'Acuerdo con las FARC (2016)',
+      resumen: 'En Colombia, el acuerdo con la guerrilla incluyó desarme, participación política y una nueva jurisdicción de justicia transicional, tras más de 50 años de conflicto armado.',
+      valorDocumentado: 3,
+      explicacion: 'El acuerdo fue más allá de detener los combates: creó instituciones como la Jurisdicción Especial para la Paz y abrió espacio político para los excombatientes. Pero el cumplimiento de los compromisos de reforma rural ha sido desigual y la violencia no ha desaparecido en varias regiones. Por eso se documenta como un proceso en transición, no como un caso cerrado.',
+      fuenteUrl: 'https://peaceaccords.nd.edu/barometer',
+      fuenteNombre: 'Barometer Initiative, Kroc Institute',
+      accent: 'var(--azul-claro)'
+    },
+    {
+      titulo: 'Plan Marshall (1948)',
+      resumen: 'Estados Unidos financió la reconstrucción de Europa occidental, incluyendo a antiguos enemigos, sentando las bases de lo que después sería la integración europea.',
+      valorDocumentado: 4,
+      explicacion: 'No se limitó a poner fin a la guerra: financió infraestructura, impulsó la cooperación económica entre antiguos enemigos y sentó bases institucionales que con el tiempo llevarían a la Unión Europea. Es uno de los ejemplos más citados de construcción de paz positiva a gran escala.',
+      fuenteUrl: 'https://www.marshallfoundation.org/the-marshall-plan/history/',
+      fuenteNombre: 'George C. Marshall Foundation',
+      videoUrl: 'https://www.youtube.com/watch?v=tMXjsVLOznc',
+      videoNombre: 'Ver video (History)',
+      accent: 'var(--azul-oscuro)'
     }
   ];
 
-  var idx = 0;
-  var caja = document.querySelector('.escenario-caja');
-  if (!caja) return;
-  var numEl = caja.querySelector('.escenario-num');
-  var totalEl = caja.querySelector('.escenario-total');
-  var contextoEl = caja.querySelector('.escenario-contexto');
-  var respuestaEl = caja.querySelector('.escenario-respuesta');
-  var veredictoEl = caja.querySelector('.escenario-veredicto');
-  var explicacionEl = caja.querySelector('.escenario-explicacion');
-  var profundizaEl = caja.querySelector('.escenario-profundiza');
-  var puntos = caja.querySelectorAll('.espectro-punto');
-  var siguienteBtn = caja.querySelector('.escenario-siguiente');
+  var grid = document.getElementById('casosGrid');
+  var verMasBtn = document.getElementById('casosVerMas');
+  if (!grid || !verMasBtn) return;
+  var visiblesIniciales = 4;
 
-  totalEl.textContent = escenarios.length;
+  casos.forEach(function (c, i) {
+    var card = document.createElement('div');
+    card.className = 'caso-card' + (i >= visiblesIniciales ? ' oculto' : '');
 
-  function render() {
-    var e = escenarios[idx];
-    numEl.textContent = idx + 1;
-    contextoEl.textContent = e.contexto;
-    respuestaEl.classList.remove('visible');
-    puntos.forEach(function (p) { p.classList.remove('elegido', 'documentado'); });
-  }
+    var videoPill = c.videoUrl
+      ? '<a class="caso-video-pill" href="' + c.videoUrl + '" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>' + c.videoNombre + '</a>'
+      : '';
 
-  puntos.forEach(function (punto) {
-    punto.addEventListener('click', function () {
-      var e = escenarios[idx];
-      var valorUsuario = parseInt(punto.getAttribute('data-valor'), 10);
-      puntos.forEach(function (p) { p.classList.remove('elegido', 'documentado'); });
-      punto.classList.add('elegido');
-      var puntoDocumentado = caja.querySelector('.espectro-punto[data-valor="' + e.valorDocumentado + '"]');
-      if (puntoDocumentado) puntoDocumentado.classList.add('documentado');
+    var puntosHtml = '';
+    for (var v = 1; v <= 5; v++) {
+      puntosHtml += '<button class="caso-punto" type="button" data-valor="' + v + '" title="' + etiquetasEspectro[v - 1] + '"></button>';
+    }
 
-      if (valorUsuario === e.valorDocumentado) {
-        veredictoEl.textContent = 'Coincide con cómo lo documentan las fuentes: ' + etiquetasEspectro[e.valorDocumentado - 1] + '.';
-      } else {
-        veredictoEl.textContent = 'Tú: ' + etiquetasEspectro[valorUsuario - 1] + '. Las fuentes: ' + etiquetasEspectro[e.valorDocumentado - 1] + '.';
-      }
-      explicacionEl.textContent = e.explicacion;
-      profundizaEl.innerHTML = '¿Quieres profundizar? Lee más en <a href="' + e.fuenteUrl + '" target="_blank" rel="noopener">' + e.fuenteNombre + '</a>.';
-      respuestaEl.classList.add('visible');
+    card.innerHTML =
+      '<div class="caso-foto" style="background: linear-gradient(135deg, ' + c.accent + ', var(--azul-oscuro));">' +
+        videoPill +
+        '<span class="caso-foto-tag">FOTO</span>' +
+      '</div>' +
+      '<div class="caso-contenido">' +
+        '<h3>' + c.titulo + '</h3>' +
+        '<p class="caso-contexto">' + c.resumen + '</p>' +
+        '<div class="caso-espectro-etiquetas"><span>Paz negativa</span><span>Paz positiva</span></div>' +
+        '<div class="caso-espectro-puntos">' + puntosHtml + '</div>' +
+        '<div class="caso-respuesta">' +
+          '<span class="caso-veredicto"></span>' +
+          '<p class="caso-explicacion"></p>' +
+          '<p class="caso-fuentes"></p>' +
+        '</div>' +
+      '</div>';
+
+    var puntos = card.querySelectorAll('.caso-punto');
+    var respuestaEl = card.querySelector('.caso-respuesta');
+    var veredictoEl = card.querySelector('.caso-veredicto');
+    var explicacionEl = card.querySelector('.caso-explicacion');
+    var fuentesEl = card.querySelector('.caso-fuentes');
+
+    puntos.forEach(function (punto) {
+      punto.addEventListener('click', function () {
+        var valorUsuario = parseInt(punto.getAttribute('data-valor'), 10);
+        puntos.forEach(function (p) { p.classList.remove('elegido', 'documentado'); });
+        punto.classList.add('elegido');
+        var puntoDoc = card.querySelector('.caso-punto[data-valor="' + c.valorDocumentado + '"]');
+        if (puntoDoc) puntoDoc.classList.add('documentado');
+
+        veredictoEl.textContent = valorUsuario === c.valorDocumentado
+          ? 'Coincide con las fuentes: ' + etiquetasEspectro[c.valorDocumentado - 1] + '.'
+          : 'Tú: ' + etiquetasEspectro[valorUsuario - 1] + '. Fuentes: ' + etiquetasEspectro[c.valorDocumentado - 1] + '.';
+        explicacionEl.textContent = c.explicacion;
+        fuentesEl.innerHTML = '¿Quieres profundizar? Lee más en <a href="' + c.fuenteUrl + '" target="_blank" rel="noopener">' + c.fuenteNombre + '</a>.';
+        respuestaEl.classList.add('visible');
+      });
     });
+
+    grid.appendChild(card);
   });
 
-  siguienteBtn.addEventListener('click', function () {
-    idx = (idx + 1) % escenarios.length;
-    render();
+  var revelado = false;
+  verMasBtn.addEventListener('click', function () {
+    if (!revelado) {
+      grid.querySelectorAll('.caso-card.oculto').forEach(function (c) { c.classList.remove('oculto'); });
+      revelado = true;
+      verMasBtn.textContent = 'Explorar case studies de CIPMEX →';
+    } else {
+      window.location.href = 'case-studies.html';
+    }
   });
-
-  render();
 })();
 </script>
 
