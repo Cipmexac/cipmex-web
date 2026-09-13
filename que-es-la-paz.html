@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.33.0/dist/tabler-icons.min.css">
-<link rel="stylesheet" href="style.css?v=28">
+<link rel="stylesheet" href="style.css?v=29">
 </head>
 <body>
 
@@ -380,9 +380,14 @@
       <div id="casoActualContenedor"></div>
 
       <div class="laboratorio-completo" id="laboratorioCompleto" hidden>
-        <i class="ti ti-confetti" aria-hidden="true"></i>
-        <p>Completaste los 6 casos del laboratorio.</p>
-        <button class="btn" type="button" id="laboratorioReiniciar">Volver a empezar</button>
+        <span class="laboratorio-perfil-eyebrow">Tu lectura, en clave de teoría de RI</span>
+        <h3 class="laboratorio-perfil-etiqueta" id="perfilEtiqueta"></h3>
+        <p class="laboratorio-perfil-desc" id="perfilDescripcion"></p>
+        <p class="laboratorio-perfil-stat" id="perfilStat"></p>
+        <div class="laboratorio-completo-ctas">
+          <button class="btn-secundario" type="button" id="laboratorioReiniciar">Volver a empezar</button>
+          <a class="btn" href="publicaciones.html">Lee nuestro análisis de coyuntura →</a>
+        </div>
       </div>
     </div>
 
@@ -603,9 +608,47 @@ window.addEventListener('scroll', function () {
   var labProgresoRelleno = document.getElementById('labProgresoRelleno');
   var laboratorioCompleto = document.getElementById('laboratorioCompleto');
   var reiniciarBtn = document.getElementById('laboratorioReiniciar');
+  var perfilEtiquetaEl = document.getElementById('perfilEtiqueta');
+  var perfilDescripcionEl = document.getElementById('perfilDescripcion');
+  var perfilStatEl = document.getElementById('perfilStat');
   if (!contenedor) return;
 
   var indice = 0;
+  var historial = [];
+
+  function calcularPerfil() {
+    var sumaDiff = 0;
+    var coincidencias = 0;
+    historial.forEach(function (h) {
+      sumaDiff += (h.usuario - h.documentado);
+      if (h.usuario === h.documentado) coincidencias += 1;
+    });
+    var promedio = sumaDiff / historial.length;
+
+    var perfil;
+    if (promedio <= -0.5) {
+      perfil = {
+        etiqueta: 'Lente realista',
+        desc: 'Tiendes a leer estos procesos con cautela: incluso cuando las fuentes documentan cambios estructurales, tu lectura se queda más cerca de la paz negativa, del cese de la violencia directa. Es una lente afín al realismo en relaciones internacionales, que ve el poder y la desconfianza como constantes y trata cualquier arreglo institucional como reversible mientras no cambie el equilibrio de fondo.'
+      };
+    } else if (promedio >= 0.5) {
+      perfil = {
+        etiqueta: 'Lente liberal institucional',
+        desc: 'Tiendes a darle más peso a los acuerdos, las instituciones y la cooperación: donde las fuentes documentan procesos aún frágiles o inconclusos, tu lectura ya ve avances hacia la paz positiva. Es una lectura cercana al liberalismo institucional, que confía en que la interdependencia y las reglas compartidas pueden transformar las causas estructurales del conflicto.'
+      };
+    } else {
+      perfil = {
+        etiqueta: 'Lente constructivista',
+        desc: 'Tu lectura se mantuvo muy cerca de cómo lo documentan las fuentes: ponderaste tanto los cambios institucionales como los cambios en las narrativas e identidades que sostenían el conflicto. Es una lectura afín al constructivismo, que entiende la paz positiva como una transformación de normas y percepciones, no solo de instituciones o poder.'
+      };
+    }
+
+    return {
+      etiqueta: perfil.etiqueta,
+      desc: perfil.desc,
+      stat: 'Coincidiste exactamente con la lectura documentada en ' + coincidencias + ' de ' + historial.length + ' casos.'
+    };
+  }
 
   function renderCaso(i) {
     var c = casos[i];
@@ -675,6 +718,7 @@ window.addEventListener('scroll', function () {
       fuentesEl.innerHTML = '¿Quieres profundizar? Lee más en <a href="' + c.fuenteUrl + '" target="_blank" rel="noopener">' + c.fuenteNombre + '</a>.';
       respuesta.classList.add('visible');
 
+      historial.push({ usuario: valorUsuario, documentado: c.valorDocumentado });
       if (labProgresoRelleno) labProgresoRelleno.style.width = (((i + 1) / casos.length) * 100) + '%';
     });
 
@@ -684,7 +728,13 @@ window.addEventListener('scroll', function () {
         renderCaso(indice);
       } else {
         contenedor.innerHTML = '';
-        if (laboratorioCompleto) laboratorioCompleto.hidden = false;
+        if (laboratorioCompleto) {
+          var perfil = calcularPerfil();
+          if (perfilEtiquetaEl) perfilEtiquetaEl.textContent = perfil.etiqueta;
+          if (perfilDescripcionEl) perfilDescripcionEl.textContent = perfil.desc;
+          if (perfilStatEl) perfilStatEl.textContent = perfil.stat;
+          laboratorioCompleto.hidden = false;
+        }
       }
     });
   }
@@ -695,6 +745,7 @@ window.addEventListener('scroll', function () {
     reiniciarBtn.addEventListener('click', function () {
       if (laboratorioCompleto) laboratorioCompleto.hidden = true;
       indice = 0;
+      historial = [];
       renderCaso(indice);
     });
   }

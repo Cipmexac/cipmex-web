@@ -412,9 +412,12 @@ footer.rico { background: var(--azul); padding: 32px 0; margin-top: 8px; }
 .laboratorio-progreso-barra { flex: 1; height: 6px; border-radius: 4px; background: var(--borde); overflow: hidden; }
 .laboratorio-progreso-relleno { height: 100%; background: var(--terracota); border-radius: 4px; transition: width 0.4s ease; }
 
-.laboratorio-completo { text-align: center; padding: 44px 20px; }
-.laboratorio-completo i { font-size: 36px; color: var(--terracota); }
-.laboratorio-completo p { font-size: 15px; color: var(--gris); margin: 14px 0 22px; }
+.laboratorio-completo { text-align: center; padding: 40px 24px 8px; max-width: 560px; margin: 0 auto; }
+.laboratorio-perfil-eyebrow { display: block; font-family: 'Roboto Mono', monospace; font-size: 10.5px; color: var(--texto-muted); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 10px; }
+.laboratorio-perfil-etiqueta { font-size: 21px; color: var(--azul); margin: 0 0 14px; }
+.laboratorio-perfil-desc { font-size: 13.5px; color: var(--gris); line-height: 1.65; margin: 0 0 14px; text-align: left; }
+.laboratorio-perfil-stat { font-family: 'Roboto Mono', monospace; font-size: 11px; color: var(--texto-muted); margin: 0 0 26px; }
+.laboratorio-completo-ctas { display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; padding-bottom: 8px; }
 
 .caso-card { border: 1.5px solid var(--borde); border-radius: 14px; overflow: hidden; background: white; max-width: 620px; margin: 0 auto; }
 .caso-foto { position: relative; width: 100%; aspect-ratio: 16 / 9; }
