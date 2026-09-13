@@ -378,3 +378,38 @@ footer.rico { background: var(--azul); padding: 32px 0; margin-top: 8px; }
   .paz-toggle-btns { flex-direction: column; }
   .violencia-nodos { flex-direction: column; }
 }
+
+/* Fuente/cita con link, usada bajo definiciones académicas (IEP, Galtung, etc.) */
+.fuente-cita { display: block; font-size: 12px; color: var(--texto-muted); margin-top: 12px; }
+.fuente-cita a { color: var(--azul); text-decoration: none; }
+.fuente-cita a:hover { color: var(--terracota); }
+
+/* Los 8 pilares de la paz positiva — tarjetas que voltean (reusan .flip-outer/.flip-inner/.flip-face/.flip-back) */
+.pilares-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 4px; }
+.pilar-outer { aspect-ratio: 1 / 1; cursor: pointer; }
+.pilar-outer.flipped .flip-inner { transform: rotateY(180deg); }
+.pilar-face { padding: 16px; }
+.pilar-face i { font-size: 26px; }
+.pilar-face .pilar-num { font-family: 'Roboto Mono', monospace; font-size: 11px; font-weight: 700; opacity: 0.55; position: absolute; top: 14px; left: 16px; }
+.pilar-face p.pilar-titulo { font-weight: 700; font-size: 13px; margin: 12px 0 0; text-align: center; line-height: 1.35; color: var(--gris); }
+.pilar-back p { font-size: 12.5px; line-height: 1.55; margin: 0; max-width: 94%; color: var(--gris); }
+
+/* Herramienta "Pon a prueba lo que aprendiste" */
+.escenario-caja { border: 1.5px solid var(--borde); border-radius: 14px; padding: 28px; background: white; }
+.escenario-kicker { display: block; font-family: 'Roboto Mono', monospace; font-size: 11px; color: var(--texto-muted); text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 14px; }
+.escenario-contexto { font-size: 14.5px; color: var(--gris); line-height: 1.75; margin-bottom: 20px; }
+.escenario-botones { display: flex; gap: 10px; margin-bottom: 18px; flex-wrap: wrap; }
+.escenario-btn { flex: 1; min-width: 200px; padding: 14px 16px; border-radius: 10px; border: 1.5px solid var(--borde); background: white; font-family: 'Inter', sans-serif; font-size: 13.5px; font-weight: 700; color: var(--gris); cursor: pointer; transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease; }
+.escenario-btn:hover { border-color: var(--azul); color: var(--azul); }
+.escenario-btn.elegido { border-color: var(--azul); background: var(--fondo-card); color: var(--azul); }
+.escenario-respuesta { display: none; background: var(--fondo-card); border-radius: 10px; padding: 18px 20px; }
+.escenario-respuesta.visible { display: block; }
+.escenario-veredicto { display: block; font-family: 'Roboto Mono', monospace; font-size: 11px; text-transform: uppercase; letter-spacing: 0.03em; color: var(--terracota); margin-bottom: 8px; }
+.escenario-explicacion { font-size: 14px; color: var(--gris); line-height: 1.7; margin: 0; }
+.escenario-siguiente { display: inline-block; margin-top: 18px; font-size: 14px; color: var(--azul); font-weight: 600; background: none; border: none; cursor: pointer; padding: 0; font-family: 'Inter', sans-serif; }
+.escenario-siguiente:hover { color: var(--terracota); }
+
+@media (max-width: 720px) {
+  .pilares-grid { grid-template-columns: repeat(2, 1fr); }
+  .escenario-btn { min-width: 100%; }
+}
