@@ -56,9 +56,9 @@ section h1 { font-size: 26px; font-weight: 600; line-height: 1.4; color: var(--a
 section h2 { font-size: 20px; font-weight: 600; margin-bottom: 16px; color: var(--gris); }
 .texto-parrafo { font-size: 15px; color: var(--texto-muted); max-width: 640px; }
 
-/* Tarjetas generales (publicaciones, case studies, temas). Sin movimiento hacia arriba, crecen suave en su lugar */
-.card { transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease; cursor: pointer; background: white; border: 1.5px solid var(--borde); border-radius: 10px; }
-.card:hover { transform: scale(1.02); box-shadow: 0 10px 24px rgba(8,69,140,0.16); border-color: var(--accent, var(--terracota)); }
+/* Tarjetas generales (publicaciones, case studies, temas). SIN transform en hover, cero movimiento y cero escala, para que jamás se corte una foto o ícono recortado adentro. Solo sombra y borde de color */
+.card { transition: box-shadow 0.2s ease, border-color 0.2s ease; cursor: pointer; background: white; border: 1.5px solid var(--borde); border-radius: 10px; }
+.card:hover { box-shadow: 0 10px 24px rgba(8,69,140,0.16); border-color: var(--accent, var(--terracota)); }
 .card-desc { max-height: 0; opacity: 0; overflow: hidden; transition: max-height 0.25s ease, opacity 0.25s ease, margin 0.25s ease; }
 .card:hover .card-desc { max-height: 60px; opacity: 1; margin-top: 6px; }
 
@@ -80,10 +80,9 @@ section h2 { font-size: 20px; font-weight: 600; margin-bottom: 16px; color: var(
 .pub-grid .etiqueta { font-family: 'Roboto Mono', monospace; font-size: 11px; }
 .pub-grid h4 { font-size: 14px; font-weight: 600; margin: 6px 0 0; color: var(--gris); }
 
-/* Equipo en Inicio. Nombre siempre en dos renglones fijos (con salto manual en el HTML), así todas las tarjetas miden igual sin depender de si el nombre es corto o largo. Hover: crece suave, sin subir, cero riesgo de corte */
+/* Equipo en Inicio. Nombre en dos renglones fijos. Hover sin transform, solo sombra y borde, cero corte garantizado */
 .equipo-cards { display: flex; gap: 24px; overflow-x: auto; padding-bottom: 4px; }
-.persona-card { flex-shrink: 0; width: 130px; text-decoration: none; color: inherit; display: block; transition: transform 0.2s ease; }
-.persona-card:hover { transform: scale(1.04); }
+.persona-card { flex-shrink: 0; width: 130px; text-decoration: none; color: inherit; display: block; }
 .persona-card .card-inner { border: 1.5px solid var(--borde); border-radius: 10px; overflow: hidden; transition: box-shadow 0.2s ease, border-color 0.2s ease; }
 .persona-card:hover .card-inner { box-shadow: 0 10px 24px rgba(8,69,140,0.16); border-color: var(--terracota); }
 .persona-card .foto-cuadrada { width: 100%; aspect-ratio: 1 / 1; overflow: hidden; background: var(--fondo-card); }
@@ -144,7 +143,6 @@ section h2 { font-size: 20px; font-weight: 600; margin-bottom: 16px; color: var(
 .foto-banda img { width: 100%; display: block; border-radius: 14px; object-fit: cover; }
 .foto-banda .caption { font-family: 'Roboto Mono', monospace; font-size: 12px; color: var(--texto-muted); margin-top: 10px; }
 
-/* Footer, logo y frase lado a lado, logo más grande */
 footer.rico { background: var(--azul); padding: 32px 0; margin-top: 8px; }
 .footer-grid { display: grid; grid-template-columns: 1.3fr 1px 1fr 1px 1fr 1px 1fr; gap: 20px; align-items: center; }
 .footer-logo-col { display: flex; align-items: center; gap: 14px; }
