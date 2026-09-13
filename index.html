@@ -8,6 +8,12 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css?v=6">
 </head>
+  <script>
+window.addEventListener('scroll', function () {
+  var hw = document.getElementById('headerWrap');
+  if (window.scrollY > 20) { hw.classList.add('scrolled'); } else { hw.classList.remove('scrolled'); }
+});
+</script>
 <body>
 
 <div class="linea-superior"></div>
@@ -22,6 +28,7 @@
   </div>
 </div>
 
+<div class="header-wrap" id="headerWrap">
 <div class="contenedor">
   <header>
     <a href="index.html" class="logo">
@@ -29,9 +36,15 @@
     </a>
     <nav>
       <ul>
-        <li><a href="index.html" class="activo">Inicio</a></li>
-        <li><a href="quienes-somos.html">Quiénes somos</a></li>
-        <li><a href="equipo.html">Equipo</a></li>
+        <li><a href="index.html">Inicio</a></li>
+        <li class="nav-item-dropdown">
+          <span>Sobre nosotros</span>
+          <div class="dropdown-menu">
+            <a href="quienes-somos.html">Quiénes somos</a>
+            <a href="equipo.html">Equipo</a>
+            <a href="que-es-la-paz.html">¿Qué es la paz?</a>
+          </div>
+        </li>
         <li><a href="publicaciones.html">Publicaciones</a></li>
         <li><a href="case-studies.html">Case studies</a></li>
         <li><a href="contacto.html">Contacto</a></li>
@@ -40,7 +53,7 @@
     <a href="contacto.html" class="btn">Contactar</a>
   </header>
 </div>
-
+</div>
 <div class="hero">
   <div class="contenedor">
     <div class="hero-flex">
