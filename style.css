@@ -358,3 +358,8 @@ footer.rico { background: var(--azul); padding: 32px 0; margin-top: 8px; }
 /* Ajustes: publicaciones con proporciones normales, tres columnas fijas, sin huecos raros */
 .semblanza-pub-grid { grid-template-columns: repeat(3, 1fr); }
 .semblanza-pub-grid .foto { height: auto; aspect-ratio: 16 / 10; }
+
+/* Ajustes finales: equipo — bordes neutros por default, todo se colorea solo al pasar el mouse */
+.equipo-grid-completo .card-inner { border: 2px solid var(--borde); }
+.equipo-grid-completo .persona-card:hover .card-inner { box-shadow: 0 12px 26px color-mix(in srgb, var(--accent, var(--terracota)) 35%, transparent); }
+
