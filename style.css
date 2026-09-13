@@ -157,11 +157,14 @@ footer.rico { background: var(--azul); padding: 32px 0; margin-top: 8px; }
 .pagina-flotante .contenedor-flotante { max-width: 1040px; margin: 0 auto; padding: 0 24px; }
 .tarjeta-flotante { border-radius: 20px; overflow: hidden; margin-bottom: 24px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
 
-/* Título flotando sobre foto desenfocada */
-.foto-hero-titulo { position: relative; min-height: 340px; display: flex; align-items: center; overflow: hidden; }
-.foto-hero-bg { position: absolute; inset: -30px; filter: blur(22px); transform: scale(1.08); }
-.foto-hero-etiqueta { position: absolute; bottom: 16px; right: 24px; font-size: 10px; color: rgba(255,255,255,0.55); font-family: 'Roboto Mono', monospace; z-index: 1; }
-.titular-hero { position: relative; z-index: 1; color: white; text-shadow: 0 4px 24px rgba(0,0,0,0.45), 0 2px 8px rgba(0,0,0,0.3); margin: 0; padding: 64px 0; }
+/* Foto de portada como tarjeta flotante con título y texto encima, estilo GBM */
+.foto-hero-titulo { position: relative; overflow: hidden; border-radius: 20px; min-height: 420px; display: flex; align-items: center; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
+.foto-hero-bg { position: absolute; inset: 0; }
+.foto-hero-overlay { position: absolute; inset: 0; background: linear-gradient(100deg, rgba(5,26,50,0.85) 0%, rgba(5,26,50,0.55) 38%, rgba(5,26,50,0.1) 72%); }
+.foto-hero-etiqueta { position: absolute; bottom: 16px; right: 24px; font-size: 10px; color: rgba(255,255,255,0.5); font-family: 'Roboto Mono', monospace; z-index: 1; }
+.foto-hero-texto { position: relative; z-index: 1; padding: 56px 48px; max-width: 560px; }
+.titular-hero { color: white; margin: 0 0 18px; }
+.hero-parrafo { color: rgba(255,255,255,0.9); font-size: 15px; line-height: 1.7; margin: 0; }
 
 .hero-qs { background: var(--azul); display: flex; flex-wrap: wrap; }
 .hero-qs-texto { flex: 1.2; min-width: 260px; padding: 44px 32px; }
