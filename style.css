@@ -338,3 +338,15 @@ footer.rico { background: var(--azul); padding: 32px 0; margin-top: 8px; }
   .equipo-grid-completo { grid-template-columns: 1fr 1fr; }
   .semblanza-pub-grid { grid-template-columns: 1fr; }
 }
+
+/* Ajustes: página Equipo — puesto centrado y dentro de la tarjeta, borde de color propio */
+.equipo-grid-completo .nombre-card { text-align: center; justify-content: center; padding: 10px 10px 2px; }
+.equipo-grid-completo .rol-dentro { font-family: 'Roboto Mono', monospace; font-size: 11px; color: var(--texto-muted); text-align: center; margin: 0; padding: 0 10px 14px; }
+.equipo-grid-completo .card-inner { border: 2px solid var(--accent, var(--borde)); }
+.persona-card:hover .card-inner { border-color: var(--accent, var(--terracota)); }
+
+/* Ajustes: semblanza individual */
+.semblanza-hero { align-items: flex-start; }
+.semblanza-publicaciones { padding-bottom: 40px; }
+.semblanza-pub-grid { grid-template-columns: repeat(auto-fit, minmax(150px, 190px)); justify-content: start; }
+.semblanza-pub-grid .foto { height: auto; aspect-ratio: 3 / 4; }
