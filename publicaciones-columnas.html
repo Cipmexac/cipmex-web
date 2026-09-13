@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.33.0/dist/tabler-icons.min.css">
-<link rel="stylesheet" href="style.css?v=31">
+<link rel="stylesheet" href="style.css?v=32">
 </head>
 <body>
 
@@ -59,17 +59,94 @@
 
 <div class="mini-grid">
   <div class="contenedor">
-    <span class="label">DÓNDE ESCRIBIMOS</span>
-    <p class="texto-parrafo" style="max-width: none; margin-bottom: 8px;">Miembros de nuestro equipo escriben columnas de opinión periódicas, analizando temas de coyuntura nacional e internacional desde marcos de estudios de paz y relaciones internacionales. Publicamos en distintos medios y sobre distintos temas; usa los filtros para encontrar lo que buscas.</p>
-
-    <div class="columnas-filtros">
-      <div class="filtro-grupo">
-        <span class="filtro-grupo-label">Medio</span>
-        <button class="filtro-btn activo" type="button" data-filtro="medio" data-valor="todos">Todos</button>
-        <button class="filtro-btn" type="button" data-filtro="medio" data-valor="sol">El Sol de México</button>
-        <button class="filtro-btn" type="button" data-filtro="medio" data-valor="universal">El Universal</button>
-        <button class="filtro-btn" type="button" data-filtro="medio" data-valor="nmas">N+ Opinión</button>
+    <span class="label">PUBLICACIONES MÁS RECIENTES</span>
+    <div class="recientes-marquee-wrap">
+      <div class="recientes-marquee">
+        <a href="#" class="recientes-card">
+          <div class="recientes-card-medio" style="background: var(--azul);">EL SOL DE MÉXICO</div>
+          <div class="recientes-card-cuerpo">
+            <h4>[Título de la columna]</h4>
+            <p class="recientes-card-fecha">[mes, año]</p>
+          </div>
+        </a>
+        <a href="#" class="recientes-card">
+          <div class="recientes-card-medio" style="background: var(--verde);">INVESTIGACIÓN</div>
+          <div class="recientes-card-cuerpo">
+            <h4>[Título del reporte]</h4>
+            <p class="recientes-card-fecha">[mes, año]</p>
+          </div>
+        </a>
+        <a href="#" class="recientes-card">
+          <div class="recientes-card-medio" style="background: var(--azul-oscuro);">EL UNIVERSAL</div>
+          <div class="recientes-card-cuerpo">
+            <h4>[Título de la columna]</h4>
+            <p class="recientes-card-fecha">[mes, año]</p>
+          </div>
+        </a>
+        <a href="#" class="recientes-card">
+          <div class="recientes-card-medio" style="background: var(--morado);">N+ OPINIÓN</div>
+          <div class="recientes-card-cuerpo">
+            <h4>[Título de la columna]</h4>
+            <p class="recientes-card-fecha">[mes, año]</p>
+          </div>
+        </a>
+        <a href="#" class="recientes-card">
+          <div class="recientes-card-medio" style="background: var(--terracota);">REVISTA DE PAZ</div>
+          <div class="recientes-card-cuerpo">
+            <h4>[Título del artículo]</h4>
+            <p class="recientes-card-fecha">[mes, año]</p>
+          </div>
+        </a>
+        <a href="#" class="recientes-card">
+          <div class="recientes-card-medio" style="background: var(--azul);">EL SOL DE MÉXICO</div>
+          <div class="recientes-card-cuerpo">
+            <h4>[Título de la columna]</h4>
+            <p class="recientes-card-fecha">[mes, año]</p>
+          </div>
+        </a>
+        <a href="#" class="recientes-card">
+          <div class="recientes-card-medio" style="background: var(--verde);">INVESTIGACIÓN</div>
+          <div class="recientes-card-cuerpo">
+            <h4>[Título del reporte]</h4>
+            <p class="recientes-card-fecha">[mes, año]</p>
+          </div>
+        </a>
+        <a href="#" class="recientes-card">
+          <div class="recientes-card-medio" style="background: var(--azul-oscuro);">EL UNIVERSAL</div>
+          <div class="recientes-card-cuerpo">
+            <h4>[Título de la columna]</h4>
+            <p class="recientes-card-fecha">[mes, año]</p>
+          </div>
+        </a>
+        <a href="#" class="recientes-card">
+          <div class="recientes-card-medio" style="background: var(--morado);">N+ OPINIÓN</div>
+          <div class="recientes-card-cuerpo">
+            <h4>[Título de la columna]</h4>
+            <p class="recientes-card-fecha">[mes, año]</p>
+          </div>
+        </a>
+        <a href="#" class="recientes-card">
+          <div class="recientes-card-medio" style="background: var(--terracota);">REVISTA DE PAZ</div>
+          <div class="recientes-card-cuerpo">
+            <h4>[Título del artículo]</h4>
+            <p class="recientes-card-fecha">[mes, año]</p>
+          </div>
+        </a>
       </div>
+    </div>
+    <p style="font-size: 11px; color: var(--texto-muted); margin: 8px 0 0;">Esta franja se actualiza agregando tarjetas nuevas arriba de la lista en el código; no jala contenido solo, pero mantenerla al día es tan simple como copiar y pegar una tarjeta.</p>
+
+    <span class="label" style="margin-top: 44px;">DÓNDE ESCRIBIMOS</span>
+    <p class="texto-parrafo" style="max-width: none; margin-bottom: 8px;">Miembros de nuestro equipo escriben columnas de opinión periódicas, analizando temas de coyuntura nacional e internacional desde marcos de estudios de paz y relaciones internacionales. Da clic en un medio para ver todo lo publicado ahí, o filtra por tema.</p>
+
+    <div class="medios-chips">
+      <a href="publicaciones-sol.html" class="medio-chip" style="--accent: var(--azul);">El Sol de México</a>
+      <a href="publicaciones-universal.html" class="medio-chip" style="--accent: var(--azul-oscuro);">El Universal</a>
+      <a href="publicaciones-nmas.html" class="medio-chip" style="--accent: var(--morado);">N+ Opinión</a>
+      <span class="medio-chip proximamente">Substack (próximamente)</span>
+    </div>
+
+    <div class="columnas-filtros" style="margin-top: 20px;">
       <div class="filtro-grupo">
         <span class="filtro-grupo-label">Tema</span>
         <button class="filtro-btn activo" type="button" data-filtro="tema" data-valor="todos">Todos</button>
@@ -81,8 +158,8 @@
     </div>
 
     <div class="columnas-grid" id="columnasGrid">
-      <div class="columna-card" data-medio="sol" data-tema="mexico">
-        <div class="columna-medio" style="--accent: var(--azul);">EL SOL DE MÉXICO</div>
+      <div class="columna-card" data-tema="mexico">
+        <a href="publicaciones-sol.html" class="columna-medio" style="--accent: var(--azul);">EL SOL DE MÉXICO</a>
         <div class="columna-contenido">
           <span class="columna-tema-tag">México</span>
           <h3>[Título de la columna]</h3>
@@ -92,8 +169,8 @@
           </div>
         </div>
       </div>
-      <div class="columna-card" data-medio="universal" data-tema="geopolitica">
-        <div class="columna-medio" style="--accent: var(--azul-oscuro);">EL UNIVERSAL</div>
+      <div class="columna-card" data-tema="geopolitica">
+        <a href="publicaciones-universal.html" class="columna-medio" style="--accent: var(--azul-oscuro);">EL UNIVERSAL</a>
         <div class="columna-contenido">
           <span class="columna-tema-tag">Geopolítica</span>
           <h3>[Título de la columna]</h3>
@@ -103,8 +180,8 @@
           </div>
         </div>
       </div>
-      <div class="columna-card" data-medio="nmas" data-tema="reflexion">
-        <div class="columna-medio" style="--accent: var(--morado);">N+ OPINIÓN</div>
+      <div class="columna-card" data-tema="reflexion">
+        <a href="publicaciones-nmas.html" class="columna-medio" style="--accent: var(--morado);">N+ OPINIÓN</a>
         <div class="columna-contenido">
           <span class="columna-tema-tag">Reflexión</span>
           <h3>[Título de la columna]</h3>
@@ -115,45 +192,22 @@
         </div>
       </div>
     </div>
-    <p class="columnas-sin-resultados" id="columnasSinResultados" hidden>No hay columnas con esa combinación de filtros todavía.</p>
+    <p class="columnas-sin-resultados" id="columnasSinResultados" hidden>No hay columnas con ese tema todavía.</p>
 
     <span class="label" style="margin-top: 48px;">POR AUTOR</span>
-    <div class="columnistas-grid">
-      <div class="columnista-card">
-        <div class="columnista-header">
-          <div class="columnista-foto"><img src="img/mauricio-meschoulam.jpg" alt="Mauricio Meschoulam"></div>
-          <div>
-            <p class="columnista-nombre">Mauricio Meschoulam</p>
-            <p class="columnista-medio">El Sol de México · El Universal · N+ Opinión</p>
-          </div>
-        </div>
-        <ul class="columnista-entradas">
-          <li><a href="#"><span>[Título de la columna]</span><span class="fecha">[mes, año]</span></a></li>
-          <li><a href="#"><span>[Título de la columna]</span><span class="fecha">[mes, año]</span></a></li>
-          <li><a href="#"><span>[Título de la columna]</span><span class="fecha">[mes, año]</span></a></li>
-        </ul>
-      </div>
-
-      <div class="columnista-card">
-        <div class="columnista-header">
-          <div class="columnista-foto"><img src="img/daniela-manzanarez.jpg" alt="Daniela Manzanarez"></div>
-          <div>
-            <p class="columnista-nombre">Daniela Manzanarez</p>
-            <p class="columnista-medio">El Sol de México</p>
-          </div>
-        </div>
-        <ul class="columnista-entradas">
-          <li><a href="#"><span>[Título de la columna]</span><span class="fecha">[mes, año]</span></a></li>
-          <li><a href="#"><span>[Título de la columna]</span><span class="fecha">[mes, año]</span></a></li>
-          <li><a href="#"><span>[Título de la columna]</span><span class="fecha">[mes, año]</span></a></li>
-        </ul>
-      </div>
+    <p class="texto-parrafo" style="max-width: none; margin-bottom: 4px;">Da clic en cada quien para ver todo lo que ha publicado o en lo que ha participado, sin dividir por tipo.</p>
+    <div class="autores-chips">
+      <a href="semblanza-mauricio.html" class="autor-chip">
+        <div class="autor-chip-foto"><img src="img/mauricio-meschoulam.jpg" alt="Mauricio Meschoulam"></div>
+        <span>Mauricio Meschoulam</span>
+      </a>
+      <a href="semblanza-daniela.html" class="autor-chip">
+        <div class="autor-chip-foto"><img src="img/daniela-manzanarez.jpg" alt="Daniela Manzanarez"></div>
+        <span>Daniela Manzanarez</span>
+      </a>
+      <span class="autor-credito">[Nombre de ex colaborador/a]</span>
     </div>
-
-    <div class="columnista-proximamente">
-      <i class="ti ti-rss" aria-hidden="true"></i>
-      <p><strong>Próximamente en Substack.</strong> Estamos preparando un espacio propio para análisis más largos y reflexiones que no caben en el formato de columna.</p>
-    </div>
+    <p class="autores-nota">Algunas columnas e investigaciones fueron escritas por personas que ya no forman parte del equipo. No tienen página propia, pero aparecen con crédito (nombre sin liga) en cada publicación en la que participaron.</p>
   </div>
 </div>
 
@@ -205,29 +259,17 @@ window.addEventListener('scroll', function () {
   var sinResultados = document.getElementById('columnasSinResultados');
   if (!cards.length) return;
 
-  var medioActivo = 'todos';
   var temaActivo = 'todos';
 
   function aplicarFiltros() {
     var visibles = 0;
     cards.forEach(function (card) {
-      var coincideMedio = medioActivo === 'todos' || card.getAttribute('data-medio') === medioActivo;
       var coincideTema = temaActivo === 'todos' || card.getAttribute('data-tema') === temaActivo;
-      var mostrar = coincideMedio && coincideTema;
-      card.classList.toggle('oculta', !mostrar);
-      if (mostrar) visibles += 1;
+      card.classList.toggle('oculta', !coincideTema);
+      if (coincideTema) visibles += 1;
     });
     if (sinResultados) sinResultados.hidden = visibles > 0;
   }
-
-  document.querySelectorAll('.filtro-btn[data-filtro="medio"]').forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      document.querySelectorAll('.filtro-btn[data-filtro="medio"]').forEach(function (b) { b.classList.remove('activo'); });
-      btn.classList.add('activo');
-      medioActivo = btn.getAttribute('data-valor');
-      aplicarFiltros();
-    });
-  });
 
   document.querySelectorAll('.filtro-btn[data-filtro="tema"]').forEach(function (btn) {
     btn.addEventListener('click', function () {

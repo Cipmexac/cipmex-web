@@ -555,3 +555,39 @@ footer.rico { background: var(--azul); padding: 32px 0; margin-top: 8px; }
   .columnas-grid { grid-template-columns: 1fr; }
   .columnistas-grid { grid-template-columns: 1fr; }
 }
+
+/* Columnas de opinión: franja de "publicaciones más recientes" (mismo mecanismo que .marquee, tarjetas en vez de logos) */
+.recientes-marquee-wrap { overflow: hidden; margin-top: 20px; -webkit-mask-image: linear-gradient(90deg, transparent, black 32px, black calc(100% - 32px), transparent); mask-image: linear-gradient(90deg, transparent, black 32px, black calc(100% - 32px), transparent); }
+.recientes-marquee { display: flex; gap: 16px; width: max-content; animation: scroll-marquee 40s linear infinite; }
+.recientes-marquee-wrap:hover .recientes-marquee { animation-play-state: paused; }
+.recientes-card { flex-shrink: 0; width: 210px; white-space: normal; border: 1.5px solid var(--borde); border-radius: 12px; overflow: hidden; background: white; text-decoration: none; transition: box-shadow 0.2s ease, border-color 0.2s ease; }
+.recientes-card:hover { box-shadow: 0 10px 22px rgba(8,69,140,0.14); border-color: var(--terracota); }
+.recientes-card-medio { color: white; font-family: 'Roboto Mono', monospace; font-size: 10px; font-weight: 700; letter-spacing: 0.03em; padding: 8px 14px; }
+.recientes-card-cuerpo { padding: 14px 16px 16px; }
+.recientes-card-cuerpo h4 { font-size: 13px; font-weight: 600; color: var(--gris); margin: 0 0 6px; line-height: 1.4; }
+.recientes-card-fecha { font-family: 'Roboto Mono', monospace; font-size: 10.5px; color: var(--texto-muted); margin: 0; }
+
+/* Columnas de opinión: chips de medio (dan clic y llevan a la página propia de cada medio) */
+.medios-chips { display: flex; flex-wrap: wrap; gap: 10px; margin: 20px 0 4px; }
+.medio-chip { display: inline-flex; align-items: center; gap: 8px; border: 1.5px solid var(--borde); background: white; color: var(--gris); font-size: 13px; font-weight: 700; padding: 10px 18px; border-radius: 20px; text-decoration: none; transition: border-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease; }
+.medio-chip::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--accent, var(--azul)); flex-shrink: 0; }
+.medio-chip:hover { border-color: var(--accent, var(--azul)); color: var(--accent, var(--azul)); box-shadow: 0 6px 16px rgba(8,69,140,0.12); }
+.medio-chip.proximamente { color: var(--texto-muted); cursor: default; opacity: 0.75; }
+.medio-chip.proximamente::before { background: var(--texto-muted); }
+.medio-chip.proximamente:hover { border-color: var(--borde); color: var(--texto-muted); box-shadow: none; }
+
+/* Columnas de opinión: "Por autor" — carita + nombre, da clic y va a la semblanza de esa persona */
+.autores-chips { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 16px; }
+.autor-chip { display: flex; align-items: center; gap: 10px; text-decoration: none; border: 1.5px solid var(--borde); border-radius: 40px; padding: 6px 18px 6px 6px; background: white; transition: border-color 0.2s ease, box-shadow 0.2s ease; }
+.autor-chip:hover { border-color: var(--terracota); box-shadow: 0 8px 18px rgba(8,69,140,0.14); }
+.autor-chip-foto { width: 40px; height: 40px; border-radius: 50%; overflow: hidden; flex-shrink: 0; background: var(--fondo-card); }
+.autor-chip-foto img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.autor-chip span { font-size: 13.5px; font-weight: 700; color: var(--azul); }
+
+/* Crédito para autores que ya no están en el equipo: sin foto, sin liga, sin página propia — solo reconocimiento */
+.autor-credito { display: inline-flex; align-items: center; border: 1.5px dashed var(--borde); border-radius: 40px; padding: 8px 18px; font-size: 13px; color: var(--texto-muted); font-weight: 600; background: transparent; }
+.autores-nota { font-size: 12.5px; color: var(--texto-muted); margin-top: 14px; max-width: 640px; }
+
+@media (max-width: 720px) {
+  .recientes-card { width: 180px; }
+}
