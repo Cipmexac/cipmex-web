@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.33.0/dist/tabler-icons.min.css">
-<link rel="stylesheet" href="style.css?v=30">
+<link rel="stylesheet" href="style.css?v=31">
 </head>
 <body>
 
@@ -28,7 +28,15 @@
             <a href="que-es-la-paz.html">¿Qué es la paz?</a>
           </div>
         </li>
-        <li><a href="publicaciones.html" class="activo">Publicaciones</a></li>
+        <li class="nav-item-dropdown activo">
+          <span>Publicaciones</span>
+          <div class="dropdown-menu">
+            <a href="publicaciones.html">Todas las publicaciones</a>
+            <a href="publicaciones-columnas.html">Columnas de opinión</a>
+            <a href="publicaciones-investigacion.html">Publicaciones e investigación</a>
+            <a href="publicaciones-lecturas.html">Lecturas comentadas</a>
+          </div>
+        </li>
         <li><a href="case-studies.html">Case studies</a></li>
         <li><a href="contacto.html">Contacto</a></li>
       </ul>
@@ -52,15 +60,71 @@
 <div class="mini-grid">
   <div class="contenedor">
     <span class="label">DÓNDE ESCRIBIMOS</span>
-    <p class="texto-parrafo" style="max-width: none; margin-bottom: 8px;">Miembros de nuestro equipo escriben columnas de opinión periódicas, analizando temas de coyuntura nacional e internacional desde marcos de estudios de paz y relaciones internacionales.</p>
+    <p class="texto-parrafo" style="max-width: none; margin-bottom: 8px;">Miembros de nuestro equipo escriben columnas de opinión periódicas, analizando temas de coyuntura nacional e internacional desde marcos de estudios de paz y relaciones internacionales. Publicamos en distintos medios y sobre distintos temas; usa los filtros para encontrar lo que buscas.</p>
 
+    <div class="columnas-filtros">
+      <div class="filtro-grupo">
+        <span class="filtro-grupo-label">Medio</span>
+        <button class="filtro-btn activo" type="button" data-filtro="medio" data-valor="todos">Todos</button>
+        <button class="filtro-btn" type="button" data-filtro="medio" data-valor="sol">El Sol de México</button>
+        <button class="filtro-btn" type="button" data-filtro="medio" data-valor="universal">El Universal</button>
+        <button class="filtro-btn" type="button" data-filtro="medio" data-valor="nmas">N+ Opinión</button>
+      </div>
+      <div class="filtro-grupo">
+        <span class="filtro-grupo-label">Tema</span>
+        <button class="filtro-btn activo" type="button" data-filtro="tema" data-valor="todos">Todos</button>
+        <button class="filtro-btn" type="button" data-filtro="tema" data-valor="mexico">México</button>
+        <button class="filtro-btn" type="button" data-filtro="tema" data-valor="mundo">Mundo</button>
+        <button class="filtro-btn" type="button" data-filtro="tema" data-valor="geopolitica">Geopolítica</button>
+        <button class="filtro-btn" type="button" data-filtro="tema" data-valor="reflexion">Reflexión</button>
+      </div>
+    </div>
+
+    <div class="columnas-grid" id="columnasGrid">
+      <div class="columna-card" data-medio="sol" data-tema="mexico">
+        <div class="columna-medio" style="--accent: var(--azul);">EL SOL DE MÉXICO</div>
+        <div class="columna-contenido">
+          <span class="columna-tema-tag">México</span>
+          <h3>[Título de la columna]</h3>
+          <div class="columna-meta">
+            <span>Daniela Manzanarez · [mes, año]</span>
+            <a href="#">Leer →</a>
+          </div>
+        </div>
+      </div>
+      <div class="columna-card" data-medio="universal" data-tema="geopolitica">
+        <div class="columna-medio" style="--accent: var(--azul-oscuro);">EL UNIVERSAL</div>
+        <div class="columna-contenido">
+          <span class="columna-tema-tag">Geopolítica</span>
+          <h3>[Título de la columna]</h3>
+          <div class="columna-meta">
+            <span>Mauricio Meschoulam · [mes, año]</span>
+            <a href="#">Leer →</a>
+          </div>
+        </div>
+      </div>
+      <div class="columna-card" data-medio="nmas" data-tema="reflexion">
+        <div class="columna-medio" style="--accent: var(--morado);">N+ OPINIÓN</div>
+        <div class="columna-contenido">
+          <span class="columna-tema-tag">Reflexión</span>
+          <h3>[Título de la columna]</h3>
+          <div class="columna-meta">
+            <span>Mauricio Meschoulam · [mes, año]</span>
+            <a href="#">Leer →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="columnas-sin-resultados" id="columnasSinResultados" hidden>No hay columnas con esa combinación de filtros todavía.</p>
+
+    <span class="label" style="margin-top: 48px;">POR AUTOR</span>
     <div class="columnistas-grid">
       <div class="columnista-card">
         <div class="columnista-header">
           <div class="columnista-foto"><img src="img/mauricio-meschoulam.jpg" alt="Mauricio Meschoulam"></div>
           <div>
             <p class="columnista-nombre">Mauricio Meschoulam</p>
-            <p class="columnista-medio">El Sol de México</p>
+            <p class="columnista-medio">El Sol de México · El Universal · N+ Opinión</p>
           </div>
         </div>
         <ul class="columnista-entradas">
@@ -135,6 +199,45 @@ window.addEventListener('scroll', function () {
   var hw = document.getElementById('headerWrap');
   if (window.scrollY > 20) { hw.classList.add('scrolled'); } else { hw.classList.remove('scrolled'); }
 });
+
+(function () {
+  var cards = document.querySelectorAll('.columna-card');
+  var sinResultados = document.getElementById('columnasSinResultados');
+  if (!cards.length) return;
+
+  var medioActivo = 'todos';
+  var temaActivo = 'todos';
+
+  function aplicarFiltros() {
+    var visibles = 0;
+    cards.forEach(function (card) {
+      var coincideMedio = medioActivo === 'todos' || card.getAttribute('data-medio') === medioActivo;
+      var coincideTema = temaActivo === 'todos' || card.getAttribute('data-tema') === temaActivo;
+      var mostrar = coincideMedio && coincideTema;
+      card.classList.toggle('oculta', !mostrar);
+      if (mostrar) visibles += 1;
+    });
+    if (sinResultados) sinResultados.hidden = visibles > 0;
+  }
+
+  document.querySelectorAll('.filtro-btn[data-filtro="medio"]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      document.querySelectorAll('.filtro-btn[data-filtro="medio"]').forEach(function (b) { b.classList.remove('activo'); });
+      btn.classList.add('activo');
+      medioActivo = btn.getAttribute('data-valor');
+      aplicarFiltros();
+    });
+  });
+
+  document.querySelectorAll('.filtro-btn[data-filtro="tema"]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      document.querySelectorAll('.filtro-btn[data-filtro="tema"]').forEach(function (b) { b.classList.remove('activo'); });
+      btn.classList.add('activo');
+      temaActivo = btn.getAttribute('data-valor');
+      aplicarFiltros();
+    });
+  });
+})();
 </script>
 
 </body>
