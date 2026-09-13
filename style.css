@@ -17,9 +17,13 @@ body { font-family: 'Inter', sans-serif; color: var(--gris); background: var(--f
 .mono { font-family: 'Roboto Mono', monospace; }
 .contenedor { max-width: 1040px; margin: 0 auto; padding: 0 28px; }
 
-header { display: flex; align-items: center; justify-content: space-between; padding: 20px 0; border-bottom: 0.5px solid var(--borde); }
+/* Header pegajoso: normal arriba, se vuelve translúcido con blur al hacer scroll */
+.header-wrap { position: sticky; top: 0; z-index: 50; background: white; transition: background 0.3s ease, box-shadow 0.3s ease, backdrop-filter 0.3s ease; }
+.header-wrap.scrolled { background: rgba(255,255,255,0.82); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); box-shadow: 0 2px 16px rgba(8,69,140,0.08); }
+header { display: flex; align-items: center; justify-content: space-between; padding: 12px 0; border-bottom: 0.5px solid var(--borde); }
 .logo { display: flex; align-items: center; text-decoration: none; }
-.logo img { height: 100px; display: block; }
+.logo img { height: 84px; display: block; transition: height 0.2s ease; }
+.header-wrap.scrolled .logo img { height: 62px; }
 nav ul { list-style: none; display: flex; gap: 28px; align-items: center; }
 nav a { text-decoration: none; color: var(--gris); font-size: 14px; }
 nav a:hover, nav a.activo { color: var(--azul); }
@@ -28,7 +32,7 @@ nav a:hover, nav a.activo { color: var(--azul); }
 .btn-inv { display: inline-block; background: transparent; border: 1.5px solid var(--terracota); color: white; padding: 10px 20px; border-radius: 6px; font-size: 13px; font-weight: 600; cursor: pointer; text-decoration: none; transition: background 0.2s ease, color 0.2s ease; font-family: 'Inter', sans-serif; }
 .btn-inv:hover { background: var(--terracota); color: var(--azul); }
 
-/* Menú desplegable, Sobre nosotros */
+/* Menú desplegable, Sobre nosotros — igual en todas las páginas */
 .nav-item-dropdown { position: relative; cursor: pointer; }
 .nav-item-dropdown > span { font-size: 14px; color: var(--gris); }
 .nav-item-dropdown:hover > span, .nav-item-dropdown.activo > span { color: var(--azul); }
