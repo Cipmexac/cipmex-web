@@ -311,7 +311,22 @@ window.addEventListener('scroll', function () {
   var hw = document.getElementById('headerWrap');
   if (window.scrollY > 20) { hw.classList.add('scrolled'); } else { hw.classList.remove('scrolled'); }
 });
-</script>
 
-</body>
-</html>
+(function () {
+  var items = document.querySelectorAll('.servicio-item');
+  if (!items.length) return;
+  if (!('IntersectionObserver' in window)) {
+    items.forEach(function (el) { el.classList.add('visible'); });
+    return;
+  }
+  var obs = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        obs.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  items.forEach(function (el) { obs.observe(el); });
+})();
+</script>
