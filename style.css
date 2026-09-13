@@ -204,10 +204,13 @@ footer.rico { background: var(--azul); padding: 32px 0; margin-top: 8px; }
 .trabajo-card .trabajo-titulo { font-size: 15px; font-weight: 700; color: var(--azul); margin: 0 0 6px; }
 .trabajo-card .trabajo-desc { font-size: 14px; color: var(--texto-muted); line-height: 1.6; margin: 0; }
 
-.servicios-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px 20px; margin-top: 18px; }
+.servicios-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 18px; }
+.servicio-item { border: 1.5px solid var(--borde); border-radius: 12px; padding: 20px; transition: box-shadow 0.2s ease, border-color 0.2s ease, transform 0.2s ease; }
+.servicio-item:hover { box-shadow: 0 10px 24px rgba(8,69,140,0.14); border-color: var(--accent, var(--terracota)); transform: translateY(-3px); }
+.servicio-item .servicio-icono { width: 38px; height: 38px; border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 12px; background: var(--accent, var(--azul)); }
+.servicio-item .servicio-icono i { color: white; font-size: 17px; }
 .servicio-item h4 { font-size: 15px; font-weight: 700; color: var(--azul); margin-bottom: 6px; }
 .servicio-item p { font-size: 13.5px; color: var(--texto-muted); line-height: 1.6; margin: 0; }
-
 .marquee-bloque { background: white; padding: 40px 24px; }
 
 .cs-mini-grid { background: white; padding: 40px 24px; }
