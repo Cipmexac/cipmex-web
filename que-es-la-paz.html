@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.33.0/dist/tabler-icons.min.css">
-<link rel="stylesheet" href="style.css?v=24">
+<link rel="stylesheet" href="style.css?v=25">
 </head>
 <body>
 
@@ -38,18 +38,25 @@
 </div>
 </div>
 
-<div class="banner-pagina">
+<div class="hero">
   <div class="contenedor">
-    <div class="hero-kicker">
-      <div class="barra"></div>
-      <p>NUESTRO MARCO CONCEPTUAL</p>
+    <div class="hero-flex">
+      <div class="hero-texto" style="padding: 56px 0;">
+        <div class="hero-kicker">
+          <div class="barra"></div>
+          <p>NUESTRO MARCO CONCEPTUAL</p>
+        </div>
+        <h1 style="font-size: 32px; margin-bottom: 0;">¿Qué es la paz para CIPMEX?</h1>
+      </div>
+      <div class="hero-foto degradado-suave">
+        <span>FOTO</span>
+      </div>
     </div>
-    <h1>¿Qué es la paz para CIPMEX?</h1>
   </div>
 </div>
 
 <div class="contenedor" style="padding: 40px 0 8px;">
-  <p class="texto-parrafo" style="font-size: 16px; max-width: 720px;">En el Centro de Investigación para la Paz México compartimos la visión de un buen número de pensadores e instituciones dedicadas a los estudios de paz: entendemos la paz en un sentido más amplio que la simple ausencia de violencia. Para nosotros, la paz está compuesta por elementos políticos, económicos, sociales, culturales y psicológicos que promueven la cohesión, la integración y la colaboración dentro de las sociedades.</p>
+  <p class="texto-parrafo" style="font-size: 16px; max-width: none; text-align: justify;">En el Centro de Investigación para la Paz México compartimos la visión de un buen número de pensadores e instituciones dedicadas a los estudios de paz: entendemos la paz en un sentido más amplio que la simple ausencia de violencia. Para nosotros, la paz está compuesta por elementos políticos, económicos, sociales, culturales y psicológicos que promueven la cohesión, la integración y la colaboración dentro de las sociedades.</p>
 </div>
 
 <div class="mini-grid" style="border-top: none; padding-top: 12px;">
@@ -66,7 +73,7 @@
         <p class="trabajo-desc">Exclusión y desigualdad, corrupción y opacidad, polarización y desconfianza.</p>
       </div>
     </div>
-    <p class="texto-parrafo" style="max-width: none; margin-top: 20px;">Todo lo que integra a una sociedad lo entendemos como un constructor de paz. Todo lo que la desintegra, como un disruptor. En CIPMEX estudiamos ambos tipos de elementos.</p>
+    <p class="texto-parrafo" style="max-width: none; margin-top: 20px; text-align: justify;">Todo lo que integra a una sociedad lo entendemos como un constructor de paz. Todo lo que la desintegra, como un disruptor. En CIPMEX estudiamos ambos tipos de elementos.</p>
   </div>
 </div>
 
@@ -102,7 +109,7 @@
 <div class="contenedor" style="padding: 8px 0;">
   <div class="cita-galtung">
     <i class="ti ti-quotes cita-icono" aria-hidden="true"></i>
-    <div class="cita-foto" style="background: linear-gradient(135deg, var(--azul-claro), var(--morado));"><span>FOTO</span></div>
+    <div class="cita-foto cita-foto-grande" style="background: linear-gradient(135deg, var(--azul-claro), var(--morado));"><span>FOTO</span></div>
     <p class="cita-texto">Si de verdad queremos que la paz dure, no basta con detener la violencia: hay que construir las condiciones que la vuelvan innecesaria.</p>
     <span class="cita-autor">Concepto de Johan Galtung</span>
     <span class="cita-rol">Fundador de los estudios de paz</span>
@@ -135,17 +142,92 @@
         <div data-tipo-panel="directa">
           <h3 style="color: var(--terracota);">Violencia directa</h3>
           <p>Es la más visible: un daño físico o psicológico que una persona o un grupo ejerce sobre otra, de forma identificable.</p>
-          <div class="violencia-ejemplo"><strong>Ejemplo:</strong> un asalto, un homicidio, un secuestro.</div>
+          <div class="violencia-fichas">
+            <div class="card ficha-caso" style="--accent: var(--terracota);">
+              <div class="ficha-foto" style="background: linear-gradient(135deg, var(--terracota), var(--azul-oscuro));"><span>FOTO</span></div>
+              <div class="ficha-contenido">
+                <h4>Genocidio en Ruanda (1994)</h4>
+                <p class="ficha-desc">En apenas cien días, cerca de 800 mil personas, en su mayoría de la etnia tutsi, fueron asesinadas.</p>
+                <p class="ficha-fuente">Fuente: <a href="https://www.un.org/en/preventgenocide/rwanda/" target="_blank" rel="noopener">Naciones Unidas</a></p>
+              </div>
+            </div>
+            <div class="card ficha-caso" style="--accent: var(--terracota);">
+              <div class="ficha-foto" style="background: linear-gradient(135deg, var(--gris), var(--azul-oscuro));"><span>FOTO</span></div>
+              <div class="ficha-contenido">
+                <h4>Masacre de Srebrenica (1995)</h4>
+                <p class="ficha-desc">Más de 8,000 hombres y niños bosnios musulmanes fueron asesinados durante la guerra de Bosnia.</p>
+                <p class="ficha-fuente">Fuente: <a href="https://www.icty.org/en/press/seven-senior-bosnian-serb-officials-convicted-srebrenica-crimes" target="_blank" rel="noopener">Tribunal Penal Internacional para la ex Yugoslavia</a></p>
+              </div>
+            </div>
+            <div class="card ficha-caso" style="--accent: var(--terracota);">
+              <div class="ficha-foto" style="background: linear-gradient(135deg, var(--terracota), var(--morado));"><span>FOTO</span></div>
+              <div class="ficha-contenido">
+                <h4>Hiroshima y Nagasaki (1945)</h4>
+                <p class="ficha-desc">Los bombardeos nucleares mataron a un estimado de 200 mil personas, la mayoría civiles.</p>
+                <p class="ficha-fuente">Fuente: <a href="https://www.icrc.org/en/article/hiroshima-80-years-humanitarian-imperative-eliminate-nuclear-weapons" target="_blank" rel="noopener">Comité Internacional de la Cruz Roja</a></p>
+              </div>
+            </div>
+          </div>
         </div>
         <div data-tipo-panel="estructural" hidden>
           <h3 style="color: var(--morado);">Violencia estructural</h3>
           <p>Es la desigualdad y la exclusión que quedan incrustadas en las instituciones y en la forma en que se reparten los recursos, sin que haya siempre un agresor identificable.</p>
-          <div class="violencia-ejemplo"><strong>Ejemplo:</strong> la falta de acceso a servicios de salud en ciertas zonas, o un sistema judicial que trata distinto según el nivel socioeconómico.</div>
+          <div class="violencia-fichas">
+            <div class="card ficha-caso" style="--accent: var(--morado);">
+              <div class="ficha-foto" style="background: linear-gradient(135deg, var(--morado), var(--azul-oscuro));"><span>FOTO</span></div>
+              <div class="ficha-contenido">
+                <h4>Apartheid en Sudáfrica (1948–1994)</h4>
+                <p class="ficha-desc">Un sistema legal que segregaba a la población por raza y limitaba su acceso a educación, vivienda y empleo, sin que hiciera falta un acto de violencia física para sostenerlo día a día.</p>
+                <p class="ficha-fuente">Fuente: <a href="https://sahistory.org.za/article/truth-and-reconciliation-commission-trc-0" target="_blank" rel="noopener">South African History Online</a></p>
+              </div>
+            </div>
+            <div class="card ficha-caso" style="--accent: var(--morado);">
+              <div class="ficha-foto" style="background: linear-gradient(135deg, var(--azul), var(--morado));"><span>FOTO</span></div>
+              <div class="ficha-contenido">
+                <h4>Leyes Jim Crow en Estados Unidos (1877–1965)</h4>
+                <p class="ficha-desc">Un conjunto de leyes estatales y locales que institucionalizaron la segregación racial en el sur de Estados Unidos durante casi un siglo.</p>
+                <p class="ficha-fuente">Fuente: <a href="https://segregationinamerica.eji.org/report/how-segregation-survived.html" target="_blank" rel="noopener">Equal Justice Initiative</a></p>
+              </div>
+            </div>
+            <div class="card ficha-caso" style="--accent: var(--morado);">
+              <div class="ficha-foto" style="background: linear-gradient(135deg, var(--verde), var(--morado));"><span>FOTO</span></div>
+              <div class="ficha-contenido">
+                <h4>Brechas en el acceso a la salud</h4>
+                <p class="ficha-desc">La OMS documenta cómo el lugar de nacimiento, el ingreso y la educación siguen determinando las probabilidades de vivir una vida larga y saludable.</p>
+                <p class="ficha-fuente">Fuente: <a href="https://www.who.int/publications/i/item/WHO-IER-CSDH-08.1" target="_blank" rel="noopener">Organización Mundial de la Salud</a></p>
+              </div>
+            </div>
+          </div>
         </div>
         <div data-tipo-panel="cultural" hidden>
           <h3 style="color: var(--azul);">Violencia cultural</h3>
           <p>Son las creencias, normas y discursos que legitiman a las otras dos. Abren la puerta para que la violencia directa y la estructural se sostengan en el tiempo.</p>
-          <div class="violencia-ejemplo"><strong>Ejemplo:</strong> normalizar el uso de la fuerza para resolver conflictos, o discursos que deshumanizan a un grupo entero.</div>
+          <div class="violencia-fichas">
+            <div class="card ficha-caso" style="--accent: var(--azul);">
+              <div class="ficha-foto" style="background: linear-gradient(135deg, var(--azul), var(--terracota));"><span>FOTO</span></div>
+              <div class="ficha-contenido">
+                <h4>Radio Télévision Libre des Mille Collines</h4>
+                <p class="ficha-desc">Antes y durante el genocidio en Ruanda, esta radio difundió mensajes que deshumanizaban a la población tutsi.</p>
+                <p class="ficha-fuente">Fuente: <a href="https://unictr.irmct.org/en/news/three-media-leaders-convicted-genocide" target="_blank" rel="noopener">Tribunal Penal Internacional para Ruanda (ONU)</a></p>
+              </div>
+            </div>
+            <div class="card ficha-caso" style="--accent: var(--azul);">
+              <div class="ficha-foto" style="background: linear-gradient(135deg, var(--azul-oscuro), var(--gris));"><span>FOTO</span></div>
+              <div class="ficha-contenido">
+                <h4>Propaganda nazi contra la población judía (1933–1945)</h4>
+                <p class="ficha-desc">El régimen nazi construyó durante años una narrativa que presentaba a la población judía como una amenaza, sentando las bases culturales para las políticas de exterminio que vinieron después.</p>
+                <p class="ficha-fuente">Fuente: <a href="https://encyclopedia.ushmm.org/content/en/article/nazi-propaganda" target="_blank" rel="noopener">United States Holocaust Memorial Museum</a></p>
+              </div>
+            </div>
+            <div class="card ficha-caso" style="--accent: var(--azul);">
+              <div class="ficha-foto" style="background: linear-gradient(135deg, var(--azul-claro), var(--terracota));"><span>FOTO</span></div>
+              <div class="ficha-contenido">
+                <h4>Normalización mediática de la violencia de género</h4>
+                <p class="ficha-desc">Distintos estudios documentan cómo ciertos discursos y contenidos mediáticos minimizan la violencia contra las mujeres, dificultando que se reconozca como un problema estructural.</p>
+                <p class="ficha-fuente">Fuente: <a href="https://www.unwomen.org/en/what-we-do/ending-violence-against-women" target="_blank" rel="noopener">ONU Mujeres</a></p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -265,18 +347,19 @@
 <div class="mini-grid">
   <div class="contenedor" style="max-width: 760px;">
     <span class="label">PON A PRUEBA LO QUE APRENDISTE</span>
-    <p class="texto-parrafo" style="max-width: none; margin-bottom: 20px;">Estos son momentos reales de la historia reciente, no necesariamente ligados al trabajo de CIPMEX. Léelos y decide: ¿crees que se resolvieron con paz negativa o con paz positiva? La paz rara vez es blanco o negro, pero sí hay pistas que ayudan a distinguir una de otra.</p>
+    <p class="texto-parrafo" style="max-width: none; margin-bottom: 20px;">Estos son casos documentados de la historia reciente, no necesariamente ligados al trabajo de CIPMEX. Analiza cada uno y decide: ¿lo leerías como un ejercicio de paz negativa o de paz positiva? La paz rara vez es blanco o negro, pero hay pistas que ayudan a distinguir una de otra. Cada caso enlaza a una fuente donde puedes profundizar.</p>
 
     <div class="escenario-caja">
       <span class="escenario-kicker">CASO <span class="escenario-num">1</span> DE <span class="escenario-total">4</span></span>
       <p class="escenario-contexto"></p>
       <div class="escenario-botones">
-        <button class="escenario-btn" type="button" data-eleccion="negativa">Yo creo que fue paz negativa</button>
-        <button class="escenario-btn" type="button" data-eleccion="positiva">Yo creo que fue paz positiva</button>
+        <button class="escenario-btn" type="button" data-eleccion="negativa">Paz negativa</button>
+        <button class="escenario-btn" type="button" data-eleccion="positiva">Paz positiva</button>
       </div>
       <div class="escenario-respuesta">
         <span class="escenario-veredicto"></span>
         <p class="escenario-explicacion"></p>
+        <p class="escenario-profundiza"></p>
       </div>
       <button class="escenario-siguiente" type="button">Ver otro caso →</button>
     </div>
@@ -429,22 +512,30 @@ window.addEventListener('scroll', function () {
     {
       contexto: 'Guerra Fría (1947–1991): durante más de cuatro décadas, Estados Unidos y la Unión Soviética evitaron una guerra directa entre ellas, aunque la tensión y la carrera armamentista definieron buena parte del siglo XX.',
       veredicto: 'Sobre todo paz negativa',
-      explicacion: 'No hubo guerra directa entre las dos potencias, pero coexistieron con una carrera armamentista, guerras por delegación en otros países y una desconfianza estructural que nunca se resolvió. Se contuvo la violencia directa; las causas de fondo, no.'
+      explicacion: 'No hubo guerra directa entre las dos potencias, pero coexistieron con una carrera armamentista, guerras por delegación en otros países y una desconfianza estructural que nunca se resolvió. Se contuvo la violencia directa; las causas de fondo, no.',
+      fuenteUrl: 'https://www.wilsoncenter.org/publication-series/cwihp-bulletin',
+      fuenteNombre: 'Cold War International History Project, Wilson Center'
     },
     {
       contexto: 'Acuerdo de Viernes Santo, Irlanda del Norte (1998): tras casi tres décadas de conflicto armado conocido como "The Troubles", este acuerdo detuvo la violencia y además creó un gobierno compartido entre comunidades, impulsó el desarme y abrió reformas sociales.',
       veredicto: 'Un intento de paz positiva',
-      explicacion: 'El acuerdo no solo detuvo la violencia armada: también repartió el poder político y atendió parte de las causas de exclusión que alimentaban el conflicto. Persisten tensiones hasta hoy, pero cambió la estructura, no solo el nivel de violencia.'
+      explicacion: 'El acuerdo no solo detuvo la violencia armada: también repartió el poder político y atendió parte de las causas de exclusión que alimentaban el conflicto. Persisten tensiones hasta hoy, pero cambió la estructura, no solo el nivel de violencia.',
+      fuenteUrl: 'https://cain.ulster.ac.uk/events/peace/pp9899.htm',
+      fuenteNombre: 'CAIN Archive, Ulster University'
     },
     {
       contexto: 'Fin del apartheid y Comisión de la Verdad y la Reconciliación, Sudáfrica (1994–1998): el fin legal del apartheid vino acompañado de una nueva constitución, garantías de derechos y un proceso público para procesar los abusos del pasado.',
       veredicto: 'Paz positiva',
-      explicacion: 'Se atacaron las estructuras legales que sostenían la desigualdad racial, no solo los episodios de violencia directa. Las brechas económicas heredadas, sin embargo, siguen siendo un reto hasta hoy: la paz positiva es un proceso, no un punto final.'
+      explicacion: 'Se atacaron las estructuras legales que sostenían la desigualdad racial, no solo los episodios de violencia directa. Las brechas económicas heredadas, sin embargo, siguen siendo un reto hasta hoy: la paz positiva es un proceso, no un punto final.',
+      fuenteUrl: 'https://sahistory.org.za/article/truth-and-reconciliation-commission-trc-0',
+      fuenteNombre: 'South African History Online'
     },
     {
-      contexto: 'Altos al fuego sin reformas de fondo: en muchos conflictos armados alrededor del mundo, un alto el fuego ha silenciado las armas durante meses o años, sin ir acompañado de cambios en las instituciones o en la distribución de recursos que originaron el conflicto.',
+      contexto: 'Acuerdos de Bicesse, Angola (1991): tras años de guerra civil, este acuerdo de paz detuvo los combates y llevó a elecciones en 1992, pero no fue acompañado de reformas de fondo en la distribución del poder. Cuando la oposición rechazó los resultados, la guerra se reanudó y duró otra década.',
       veredicto: 'Paz negativa, y frágil',
-      explicacion: 'Se logra el objetivo más inmediato, detener la violencia, pero al no tocar las causas estructurales, este tipo de paz suele ser inestable y el conflicto puede reactivarse.'
+      explicacion: 'Se logró el objetivo más inmediato, detener la violencia, pero al no resolver las causas estructurales del conflicto, este tipo de paz resultó inestable y el conflicto se reactivó poco después.',
+      fuenteUrl: 'https://peaceaccords.nd.edu/accord/bicesse-accords',
+      fuenteNombre: 'Peace Accords Matrix, Kroc Institute'
     }
   ];
 
@@ -457,6 +548,7 @@ window.addEventListener('scroll', function () {
   var respuestaEl = caja.querySelector('.escenario-respuesta');
   var veredictoEl = caja.querySelector('.escenario-veredicto');
   var explicacionEl = caja.querySelector('.escenario-explicacion');
+  var profundizaEl = caja.querySelector('.escenario-profundiza');
   var btns = caja.querySelectorAll('.escenario-btn');
   var siguienteBtn = caja.querySelector('.escenario-siguiente');
 
@@ -468,8 +560,9 @@ window.addEventListener('scroll', function () {
     contextoEl.textContent = e.contexto;
     respuestaEl.classList.remove('visible');
     btns.forEach(function (b) { b.classList.remove('elegido'); });
-    veredictoEl.textContent = 'Así lo interpretamos: ' + e.veredicto;
+    veredictoEl.textContent = 'Una lectura posible: ' + e.veredicto;
     explicacionEl.textContent = e.explicacion;
+    profundizaEl.innerHTML = '¿Quieres profundizar? Lee más en <a href="' + e.fuenteUrl + '" target="_blank" rel="noopener">' + e.fuenteNombre + '</a>.';
   }
 
   btns.forEach(function (btn) {

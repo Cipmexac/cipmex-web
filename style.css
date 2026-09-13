@@ -413,3 +413,32 @@ footer.rico { background: var(--azul); padding: 32px 0; margin-top: 8px; }
   .pilares-grid { grid-template-columns: repeat(2, 1fr); }
   .escenario-btn { min-width: 100%; }
 }
+
+.escenario-profundiza { font-size: 13px; color: var(--texto-muted); margin: 12px 0 0; }
+.escenario-profundiza a { color: var(--azul); text-decoration: none; font-weight: 600; }
+.escenario-profundiza a:hover { color: var(--terracota); }
+
+/* Cita de Galtung en esta página: foto más grande que el default de .cita-foto */
+.cita-foto-grande { width: 168px; height: 168px; }
+
+/* Fichas técnicas de ejemplos reales dentro del explorador de violencia */
+.violencia-fichas { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 14px; margin-top: 4px; }
+.ficha-caso { overflow: hidden; cursor: default; }
+.ficha-caso .ficha-foto { width: 100%; aspect-ratio: 16 / 10; display: flex; align-items: center; justify-content: center; }
+.ficha-caso .ficha-foto span { font-size: 10px; color: white; font-family: 'Roboto Mono', monospace; }
+.ficha-caso .ficha-contenido { padding: 14px; }
+.ficha-caso h4 { font-size: 13.5px; font-weight: 700; margin: 0 0 6px; color: var(--gris); line-height: 1.35; }
+.ficha-caso p.ficha-desc { font-size: 12.5px; color: var(--texto-muted); line-height: 1.55; margin: 0 0 10px; }
+.ficha-caso p.ficha-fuente { font-size: 11px; color: var(--texto-muted); margin: 0; }
+.ficha-caso p.ficha-fuente a { color: var(--azul); text-decoration: none; font-weight: 600; }
+.ficha-caso p.ficha-fuente a:hover { color: var(--terracota); }
+
+@media (max-width: 720px) {
+  .cita-foto-grande { width: 120px; height: 120px; }
+}
+
+/* Banner con foto que se funde con el azul (usado en ¿Qué es la paz?) */
+.hero-foto.degradado-suave { position: relative; }
+.hero-foto.degradado-suave::before { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, var(--azul) 0%, rgba(8,69,140,0.65) 25%, rgba(8,69,140,0.15) 60%, rgba(8,69,140,0) 100%); z-index: 1; }
+.hero-foto.degradado-suave span { position: relative; z-index: 2; }
+.hero-foto.degradado-suave img { filter: saturate(1.05); }
