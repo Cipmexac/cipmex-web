@@ -281,3 +281,60 @@ footer.rico { background: var(--azul); padding: 32px 0; margin-top: 8px; }
   .servicios-grid { grid-template-columns: 1fr; }
   .titular-apertura { font-size: 24px; }
 }
+
+/* Banner simple de página interior (Equipo y similares) */
+.banner-pagina { background: var(--azul); padding: 64px 0; }
+.banner-pagina .hero-kicker { margin-bottom: 14px; }
+.banner-pagina h1 { color: white; font-size: 32px; font-weight: 700; margin: 0; max-width: 620px; }
+
+/* Página Equipo — usa la tarjeta que ya existe en el home (persona-card) en un grid completo */
+.equipo-grid-completo { display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px 20px; }
+.equipo-grid-completo .persona-card { width: 100%; opacity: 0; transform: scale(0.92); transition: opacity 0.5s ease, transform 0.35s ease; }
+.equipo-grid-completo .persona-card.visible { opacity: 1; transform: scale(1); }
+.equipo-grid-completo .persona-card:nth-child(odd) { transition-delay: 0s; }
+.equipo-grid-completo .persona-card:nth-child(even) { transition-delay: 0.08s; }
+.persona-card .foto-cuadrada img { transition: transform 0.5s ease; }
+.persona-card:hover .foto-cuadrada img { transform: scale(1.06); }
+.persona-card:hover .nombre-card { color: var(--accent, var(--azul)); }
+
+.equipo-cta { background: var(--fondo-card); border-radius: 16px; padding: 36px 24px; text-align: center; margin-top: 32px; }
+.equipo-cta p.equipo-cta-titulo { font-size: 17px; font-weight: 700; color: var(--azul); margin: 0 0 16px; }
+
+/* Página de semblanza individual */
+.semblanza-hero { display: flex; gap: 40px; align-items: center; padding: 40px 0 8px; flex-wrap: wrap; }
+.semblanza-hero-texto { flex: 1.2; min-width: 260px; }
+.semblanza-kicker { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+.semblanza-kicker .barra { width: 3px; height: 16px; background: var(--accent, var(--terracota)); }
+.semblanza-kicker span { font-family: 'Roboto Mono', monospace; font-size: 12px; color: var(--accent, var(--terracota)); letter-spacing: 0.03em; font-weight: 600; text-transform: uppercase; }
+.semblanza-hero-texto h1 { font-size: 32px; font-weight: 700; color: var(--azul); margin: 0 0 8px; }
+.semblanza-rol { font-family: 'Roboto Mono', monospace; font-size: 13px; color: var(--accent, var(--terracota)); text-transform: uppercase; letter-spacing: 0.02em; }
+.semblanza-foto { flex: 0.8; min-width: 220px; aspect-ratio: 4 / 5; max-width: 320px; border-radius: 20px; overflow: hidden; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, var(--accent, var(--azul)), var(--azul-oscuro)); box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
+.semblanza-foto span { font-size: 11px; color: rgba(255,255,255,0.7); font-family: 'Roboto Mono', monospace; }
+.semblanza-foto img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+.semblanza-bio { padding: 8px 0 32px; }
+.semblanza-bio h2 { font-size: 14px; text-transform: uppercase; letter-spacing: 0.04em; color: var(--azul); font-family: 'Roboto Mono', monospace; font-weight: 600; margin: 0 0 14px; }
+.semblanza-bio-texto { font-size: 15px; color: var(--gris); line-height: 1.8; max-width: 720px; }
+.semblanza-bio-texto.clamp { max-height: 4.9em; overflow: hidden; }
+.semblanza-leermas { display: inline-block; margin-top: 12px; font-size: 14px; color: var(--accent, var(--azul)); font-weight: 600; background: none; border: none; cursor: pointer; padding: 0; font-family: 'Inter', sans-serif; }
+.semblanza-leermas:hover { color: var(--terracota); }
+
+.semblanza-divisor { height: 1px; background: var(--borde); margin: 8px 0 32px; }
+.semblanza-pub-intro { font-size: 14px; color: var(--texto-muted); margin-bottom: 18px; }
+.semblanza-pub-intro strong { color: var(--gris); }
+
+.semblanza-pub-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.semblanza-pub-grid .card { overflow: hidden; }
+.semblanza-pub-grid .foto { width: 100%; height: 100px; display: flex; align-items: center; justify-content: center; }
+.semblanza-pub-grid .foto span { font-size: 10px; color: white; font-family: 'Roboto Mono', monospace; }
+.semblanza-pub-grid .contenido { padding: 14px; }
+.semblanza-pub-grid .etiqueta { font-family: 'Roboto Mono', monospace; font-size: 10px; }
+.semblanza-pub-grid h4 { font-size: 13.5px; font-weight: 700; margin: 8px 0 4px; color: var(--gris); }
+.semblanza-pub-grid p.desc { font-size: 12.5px; color: var(--texto-muted); line-height: 1.5; margin: 0; }
+
+@media (max-width: 720px) {
+  .semblanza-hero { padding-top: 24px; }
+  .semblanza-foto { max-width: 100%; }
+  .equipo-grid-completo { grid-template-columns: 1fr 1fr; }
+  .semblanza-pub-grid { grid-template-columns: 1fr; }
+}
