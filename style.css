@@ -102,13 +102,13 @@ section h2 { font-size: 20px; font-weight: 600; margin-bottom: 16px; color: var(
 .equipo-lista { display: flex; gap: 24px; overflow-x: auto; padding-bottom: 4px; align-items: center; }
 .persona { text-align: center; flex-shrink: 0; transition: transform 0.2s ease; cursor: pointer; }
 .persona:hover { transform: scale(1.1); }
-.persona .avatar { width: 54px; height: 54px; border-radius: 50%; object-fit: cover; }
+.persona .avatar { width: 54px; height: 54px; border-radius: 50%; object-fit: cover; overflow: hidden; display: block; }
 .persona p { font-size: 11px; margin-top: 6px; }
 
 /* Equipo, versión grid completo de Quiénes somos, con fotos reales */
 .equipo-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px 20px; margin-top: 20px; }
 .miembro { text-align: center; }
-.miembro .foto { width: 88px; height: 88px; border-radius: 50%; background: var(--fondo-card); object-fit: cover; display: block; margin: 0 auto 12px; }
+.miembro .foto { width: 88px; height: 88px; border-radius: 50%; background: var(--fondo-card); object-fit: cover; overflow: hidden; display: block; margin: 0 auto 12px; }
 .miembro .nombre { font-size: 14px; font-weight: 600; color: var(--gris); margin: 0 0 4px; }
 .miembro .rol { font-family: 'Roboto Mono', monospace; font-size: 11px; color: var(--terracota); margin: 0; }
 
