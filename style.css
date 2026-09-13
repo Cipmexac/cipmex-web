@@ -205,13 +205,17 @@ footer.rico { background: var(--azul); padding: 32px 0; margin-top: 8px; }
 .trabajo-card .trabajo-desc { font-size: 14px; color: var(--texto-muted); line-height: 1.6; margin: 0; }
 
 .servicios-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 18px; }
-.servicio-item { border: 1.5px solid var(--borde); border-radius: 12px; padding: 20px; transition: box-shadow 0.2s ease, border-color 0.2s ease, transform 0.2s ease; }
-.servicio-item:hover { box-shadow: 0 10px 24px rgba(8,69,140,0.14); border-color: var(--accent, var(--terracota)); transform: translateY(-3px); }
-.servicio-item .servicio-icono { width: 38px; height: 38px; border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 12px; background: var(--accent, var(--azul)); }
-.servicio-item .servicio-icono i { color: white; font-size: 17px; }
+.servicio-item { position: relative; overflow: hidden; border-radius: 14px; padding: 22px 20px 20px; border: 1.5px solid var(--borde); transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease; }
+.servicio-item::before { content: ""; position: absolute; inset: 0; background: var(--accent, var(--azul)); opacity: 0.06; z-index: 0; }
+.servicio-item:hover { transform: translateY(-5px); box-shadow: 0 14px 28px rgba(8,69,140,0.16); border-color: var(--accent, var(--terracota)); }
+.servicio-item > * { position: relative; z-index: 1; }
+.servicio-item .servicio-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px; }
+.servicio-item .servicio-icono { width: 44px; height: 44px; border-radius: 12px; display: flex; align-items: center; justify-content: center; background: var(--accent, var(--azul)); transition: transform 0.25s ease; }
+.servicio-item:hover .servicio-icono { transform: scale(1.08) rotate(-4deg); }
+.servicio-item .servicio-icono i { color: white; font-size: 20px; }
+.servicio-item .servicio-num { font-family: 'Roboto Mono', monospace; font-size: 12px; font-weight: 700; color: var(--accent, var(--azul)); opacity: 0.55; }
 .servicio-item h4 { font-size: 15px; font-weight: 700; color: var(--azul); margin-bottom: 6px; }
 .servicio-item p { font-size: 13.5px; color: var(--texto-muted); line-height: 1.6; margin: 0; }
-.marquee-bloque { background: white; padding: 40px 24px; }
 
 .cs-mini-grid { background: white; padding: 40px 24px; }
 .cs-mini-grid .grid-cs { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 14px; }
