@@ -197,3 +197,14 @@ footer.rico { background: var(--azul); padding: 32px 0; margin-top: 8px; }
   .footer-grid { grid-template-columns: 1fr; }
   .footer-sep { display: none; }
 }
+.avatar-wrap { width: 54px; height: 54px; border-radius: 50%; overflow: hidden; }
+.avatar-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+.foto-wrap { width: 88px; height: 88px; border-radius: 50%; overflow: hidden; margin: 0 auto 12px; }
+.foto-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+.footer-logo { display: flex; justify-content: center; margin-bottom: 24px; }
+.footer-logo img { height: 90px; }
+
+.footer-grid .redes { display: flex; gap: 12px; margin-top: 4px; }
+.footer-grid .redes a { display: flex; }
