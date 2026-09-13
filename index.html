@@ -5,70 +5,216 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CIPMEX · Centro de Investigación para la Paz México</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+<div class="linea-superior"></div>
+
+<div class="ticker-wrap">
+  <div class="ticker">
+    <span class="punto">◆</span><span class="texto">Nueva columna en El Sol de México, 14 ago</span>
+    <span class="punto">◆</span><span class="texto">11 años de investigación de campo en México</span>
+    <span class="punto">◆</span><span class="texto">14 publicaciones revisadas por pares</span>
+    <span class="punto">◆</span><span class="texto">Nueva columna en El Sol de México, 14 ago</span>
+    <span class="punto">◆</span><span class="texto">11 años de investigación de campo en México</span>
+  </div>
+</div>
+
 <div class="contenedor">
   <header>
     <a href="index.html" class="logo">
-      <img src="img/logo-cipmex-header.png" alt="CIPMEX">
+      <svg width="26" height="26" viewBox="0 0 26 26"><circle cx="13" cy="13" r="12" fill="none" stroke="#08458c" stroke-width="1.5"/><circle cx="13" cy="13" r="6" fill="#474746"/><circle cx="13" cy="3" r="1.6" fill="#474746"/><circle cx="21" cy="8" r="1.6" fill="#474746"/><circle cx="23" cy="17" r="1.6" fill="#474746"/><circle cx="16" cy="24" r="1.6" fill="#474746"/><circle cx="7" cy="23" r="1.6" fill="#474746"/><circle cx="2" cy="15" r="1.6" fill="#474746"/><circle cx="4" cy="6" r="1.6" fill="#474746"/></svg>
+      CIPMEX
     </a>
     <nav>
       <ul>
         <li><a href="index.html" class="activo">Inicio</a></li>
         <li><a href="quienes-somos.html">Quiénes somos</a></li>
-        <li><a href="equipo.html">Equipo</a></li>
         <li><a href="publicaciones.html">Publicaciones</a></li>
         <li><a href="case-studies.html">Case studies</a></li>
         <li><a href="contacto.html">Contacto</a></li>
       </ul>
     </nav>
-  </header>
-
-  <section class="hero-inicio">
-    <p class="kicker">Asociación Civil. Investigación de Campo. Rigor Académico.</p>
-    <h1>Durante once años hemos traducido la investigación sobre la falta de paz en México en decisiones concretas para gobiernos, empresas y organizaciones.</h1>
-  </section>
-
-  <section>
-    <p class="etiqueta-seccion">Nuestras áreas de trabajo</p>
-    <div class="grid-servicios">
-      <div class="servicio"><p class="titulo">Investigación</p><p class="desc">Documental y de campo</p></div>
-      <div class="servicio"><p class="titulo">Consultoría estratégica</p><p class="desc">Diagnósticos y recomendaciones</p></div>
-      <div class="servicio"><p class="titulo">Talleres</p><p class="desc">Negociación y resolución</p></div>
-      <div class="servicio"><p class="titulo">Educación para la paz</p><p class="desc">Programas para primaria</p></div>
-      <div class="servicio"><p class="titulo">Eventos</p><p class="desc">Mesas de diálogo</p></div>
-      <div class="servicio"><p class="titulo">Riesgo geopolítico</p><p class="desc">Análisis y acompañamiento</p></div>
-    </div>
-  </section>
-
-  <section>
-    <p class="etiqueta-seccion">Publicaciones recientes</p>
-    <div class="pub-lista">
-      <div class="pub-item">
-        <div class="foto"></div>
-        <div><span class="meta" style="color: var(--terracota);">Columna · 14 ago 2026</span><p class="titulo">Por qué se repiten las crisis</p></div>
-      </div>
-      <div class="pub-item">
-        <div class="foto"></div>
-        <div><span class="meta" style="color: var(--morado);">Investigación · 2024</span><p class="titulo">Género y privación de la libertad</p></div>
-      </div>
-      <div class="pub-item">
-        <div class="foto"></div>
-        <div><span class="meta" style="color: var(--terracota);">Columna · 07 ago 2026</span><p class="titulo">De la cancha al algoritmo</p></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="cta-final">
-    <p>Buscas evidencia sólida para tomar decisiones sobre paz y seguridad. Hablemos.</p>
     <a href="contacto.html" class="btn">Contactar</a>
+  </header>
+</div>
+
+<div class="hero">
+  <div class="contenedor">
+    <div class="hero-flex">
+      <div class="hero-texto">
+        <div class="hero-kicker">
+          <div class="barra"></div>
+          <p>Asociación Civil. Investigación de Campo. Rigor Académico.</p>
+        </div>
+        <h1>Durante once años hemos traducido la investigación sobre la falta de paz en México en decisiones concretas.</h1>
+        <a href="quienes-somos.html" class="btn-inv">Conoce nuestro trabajo →</a>
+      </div>
+      <div class="hero-foto"><span>FOTO</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="contenedor">
+
+  <section>
+    <p class="label">Publicaciones recientes</p>
+    <div class="card pub-destacada" style="--accent: #c97b4a;">
+      <div class="foto" style="background: linear-gradient(135deg, #08458c, #c97b4a);"><span>FOTO</span></div>
+      <div class="texto">
+        <span class="etiqueta" style="color: #c97b4a; background: #FBF0E9;">Columna</span>
+        <h3>Por qué se repiten las crisis</h3>
+        <p class="fecha">14 ago 2026 · 4 min de lectura</p>
+        <p class="desc">Un análisis sobre por qué crisis como Ceuta se repiten cada pocos años en distintas partes del mundo.</p>
+      </div>
+    </div>
+    <div class="pub-grid">
+      <div class="card" style="--accent: #7b5ea7;">
+        <div class="foto" style="background: linear-gradient(135deg, #7b5ea7, #5a8db8);"><span>FOTO</span></div>
+        <div class="contenido">
+          <span class="etiqueta" style="color: #7b5ea7;">Investigación</span>
+          <h4>Género y privación de la libertad</h4>
+          <p class="card-desc">Estudio en tres cárceles mexicanas.</p>
+        </div>
+      </div>
+      <div class="card" style="--accent: #c97b4a;">
+        <div class="foto" style="background: linear-gradient(135deg, #c97b4a, #497a6d);"><span>FOTO</span></div>
+        <div class="contenido">
+          <span class="etiqueta" style="color: #c97b4a;">Columna</span>
+          <h4>De la cancha al algoritmo</h4>
+          <p class="card-desc">Redes sociales y polarización tras el Mundial.</p>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <footer>
-    <img src="img/logo-cipmex-completo.png" alt="CIPMEX, Centro de Investigación para la Paz México, A.C.">
-  </footer>
+  <section>
+    <p class="label">Equipo</p>
+    <div class="equipo-lista">
+      <div class="persona"><div class="avatar" style="background: linear-gradient(135deg, #497a6d, #08458c);"></div><p>Mauricio</p></div>
+      <div class="persona"><div class="avatar" style="background: linear-gradient(135deg, #c97b4a, #7b5ea7);"></div><p>Daniela</p></div>
+      <div class="persona"><div class="avatar" style="background: linear-gradient(135deg, #5a8db8, #497a6d);"></div><p>Thali</p></div>
+      <div class="persona"><div class="avatar" style="background: linear-gradient(135deg, #7b5ea7, #c97b4a);"></div><p>Alejandra</p></div>
+      <div class="persona"><div class="avatar" style="background: linear-gradient(135deg, #08458c, #5a8db8);"></div><p>Fernando</p></div>
+      <div class="persona"><div class="avatar" style="background: linear-gradient(135deg, #497a6d, #c97b4a);"></div><p>Goretty</p></div>
+      <span class="ver-todos" style="align-self: center;">Ver todo →</span>
+    </div>
+  </section>
+
+  <section>
+    <div class="label-fila">
+      <p class="label" style="margin: 0;">Case studies</p>
+      <a href="case-studies.html" class="ver-todos">Ver todos →</a>
+    </div>
+    <div class="cs-grid">
+      <div class="card" style="--accent: #c97b4a;">
+        <span class="etiqueta" style="color: #c97b4a;">Leer →</span>
+        <h3>Inmujeres: un manual que se quedó a operar</h3>
+        <p class="stat">[resultado]</p>
+      </div>
+      <div class="card" style="--accent: #7b5ea7;">
+        <span class="etiqueta" style="color: #7b5ea7;">Leer →</span>
+        <h3>La Cana: entender la cárcel desde adentro</h3>
+        <p class="stat">3 cárceles</p>
+      </div>
+      <div class="card" style="--accent: #497a6d;">
+        <span class="etiqueta" style="color: #497a6d;">Leer →</span>
+        <h3>ONC: un índice que no existía</h3>
+        <p class="stat">1° en México</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <p class="label">Aliados institucionales</p>
+    <div class="marquee-wrap">
+      <div class="marquee">
+        <div class="logo-box">SENADO</div>
+        <div class="logo-box">ONU MUJERES</div>
+        <div class="logo-box">PNUD</div>
+        <div class="logo-box">TEC DE MONTERREY</div>
+        <div class="logo-box">IBERO</div>
+        <div class="logo-box">ANÁHUAC</div>
+        <div class="logo-box">SENADO</div>
+        <div class="logo-box">ONU MUJERES</div>
+      </div>
+    </div>
+  </section>
+
 </div>
+
+<div class="franja-gris">
+  <div class="contenedor">
+    <p class="label">Nuestros temas</p>
+    <div class="temas-lista">
+      <div class="card tema" style="--accent: #08458c;">
+        <div class="tema-icono" style="background: #E6EEF7;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#08458c" stroke-width="2"><path d="M12 3 L22 20 L2 20 Z"/><line x1="12" y1="9" x2="12" y2="14"/><circle cx="12" cy="17" r="0.5" fill="#08458c"/></svg>
+        </div>
+        <div><h4>Violencia estructural</h4><p>Cómo se distribuye el riesgo en la sociedad.</p></div>
+      </div>
+      <div class="card tema" style="--accent: #5a8db8;">
+        <div class="tema-icono" style="background: #EAF1F7;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5a8db8" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12 H21 M12 3 C 8 7, 8 17, 12 21 C 16 17, 16 7, 12 3 Z"/></svg>
+        </div>
+        <div><h4>Riesgo geopolítico</h4><p>Contexto internacional y su efecto en México.</p></div>
+      </div>
+      <div class="card tema" style="--accent: #7b5ea7;">
+        <div class="tema-icono" style="background: #F1EBF5;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#7b5ea7" stroke-width="2"><path d="M12 21 C 4 15, 2 9, 6 6 C 9 4, 12 6, 12 9 C 12 6, 15 4, 18 6 C 22 9, 20 15, 12 21 Z"/></svg>
+        </div>
+        <div><h4>Género y paz</h4><p>Violencia de género y construcción de paz.</p></div>
+      </div>
+      <div class="card tema" style="--accent: #497a6d;">
+        <div class="tema-icono" style="background: #EAF1EE;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#497a6d" stroke-width="2"><path d="M3 5 C 7 3, 10 4, 12 6 C 14 4, 17 3, 21 5 V 18 C 17 16, 14 17, 12 19 C 10 17, 7 16, 3 18 Z"/></svg>
+        </div>
+        <div><h4>Educación para la paz</h4><p>Formación temprana en derechos humanos.</p></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="apoyo">
+  <div class="contenedor apoyo-grid">
+    <div>
+      <h2>¿Buscas fortalecer la construcción de paz en tu organización?</h2>
+      <p>Habla con nosotros sobre investigación, consultoría o alianzas de financiamiento.</p>
+      <a href="contacto.html" class="btn">Conversemos →</a>
+    </div>
+    <div class="apoyo-foto"><span>FOTO</span></div>
+  </div>
+</div>
+
+<footer>
+  <div class="contenedor footer-grid">
+    <div>
+      <h5>Enlaces</h5>
+      <a href="quienes-somos.html">Quiénes somos</a>
+      <a href="publicaciones.html">Publicaciones</a>
+      <a href="contacto.html">Contacto</a>
+    </div>
+    <div class="footer-sep"></div>
+    <div>
+      <h5>Contacto</h5>
+      <p>contacto@cipmex.org</p>
+      <p>Ciudad de México</p>
+    </div>
+    <div class="footer-sep"></div>
+    <div>
+      <h5>Síguenos</h5>
+      <a href="#">Instagram</a>
+      <a href="#">LinkedIn</a>
+      <a href="#">Facebook</a>
+    </div>
+  </div>
+</footer>
+
+<div class="copyright">
+  <p>CIPMEX · Centro de Investigación para la Paz México, A.C. · Paz que se piensa, paz que se construye</p>
+</div>
+
 </body>
 </html>
