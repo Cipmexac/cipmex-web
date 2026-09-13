@@ -20,13 +20,22 @@ body { font-family: 'Inter', sans-serif; color: var(--gris); background: var(--f
 header { display: flex; align-items: center; justify-content: space-between; padding: 20px 0; border-bottom: 0.5px solid var(--borde); }
 .logo { display: flex; align-items: center; text-decoration: none; }
 .logo img { height: 100px; display: block; }
-nav ul { list-style: none; display: flex; gap: 28px; }
+nav ul { list-style: none; display: flex; gap: 28px; align-items: center; }
 nav a { text-decoration: none; color: var(--gris); font-size: 14px; }
 nav a:hover, nav a.activo { color: var(--azul); }
 .btn { display: inline-block; background: var(--azul); color: white; border: none; padding: 12px 24px; border-radius: 6px; font-size: 14px; font-weight: 500; cursor: pointer; text-decoration: none; transition: background 0.2s ease, transform 0.15s ease; font-family: 'Inter', sans-serif; }
 .btn:hover { background: var(--terracota); transform: scale(1.03); }
 .btn-inv { display: inline-block; background: transparent; border: 1.5px solid var(--terracota); color: white; padding: 10px 20px; border-radius: 6px; font-size: 13px; font-weight: 600; cursor: pointer; text-decoration: none; transition: background 0.2s ease, color 0.2s ease; font-family: 'Inter', sans-serif; }
 .btn-inv:hover { background: var(--terracota); color: var(--azul); }
+
+/* Menú desplegable, Sobre nosotros */
+.nav-item-dropdown { position: relative; cursor: pointer; }
+.nav-item-dropdown > span { font-size: 14px; color: var(--gris); }
+.nav-item-dropdown:hover > span, .nav-item-dropdown.activo > span { color: var(--azul); }
+.dropdown-menu { position: absolute; top: 100%; left: 0; margin-top: 10px; background: white; border: 1px solid var(--borde); border-radius: 8px; padding: 8px; min-width: 190px; box-shadow: 0 10px 24px rgba(8,69,140,0.14); opacity: 0; visibility: hidden; transform: translateY(4px); transition: opacity 0.15s ease, visibility 0.15s ease, transform 0.15s ease; z-index: 10; }
+.nav-item-dropdown:hover .dropdown-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+.dropdown-menu a { display: block; padding: 8px 10px; border-radius: 6px; font-size: 14px; color: var(--gris); }
+.dropdown-menu a:hover { background: var(--fondo-card); color: var(--azul); }
 
 .linea-superior { height: 3px; background: linear-gradient(90deg, var(--azul), var(--terracota)); }
 .ticker-wrap { overflow: hidden; background: var(--azul-oscuro); }
@@ -56,7 +65,6 @@ section h1 { font-size: 26px; font-weight: 600; line-height: 1.4; color: var(--a
 section h2 { font-size: 20px; font-weight: 600; margin-bottom: 16px; color: var(--gris); }
 .texto-parrafo { font-size: 15px; color: var(--texto-muted); max-width: 640px; }
 
-/* Tarjetas generales (publicaciones, case studies, temas). SIN transform en hover, cero movimiento y cero escala, para que jamás se corte una foto o ícono recortado adentro. Solo sombra y borde de color */
 .card { transition: box-shadow 0.2s ease, border-color 0.2s ease; cursor: pointer; background: white; border: 1.5px solid var(--borde); border-radius: 10px; }
 .card:hover { box-shadow: 0 10px 24px rgba(8,69,140,0.16); border-color: var(--accent, var(--terracota)); }
 .card-desc { max-height: 0; opacity: 0; overflow: hidden; transition: max-height 0.25s ease, opacity 0.25s ease, margin 0.25s ease; }
@@ -80,7 +88,6 @@ section h2 { font-size: 20px; font-weight: 600; margin-bottom: 16px; color: var(
 .pub-grid .etiqueta { font-family: 'Roboto Mono', monospace; font-size: 11px; }
 .pub-grid h4 { font-size: 14px; font-weight: 600; margin: 6px 0 0; color: var(--gris); }
 
-/* Equipo en Inicio. Nombre en dos renglones fijos. Hover sin transform, solo sombra y borde, cero corte garantizado */
 .equipo-cards { display: flex; gap: 24px; overflow-x: auto; padding-bottom: 4px; }
 .persona-card { flex-shrink: 0; width: 130px; text-decoration: none; color: inherit; display: block; }
 .persona-card .card-inner { border: 1.5px solid var(--borde); border-radius: 10px; overflow: hidden; transition: box-shadow 0.2s ease, border-color 0.2s ease; }
@@ -142,6 +149,9 @@ section h2 { font-size: 20px; font-weight: 600; margin-bottom: 16px; color: var(
 
 .foto-banda img { width: 100%; display: block; border-radius: 14px; object-fit: cover; }
 .foto-banda .caption { font-family: 'Roboto Mono', monospace; font-size: 12px; color: var(--texto-muted); margin-top: 10px; }
+
+.enlace-relacionado { display: inline-block; margin-top: 14px; font-size: 14px; color: var(--azul); font-weight: 500; text-decoration: none; }
+.enlace-relacionado:hover { color: var(--terracota); }
 
 footer.rico { background: var(--azul); padding: 32px 0; margin-top: 8px; }
 .footer-grid { display: grid; grid-template-columns: 1.3fr 1px 1fr 1px 1fr 1px 1fr; gap: 20px; align-items: center; }
