@@ -5,16 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Quiénes somos · CIPMEX</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=8">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=9">
 </head>
-  <script>
-window.addEventListener('scroll', function () {
-  var hw = document.getElementById('headerWrap');
-  if (window.scrollY > 20) { hw.classList.add('scrolled'); } else { hw.classList.remove('scrolled'); }
-});
-</script>
 <body>
+
 <div class="header-wrap" id="headerWrap">
 <div class="contenedor">
   <header>
@@ -24,7 +19,7 @@ window.addEventListener('scroll', function () {
     <nav>
       <ul>
         <li><a href="index.html">Inicio</a></li>
-        <li class="nav-item-dropdown">
+        <li class="nav-item-dropdown activo">
           <span>Sobre nosotros</span>
           <div class="dropdown-menu">
             <a href="quienes-somos.html">Quiénes somos</a>
@@ -42,85 +37,187 @@ window.addEventListener('scroll', function () {
 </div>
 </div>
 
-  <section>
-    <span class="kicker">SOBRE NOSOTROS</span>
-    <h1>Quiénes somos</h1>
-    <p class="texto-parrafo">El Centro de Investigación para la Paz México es una asociación civil fundada en 2015 por el Dr. Mauricio Meschoulam, y uno de los pocos centros en el país dedicados de forma específica a la investigación de la falta de paz y su construcción. Contamos con un equipo de investigadoras e investigadores de distintas disciplinas, con vínculos institucionales activos con el Senado de la República, ONU Mujeres, el Programa de las Naciones Unidas para el Desarrollo, y universidades como el Tecnológico de Monterrey, la Universidad Iberoamericana y la Universidad Anáhuac. Traducimos ese conocimiento en consultoría estratégica, talleres, educación para la paz y espacios de diálogo dirigidos a gobiernos, empresas, academia y sociedad civil.</p>
-    <a href="que-es-la-paz.html" class="enlace-relacionado">Conoce cómo entendemos la paz →</a>
-  </section>
+<div class="pagina-flotante">
+<div class="contenedor-flotante">
 
-  <section style="padding-top: 0;">
-    <div class="cifras-banda">
-      <div class="cifra">
-        <span class="numero">11</span>
-        <span class="etiqueta">años de trayectoria</span>
+<h1 class="titular-apertura">Once años traduciendo investigación en decisiones para la paz en México</h1>
+
+<div class="tarjeta-flotante foto-divisora" style="background: linear-gradient(135deg, var(--azul-claro), var(--verde));">
+  <span>FOTO</span>
+</div>
+
+<div class="tarjeta-flotante hero-qs">
+  <div class="hero-qs-texto">
+    <div class="hero-kicker">
+      <div class="barra"></div>
+      <p style="margin:0;">SOBRE NOSOTROS</p>
+    </div>
+    <p>El Centro de Investigación para la Paz México es una asociación civil fundada en 2015 por el Dr. Mauricio Meschoulam, dedicada a la investigación de la falta de paz y su construcción.</p>
+  </div>
+  <div class="hero-qs-foto"><span>FOTO</span></div>
+</div>
+
+<div class="mision-vision-flip">
+  <div class="flip-outer">
+    <div class="flip-inner">
+      <div class="flip-face">
+        <i class="ti ti-target-arrow" style="color: var(--azul);" aria-hidden="true"></i>
+        <p class="flip-titulo" style="color: var(--azul);">Misión</p>
       </div>
-      <div class="cifra">
-        <span class="numero">14</span>
-        <span class="etiqueta">publicaciones revisadas por pares</span>
+      <div class="flip-face flip-back" style="background: #EAF1F7;">
+        <p style="color:#0c3a5f;">Traducir investigación de campo rigurosa sobre la falta de paz en México en decisiones concretas.</p>
       </div>
     </div>
-  </section>
-
-  <section>
-    <h2>Nuestra historia</h2>
-    <p class="texto-parrafo">Nacimos en 2015, fundados por el Dr. Mauricio Meschoulam, a partir de una lectura que hicimos de nuestro contexto. Ante el aumento de la violencia en México hacía falta más investigación que permitiera comprender ese fenómeno de manera sistematizada, y hacía falta también un puente que tradujera ese conocimiento en propuestas concretas para las tomadoras y tomadores de decisiones. Once años después, seguimos trabajando desde ese mismo punto de partida.</p>
-  </section>
-
-  <section>
-    <h2>Cómo trabajamos</h2>
-    <p class="texto-parrafo">Sostenemos nuestro trabajo con cuatro prácticas concretas.</p>
-    <div class="valores-grid">
-      <div class="valor">
-        <p class="titulo">Rigor con propósito</p>
-        <p class="desc">Sometemos cada hallazgo a revisión de pares, la misma exigencia que sostiene nuestras catorce publicaciones académicas.</p>
+  </div>
+  <div class="flip-outer">
+    <div class="flip-inner">
+      <div class="flip-face">
+        <i class="ti ti-telescope" style="color: var(--terracota);" aria-hidden="true"></i>
+        <p class="flip-titulo" style="color: var(--terracota);">Visión</p>
       </div>
-      <div class="valor">
-        <p class="titulo">Cercanía con el territorio</p>
-        <p class="desc">Entrevistamos y visitamos comunidades e instituciones en el territorio, preferimos estar donde ocurre lo que investigamos antes que analizarlo desde un escritorio.</p>
-      </div>
-      <div class="valor">
-        <p class="titulo">Traducción a la acción</p>
-        <p class="desc">Convertimos cada hallazgo en talleres, consultorías o recomendaciones concretas, nunca lo dejamos guardado en un reporte que nadie vuelve a abrir.</p>
-      </div>
-      <div class="valor">
-        <p class="titulo">Empatía con quien decide</p>
-        <p class="desc">Hablamos con funcionarias y funcionarios, empresas, docentes y familias en su propio lenguaje, sea frente al Senado o en un salón de primaria, sin perder el rigor.</p>
+      <div class="flip-face flip-back" style="background: #FBF0E9;">
+        <p style="color:#7a3f1a;">Ser el referente en México cuando gobiernos, empresas y financiadores necesiten entender la falta de paz.</p>
       </div>
     </div>
-  </section>
+  </div>
+</div>
 
-  <section style="padding-top: 0;">
-    <div class="foto-banda">
-      <img src="img/campo-mucpaz.jpg" alt="Equipo de CIPMEX en el Tercer Encuentro Nacional de Mujeres Constructoras de Paz (MUCPAZ)">
-      <p class="caption">MUCPAZ · Tercer Encuentro Nacional de Mujeres Constructoras de Paz</p>
-    </div>
-  </section>
+<div class="cita-galtung">
+  <p class="cita-texto">La paz no se limita a la ausencia de guerra: implica construir cooperación, justicia y cohesión entre las personas.</p>
+  <span class="cita-autor">— idea de Johan Galtung, fundador de los estudios de paz</span>
+</div>
 
-  <section>
-    <div class="mision-vision">
-      <div class="mv-caja">
-        <span class="etiqueta">Misión</span>
-        <p class="texto">Traducir investigación de campo rigurosa sobre la falta de paz en México en decisiones concretas para gobiernos, empresas y organizaciones que buscan construir sociedades más justas y resilientes.</p>
-      </div>
-      <div class="mv-caja">
-        <span class="etiqueta">Visión</span>
-        <p class="texto">Ser el referente en México cuando gobiernos, empresas y financiadores necesiten entender la falta de paz y actuar frente a ella.</p>
-      </div>
-    </div>
-  </section>
+<div class="tarjeta-flotante historia-bloque">
+  <div class="historia-numero">
+    <span class="label">NUESTRA HISTORIA</span>
+    <span class="anio">2015</span>
+  </div>
+  <div class="historia-texto">
+    <p>Antes de que existiéramos, en México hacía falta investigación que ayudara a comprender la violencia que vivíamos, y hacía falta también un puente que tradujera ese conocimiento en propuestas concretas para quienes toman decisiones. Once años después, seguimos ampliando ese puente con más experiencia y más terreno recorrido.</p>
+  </div>
+</div>
 
-  <section>
-    <span class="etiqueta-seccion">VÍNCULOS INSTITUCIONALES</span>
-    <div class="aliados">
-      <span class="aliado">Senado de la República</span>
-      <span class="aliado">ONU Mujeres</span>
-      <span class="aliado">PNUD</span>
-      <span class="aliado">Tecnológico de Monterrey</span>
-      <span class="aliado">Universidad Iberoamericana</span>
-      <span class="aliado">Universidad Anáhuac</span>
+<div class="tarjeta-flotante foto-divisora" style="background: linear-gradient(135deg, var(--terracota), var(--morado));">
+  <span>FOTO DEL FUNDADOR CON EL EQUIPO</span>
+</div>
+
+<div class="tarjeta-flotante marco-destacado">
+  <i class="ti ti-world" aria-hidden="true"></i>
+  <span class="label">NUESTRO MARCO</span>
+  <p>Entendemos la paz como algo que va más allá de la ausencia de violencia directa.</p>
+  <a href="que-es-la-paz.html">Conoce cómo entendemos la paz →</a>
+</div>
+
+<div class="tarjeta-flotante foto-divisora" style="background: linear-gradient(135deg, var(--terracota), var(--verde));">
+  <span>FOTO DE CAMPO</span>
+</div>
+
+<div class="tarjeta-flotante mini-grid">
+  <span class="label">A QUIÉN SERVIMOS</span>
+  <div class="grid-3">
+    <div class="card card-mini" style="--accent: var(--azul);">
+      <i class="ti ti-building-bank" style="color: var(--azul);" aria-hidden="true"></i>
+      <p class="card-mini-titulo" style="color: var(--azul);">Fundaciones</p>
     </div>
-  </section>
+    <div class="card card-mini" style="--accent: var(--morado);">
+      <i class="ti ti-building-castle" style="color: var(--morado);" aria-hidden="true"></i>
+      <p class="card-mini-titulo" style="color: var(--morado);">Gobiernos</p>
+    </div>
+    <div class="card card-mini" style="--accent: var(--terracota);">
+      <i class="ti ti-building-skyscraper" style="color: var(--terracota);" aria-hidden="true"></i>
+      <p class="card-mini-titulo" style="color: var(--terracota);">Empresas</p>
+    </div>
+  </div>
+</div>
+
+<div class="tarjeta-flotante mini-grid">
+  <span class="label">CIFRAS QUE RESPALDAN</span>
+  <div class="grid-3">
+    <div class="card card-mini" style="--accent: var(--azul);">
+      <i class="ti ti-calendar-time" style="color: var(--azul);" aria-hidden="true"></i>
+      <p class="mono" style="font-size:24px; font-weight:700; color: var(--azul); margin:8px 0 2px;">11</p>
+      <p style="font-size:11px; color: var(--texto-muted); margin:0;">años de trayectoria</p>
+    </div>
+    <div class="card card-mini" style="--accent: var(--morado);">
+      <i class="ti ti-file-text" style="color: var(--morado);" aria-hidden="true"></i>
+      <p class="mono" style="font-size:24px; font-weight:700; color: var(--morado); margin:8px 0 2px;">14</p>
+      <p style="font-size:11px; color: var(--texto-muted); margin:0;">publicaciones revisadas</p>
+    </div>
+    <div class="card card-mini" style="--accent: var(--terracota);">
+      <i class="ti ti-users" style="color: var(--terracota);" aria-hidden="true"></i>
+      <p class="mono" style="font-size:24px; font-weight:700; color: var(--terracota); margin:8px 0 2px;">+500</p>
+      <p style="font-size:11px; color: var(--texto-muted); margin:0;">personas capacitadas</p>
+    </div>
+  </div>
+</div>
+
+<div class="tarjeta-flotante valores-fotos">
+  <span class="label">CÓMO TRABAJAMOS</span>
+  <div class="grid-valores">
+    <div class="valor-card" style="--accent: var(--morado);">
+      <div class="valor-foto" style="background: linear-gradient(135deg, var(--morado), var(--azul-claro));"><i class="ti ti-certificate" aria-hidden="true"></i></div>
+      <div class="valor-texto"><p class="valor-titulo">Rigor con propósito</p><p class="valor-desc">Cada hallazgo pasa por revisión de especialistas.</p></div>
+    </div>
+    <div class="valor-card" style="--accent: var(--azul-claro);">
+      <div class="valor-foto" style="background: linear-gradient(135deg, var(--verde), var(--azul-claro));"><i class="ti ti-map-pin" aria-hidden="true"></i></div>
+      <div class="valor-texto"><p class="valor-titulo">Cercanía con el territorio</p><p class="valor-desc">Vamos donde ocurre lo que estudiamos.</p></div>
+    </div>
+    <div class="valor-card" style="--accent: var(--terracota);">
+      <div class="valor-foto" style="background: linear-gradient(135deg, var(--terracota), var(--morado));"><i class="ti ti-bulb" aria-hidden="true"></i></div>
+      <div class="valor-texto"><p class="valor-titulo">Traducción a la acción</p><p class="valor-desc">Propuestas que alguien pueda usar de verdad.</p></div>
+    </div>
+    <div class="valor-card" style="--accent: var(--azul);">
+      <div class="valor-foto" style="background: linear-gradient(135deg, var(--azul-claro), var(--terracota));"><i class="ti ti-message-circle" aria-hidden="true"></i></div>
+      <div class="valor-texto"><p class="valor-titulo">Empatía con quien decide</p><p class="valor-desc">Su idioma, sin perder el rigor.</p></div>
+    </div>
+    <div class="valor-card" style="--accent: var(--verde);">
+      <div class="valor-foto" style="background: linear-gradient(135deg, var(--verde), var(--terracota));"><i class="ti ti-school" aria-hidden="true"></i></div>
+      <div class="valor-texto"><p class="valor-titulo">Formación con propósito</p><p class="valor-desc">Agentes de cambio desde primaria.</p></div>
+    </div>
+  </div>
+</div>
+
+<div class="tarjeta-flotante marquee-bloque">
+  <span class="label">VÍNCULOS INSTITUCIONALES</span>
+  <div class="marquee-wrap">
+    <div class="marquee">
+      <div class="logo-box">SENADO</div>
+      <div class="logo-box">ONU MUJERES</div>
+      <div class="logo-box">PNUD</div>
+      <div class="logo-box">TEC DE MONTERREY</div>
+      <div class="logo-box">IBERO</div>
+      <div class="logo-box">ANÁHUAC</div>
+      <div class="logo-box">SENADO</div>
+      <div class="logo-box">ONU MUJERES</div>
+    </div>
+  </div>
+</div>
+
+<div class="tarjeta-flotante cs-mini-grid" style="margin-bottom: 0;">
+  <div class="label-fila">
+    <span class="label" style="margin:0;">CASE STUDIES</span>
+    <a href="case-studies.html" class="ver-todos">Ver todos →</a>
+  </div>
+  <div class="grid-cs">
+    <div class="card" style="--accent: var(--terracota);">
+      <span class="etiqueta-leer" style="color: var(--terracota);">Leer →</span>
+      <h3>Inmujeres: un manual que se quedó a operar</h3>
+      <p class="cs-stat">[resultado]</p>
+    </div>
+    <div class="card" style="--accent: var(--morado);">
+      <span class="etiqueta-leer" style="color: var(--morado);">Leer →</span>
+      <h3>La Cana: entender la cárcel desde adentro</h3>
+      <p class="cs-stat">3 cárceles</p>
+    </div>
+    <div class="card" style="--accent: var(--verde);">
+      <span class="etiqueta-leer" style="color: var(--verde);">Leer →</span>
+      <h3>ONC: un índice que no existía</h3>
+      <p class="cs-stat">1° en México</p>
+    </div>
+  </div>
+</div>
+
+</div>
 </div>
 
 <footer class="rico">
@@ -128,7 +225,6 @@ window.addEventListener('scroll', function () {
     <div class="footer-grid">
       <div class="footer-logo-col">
         <img src="img/logo-cipmex-completo.png" alt="CIPMEX">
-        <p>Paz que se piensa,<br>paz que se construye</p>
       </div>
       <div class="footer-sep"></div>
       <div>
@@ -159,6 +255,13 @@ window.addEventListener('scroll', function () {
 <div class="copyright">
   <p>CIPMEX · Centro de Investigación para la Paz México, A.C. · Paz que se piensa, paz que se construye</p>
 </div>
+
+<script>
+window.addEventListener('scroll', function () {
+  var hw = document.getElementById('headerWrap');
+  if (window.scrollY > 20) { hw.classList.add('scrolled'); } else { hw.classList.remove('scrolled'); }
+});
+</script>
 
 </body>
 </html>
