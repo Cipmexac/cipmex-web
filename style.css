@@ -485,3 +485,50 @@ footer.rico { background: var(--azul); padding: 32px 0; margin-top: 8px; }
 .hero-foto.degradado-suave::before { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, var(--azul) 0%, rgba(8,69,140,0.65) 25%, rgba(8,69,140,0.15) 60%, rgba(8,69,140,0) 100%); z-index: 1; }
 .hero-foto.degradado-suave span { position: relative; z-index: 2; }
 .hero-foto.degradado-suave img { filter: saturate(1.05); }
+
+/* Publicaciones: link de "volver" sobre el banner azul */
+.volver-link { display: inline-block; color: rgba(255,255,255,0.75); font-size: 13px; font-weight: 600; text-decoration: none; margin-bottom: 18px; }
+.volver-link:hover { color: white; }
+
+/* Publicaciones: tarjetas de las tres categorías en el hub, reutilizando .servicio-item como enlace */
+.servicios-grid a.servicio-item { color: inherit; text-decoration: none; }
+
+/* Publicaciones: grid de tarjetas (lecturas comentadas / investigación) */
+.pub-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 24px; }
+.pub-card { border: 1.5px solid var(--borde); border-radius: 14px; overflow: hidden; background: white; text-decoration: none; display: block; transition: box-shadow 0.2s ease, border-color 0.2s ease; }
+.pub-card:hover { box-shadow: 0 10px 24px rgba(8,69,140,0.14); }
+.pub-foto { position: relative; width: 100%; aspect-ratio: 16 / 10; }
+.pub-foto .pub-foto-tag { position: absolute; bottom: 10px; right: 12px; font-size: 10px; color: rgba(255,255,255,0.65); font-family: 'Roboto Mono', monospace; }
+.pub-tag { position: absolute; top: 10px; left: 10px; background: rgba(5,26,50,0.72); color: white; font-size: 10px; font-weight: 700; padding: 5px 10px; border-radius: 20px; font-family: 'Inter', sans-serif; text-transform: uppercase; letter-spacing: 0.02em; }
+.pub-contenido { padding: 18px 20px 20px; }
+.pub-contenido h3 { font-size: 15px; color: var(--azul); margin: 0 0 8px; line-height: 1.35; }
+.pub-contenido p.pub-resumen { font-size: 13px; color: var(--gris); line-height: 1.6; margin: 0 0 16px; }
+.pub-meta { display: flex; justify-content: space-between; align-items: center; font-family: 'Roboto Mono', monospace; font-size: 10.5px; color: var(--texto-muted); }
+.pub-leer { color: var(--azul); font-weight: 700; transition: color 0.2s ease; }
+.pub-card:hover .pub-leer { color: var(--terracota); }
+
+/* Publicaciones: columnistas (foto real + lista de entradas) */
+.columnistas-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-top: 24px; }
+.columnista-card { border: 1.5px solid var(--borde); border-radius: 16px; padding: 26px; background: white; }
+.columnista-header { display: flex; align-items: center; gap: 16px; margin-bottom: 18px; }
+.columnista-foto { width: 64px; height: 64px; border-radius: 50%; overflow: hidden; flex-shrink: 0; }
+.columnista-foto img { width: 100%; height: 100%; object-fit: cover; }
+.columnista-nombre { font-size: 15px; font-weight: 700; color: var(--azul); margin: 0; }
+.columnista-medio { font-size: 12px; color: var(--texto-muted); margin: 2px 0 0; font-family: 'Roboto Mono', monospace; }
+.columnista-entradas { list-style: none; padding: 0; margin: 0; }
+.columnista-entradas li a { display: flex; justify-content: space-between; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--borde); color: var(--gris); text-decoration: none; font-size: 13px; }
+.columnista-entradas li:last-child a { border-bottom: none; }
+.columnista-entradas li a:hover { color: var(--azul); }
+.columnista-entradas li a span.fecha { font-family: 'Roboto Mono', monospace; font-size: 11px; color: var(--texto-muted); white-space: nowrap; }
+
+.columnista-proximamente { border: 1.5px dashed var(--borde); border-radius: 16px; padding: 32px; text-align: center; margin-top: 24px; }
+.columnista-proximamente i { font-size: 28px; color: var(--morado); }
+.columnista-proximamente p { font-size: 13.5px; color: var(--gris); margin: 12px 0 0; }
+
+@media (max-width: 900px) {
+  .pub-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 720px) {
+  .pub-grid { grid-template-columns: 1fr; }
+  .columnistas-grid { grid-template-columns: 1fr; }
+}
