@@ -17,10 +17,9 @@ body { font-family: 'Inter', sans-serif; color: var(--gris); background: var(--f
 .mono { font-family: 'Roboto Mono', monospace; }
 .contenedor { max-width: 1040px; margin: 0 auto; padding: 0 28px; }
 
-/* Header y navegación, compartido en todas las páginas */
 header { display: flex; align-items: center; justify-content: space-between; padding: 20px 0; border-bottom: 0.5px solid var(--borde); }
 .logo { display: flex; align-items: center; text-decoration: none; }
-.logo img { height: 26px; display: block; }
+.logo img { height: 42px; display: block; }
 nav ul { list-style: none; display: flex; gap: 28px; }
 nav a { text-decoration: none; color: var(--gris); font-size: 14px; }
 nav a:hover, nav a.activo { color: var(--azul); }
@@ -29,7 +28,6 @@ nav a:hover, nav a.activo { color: var(--azul); }
 .btn-inv { display: inline-block; background: transparent; border: 1.5px solid var(--terracota); color: white; padding: 10px 20px; border-radius: 6px; font-size: 13px; font-weight: 600; cursor: pointer; text-decoration: none; transition: background 0.2s ease, color 0.2s ease; font-family: 'Inter', sans-serif; }
 .btn-inv:hover { background: var(--terracota); color: var(--azul); }
 
-/* Ticker de noticias, arriba de todo, solo en Inicio */
 .linea-superior { height: 3px; background: linear-gradient(90deg, var(--azul), var(--terracota)); }
 .ticker-wrap { overflow: hidden; background: var(--azul-oscuro); }
 .ticker { display: flex; gap: 40px; white-space: nowrap; animation: scroll-ticker 26s linear infinite; padding: 8px 0; }
@@ -37,7 +35,6 @@ nav a:hover, nav a.activo { color: var(--azul); }
 .ticker span.texto { font-family: 'Roboto Mono', monospace; font-size: 12px; color: #E8EEF3; }
 @keyframes scroll-ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 
-/* Hero de Inicio */
 .hero { background: var(--azul); overflow: hidden; }
 .hero-flex { display: flex; align-items: stretch; gap: 24px; }
 .hero-texto { flex: 1.1; padding: 26px 0; }
@@ -49,7 +46,6 @@ nav a:hover, nav a.activo { color: var(--azul); }
 .hero-foto span { font-size: 10px; color: rgba(255,255,255,0.7); font-family: 'Roboto Mono', monospace; }
 .hero-foto img { width: 100%; height: 100%; object-fit: cover; }
 
-/* Encabezado de sección, compartido */
 .kicker { font-family: 'Roboto Mono', monospace; font-size: 13px; color: var(--terracota); letter-spacing: 0.02em; margin-bottom: 14px; }
 .etiqueta-seccion, .label { font-size: 14px; text-transform: uppercase; letter-spacing: 0.04em; color: var(--azul); margin: 0 0 18px; font-family: 'Roboto Mono', monospace; font-weight: 600; }
 .label-fila { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 14px; }
@@ -61,7 +57,6 @@ section h2 { font-size: 20px; font-weight: 600; margin-bottom: 16px; color: var(
 .hero-inicio { border-bottom: 1px solid var(--borde); padding-bottom: 40px; }
 .texto-parrafo { font-size: 15px; color: var(--texto-muted); max-width: 640px; }
 
-/* Tarjetas con hover de color por categoría, usadas en Publicaciones y Case studies de Inicio */
 .card { transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease; cursor: pointer; background: white; border: 1.5px solid var(--borde); border-radius: 10px; }
 .card:hover { transform: translateY(-4px); box-shadow: 0 10px 24px rgba(8,69,140,0.16); border-color: var(--accent, var(--terracota)); }
 .card-desc { max-height: 0; opacity: 0; overflow: hidden; transition: max-height 0.25s ease, opacity 0.25s ease, margin 0.25s ease; }
@@ -98,28 +93,28 @@ section h2 { font-size: 20px; font-weight: 600; margin-bottom: 16px; color: var(
 
 .foto-placeholder { background: var(--fondo-card); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: var(--texto-muted); font-size: 13px; }
 
-/* Equipo, versión tira horizontal de Inicio */
+/* Equipo, tira horizontal de Inicio, con recorte circular garantizado */
 .equipo-lista { display: flex; gap: 24px; overflow-x: auto; padding-bottom: 4px; align-items: center; }
 .persona { text-align: center; flex-shrink: 0; transition: transform 0.2s ease; cursor: pointer; }
 .persona:hover { transform: scale(1.1); }
-.persona .avatar { width: 54px; height: 54px; border-radius: 50%; object-fit: cover; overflow: hidden; display: block; }
 .persona p { font-size: 11px; margin-top: 6px; }
+.avatar-wrap { width: 54px; height: 54px; border-radius: 50%; overflow: hidden; }
+.avatar-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
-/* Equipo, versión grid completo de Quiénes somos, con fotos reales */
+/* Equipo, grid completo de la página Equipo, con recorte circular garantizado */
 .equipo-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px 20px; margin-top: 20px; }
 .miembro { text-align: center; }
-.miembro .foto { width: 88px; height: 88px; border-radius: 50%; background: var(--fondo-card); object-fit: cover; overflow: hidden; display: block; margin: 0 auto 12px; }
 .miembro .nombre { font-size: 14px; font-weight: 600; color: var(--gris); margin: 0 0 4px; }
 .miembro .rol { font-family: 'Roboto Mono', monospace; font-size: 11px; color: var(--terracota); margin: 0; }
+.foto-wrap { width: 88px; height: 88px; border-radius: 50%; overflow: hidden; margin: 0 auto 12px; background: var(--fondo-card); }
+.foto-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
-/* Case studies, formato Graphite, en Inicio */
 .cs-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--borde); border-radius: 10px; overflow: hidden; }
 .cs-grid .card { border: none; border-radius: 0; padding: 20px; }
 .cs-grid .etiqueta { font-family: 'Roboto Mono', monospace; font-size: 11px; }
 .cs-grid h3 { font-size: 14px; font-weight: 700; margin: 10px 0 12px; line-height: 1.4; color: var(--azul); }
 .cs-grid .stat { font-family: 'Roboto Mono', monospace; font-size: 22px; font-weight: 700; color: var(--azul); }
 
-/* Aliados, marquesina animada, en Inicio */
 .marquee-wrap { overflow: hidden; }
 .marquee { display: flex; gap: 16px; white-space: nowrap; animation: scroll-marquee 22s linear infinite; }
 @keyframes scroll-marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
@@ -127,11 +122,9 @@ section h2 { font-size: 20px; font-weight: 600; margin-bottom: 16px; color: var(
 .logo-box:hover { border-color: var(--azul); }
 .logo-box img { height: 24px; }
 
-/* Aliados, versión simple en texto, para Quiénes somos */
 .aliados { display: flex; flex-wrap: wrap; gap: 10px 12px; margin-top: 14px; }
 .aliado { font-family: 'Roboto Mono', monospace; font-size: 12px; color: var(--gris); background: var(--fondo-card); padding: 8px 14px; border-radius: 6px; }
 
-/* Nuestros temas, en Inicio, dentro de franja gris */
 .franja-gris { background: var(--fondo-card); padding: 32px 0; }
 .temas-lista { display: flex; gap: 12px; overflow-x: auto; padding-bottom: 4px; }
 .tema { display: flex; gap: 12px; align-items: flex-start; min-width: 190px; padding: 16px; flex-shrink: 0; }
@@ -139,7 +132,6 @@ section h2 { font-size: 20px; font-weight: 600; margin-bottom: 16px; color: var(
 .tema h4 { font-size: 14px; font-weight: 700; color: var(--azul); margin-bottom: 4px; }
 .tema p { font-size: 12px; color: var(--texto-muted); }
 
-/* Bloque de apoyo/CTA, en Inicio */
 .apoyo { background: white; padding: 32px 0; border-top: 1px solid var(--borde); }
 .apoyo-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 24px; align-items: center; }
 .apoyo h2 { font-size: 20px; font-weight: 700; color: var(--azul); margin-bottom: 10px; }
@@ -148,7 +140,6 @@ section h2 { font-size: 20px; font-weight: 600; margin-bottom: 16px; color: var(
 .apoyo-foto span { font-size: 10px; color: white; font-family: 'Roboto Mono', monospace; }
 .apoyo-foto img { width: 100%; height: 100%; object-fit: cover; }
 
-/* Misión, visión, valores, cifras — usados en Quiénes somos */
 .mision-vision { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 16px; }
 .mv-caja { background: var(--fondo-card); border-radius: 10px; padding: 24px; }
 .mv-caja .etiqueta { font-family: 'Roboto Mono', monospace; font-size: 11px; text-transform: uppercase; color: var(--terracota); margin-bottom: 10px; display: block; }
@@ -169,16 +160,18 @@ section h2 { font-size: 20px; font-weight: 600; margin-bottom: 16px; color: var(
 .foto-banda img { width: 100%; display: block; border-radius: 14px; object-fit: cover; }
 .foto-banda .caption { font-family: 'Roboto Mono', monospace; font-size: 12px; color: var(--texto-muted); margin-top: 10px; }
 
-/* Llamado a la acción con fondo cálido, usado en varias páginas */
 .cta-final { background: var(--fondo-calido); border-radius: 14px; padding: 40px 24px; text-align: center; margin: 24px 0 48px; }
 .cta-final p { font-size: 17px; font-weight: 500; color: var(--azul); max-width: 460px; margin: 0 auto 20px; }
 
-/* Footer completo, el mismo en todas las páginas */
 footer.rico { background: var(--azul); padding: 32px 0; margin-top: 8px; }
+.footer-logo { display: flex; justify-content: center; margin-bottom: 24px; }
+.footer-logo img { height: 90px; }
 .footer-grid { display: grid; grid-template-columns: 1fr 1px 1fr 1px 1fr; gap: 20px; align-items: center; }
 .footer-sep { width: 1px; height: 50px; background: rgba(255,255,255,0.2); justify-self: center; }
 .footer-grid h5 { font-size: 13px; font-weight: 700; color: white; margin-bottom: 10px; }
 .footer-grid p, .footer-grid a { font-size: 12px; color: #C9D4DE; margin-bottom: 6px; display: block; text-decoration: none; }
+.footer-grid .redes { display: flex; gap: 12px; margin-top: 4px; }
+.footer-grid .redes a { display: flex; }
 .copyright { background: var(--azul-oscuro); padding: 14px 0; text-align: center; }
 .copyright p { font-size: 11px; color: #8FA3B8; }
 
@@ -197,14 +190,3 @@ footer.rico { background: var(--azul); padding: 32px 0; margin-top: 8px; }
   .footer-grid { grid-template-columns: 1fr; }
   .footer-sep { display: none; }
 }
-.avatar-wrap { width: 54px; height: 54px; border-radius: 50%; overflow: hidden; }
-.avatar-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; }
-
-.foto-wrap { width: 88px; height: 88px; border-radius: 50%; overflow: hidden; margin: 0 auto 12px; }
-.foto-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; }
-
-.footer-logo { display: flex; justify-content: center; margin-bottom: 24px; }
-.footer-logo img { height: 90px; }
-
-.footer-grid .redes { display: flex; gap: 12px; margin-top: 4px; }
-.footer-grid .redes a { display: flex; }
