@@ -349,3 +349,32 @@ footer.rico { background: var(--azul); padding: 32px 0; margin-top: 8px; }
   .equipo-grid-completo { grid-template-columns: 1fr 1fr; }
   .semblanza-pub-grid { grid-template-columns: 1fr; }
 }
+
+/* Página ¿Qué es la paz? — toggle paz negativa/positiva */
+.paz-toggle-btns { display: flex; gap: 10px; margin-bottom: 20px; }
+.paz-toggle-btn { flex: 1; padding: 14px 18px; border-radius: 10px; border: 1.5px solid var(--borde); background: white; font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 700; color: var(--texto-muted); cursor: pointer; transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease; text-align: left; }
+.paz-toggle-btn:hover { border-color: var(--accent, var(--azul)); }
+.paz-toggle-btn.activo { border-color: var(--accent, var(--azul)); color: var(--accent, var(--azul)); background: var(--fondo-card); }
+.paz-toggle-panel { border: 1.5px solid var(--borde); border-radius: 14px; padding: 28px; background: white; }
+.paz-toggle-panel h3 { font-size: 18px; margin: 0 0 10px; }
+.paz-toggle-panel p { font-size: 14.5px; color: var(--gris); line-height: 1.75; margin-bottom: 14px; }
+.paz-toggle-ejemplo { background: var(--fondo-card); border-radius: 10px; padding: 14px 16px; font-size: 13.5px; color: var(--texto-muted); }
+.paz-toggle-ejemplo strong { color: var(--gris); }
+
+/* Explorador de los tres tipos de violencia */
+.violencia-nodos { display: flex; gap: 10px; margin-bottom: 20px; }
+.violencia-nodo { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 20px 12px; border-radius: 12px; border: 1.5px solid var(--borde); background: white; cursor: pointer; transition: border-color 0.2s ease, box-shadow 0.2s ease; font-family: 'Inter', sans-serif; }
+.violencia-nodo i { font-size: 24px; color: var(--accent, var(--azul)); }
+.violencia-nodo span { font-size: 13px; font-weight: 700; color: var(--gris); }
+.violencia-nodo:hover, .violencia-nodo.activo { border-color: var(--accent, var(--azul)); box-shadow: 0 8px 20px rgba(8,69,140,0.12); }
+.violencia-nodo.activo span { color: var(--accent, var(--azul)); }
+.violencia-panel { border: 1.5px solid var(--borde); border-radius: 14px; padding: 28px; background: white; }
+.violencia-panel h3 { font-size: 18px; margin: 0 0 10px; }
+.violencia-panel p { font-size: 14.5px; color: var(--gris); line-height: 1.75; margin-bottom: 14px; }
+.violencia-ejemplo { background: var(--fondo-card); border-radius: 10px; padding: 14px 16px; font-size: 13.5px; color: var(--texto-muted); }
+.violencia-ejemplo strong { color: var(--gris); }
+
+@media (max-width: 720px) {
+  .paz-toggle-btns { flex-direction: column; }
+  .violencia-nodos { flex-direction: column; }
+}

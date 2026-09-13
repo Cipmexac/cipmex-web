@@ -5,16 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>¿Qué es la paz? · CIPMEX</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=8">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.33.0/dist/tabler-icons.min.css">
+<link rel="stylesheet" href="style.css?v=23">
 </head>
-  <script>
-window.addEventListener('scroll', function () {
-  var hw = document.getElementById('headerWrap');
-  if (window.scrollY > 20) { hw.classList.add('scrolled'); } else { hw.classList.remove('scrolled'); }
-});
-</script>
 <body>
+
 <div class="header-wrap" id="headerWrap">
 <div class="contenedor">
   <header>
@@ -24,7 +20,7 @@ window.addEventListener('scroll', function () {
     <nav>
       <ul>
         <li><a href="index.html">Inicio</a></li>
-        <li class="nav-item-dropdown">
+        <li class="nav-item-dropdown activo">
           <span>Sobre nosotros</span>
           <div class="dropdown-menu">
             <a href="quienes-somos.html">Quiénes somos</a>
@@ -42,22 +38,164 @@ window.addEventListener('scroll', function () {
 </div>
 </div>
 
-  <section>
-    <span class="kicker">NUESTRO MARCO DE TRABAJO</span>
-    <h1>¿Qué es la paz?</h1>
-    <p class="texto-parrafo">Entendemos la paz como algo que va más allá de la ausencia de violencia directa. La integran también factores políticos, económicos, sociales, culturales y psicológicos que determinan si una sociedad logra cohesionarse o se fractura. Buscamos que ese conocimiento se traduzca en una disminución real de la violencia estructural y en la construcción de condiciones de paz.</p>
-  </section>
+<div class="banner-pagina">
+  <div class="contenedor">
+    <div class="hero-kicker">
+      <div class="barra"></div>
+      <p>NUESTRO MARCO CONCEPTUAL</p>
+    </div>
+    <h1>¿Qué es la paz para CIPMEX?</h1>
+  </div>
+</div>
 
-  <section>
-    <h2>Constructores y disruptores</h2>
-    <p class="texto-parrafo">Estudiamos ambos lados de este fenómeno con la misma rigurosidad. Llamamos constructores de paz a todo aquello que integra a una sociedad y le permite cohesionarse, y disruptores de paz a lo que la fractura. Entender solo la violencia sin entender también la paz deja incompleta cualquier posibilidad de transformarla.</p>
-  </section>
+<div class="contenedor" style="padding: 40px 0 8px;">
+  <p class="texto-parrafo" style="font-size: 16px; max-width: 720px;">Partimos de una idea que cambia cómo investigamos, diagnosticamos y proponemos soluciones: la paz no se agota en la ausencia de guerra o delincuencia. Se lo debemos, en gran parte, a Johan Galtung, uno de los fundadores de los estudios de paz, quien en 1969 propuso distinguir entre dos tipos de paz. Esa distinción sigue siendo la base de nuestro trabajo. Explora las dos tarjetas para ver la diferencia.</p>
+</div>
 
-  <section>
-    <h2>Por qué nos importa este enfoque</h2>
-    <p class="texto-parrafo">Este marco es lo que guía cada investigación que hacemos, cada taller que impartimos y cada recomendación que entregamos. No buscamos solo documentar la falta de paz en México, buscamos entender las condiciones específicas que la producen para poder diseñar propuestas que de verdad respondan a esas causas.</p>
-    <a href="quienes-somos.html" class="enlace-relacionado">Conoce quiénes somos →</a>
-  </section>
+<div class="mini-grid" style="border-top: none; padding-top: 20px;">
+  <div class="contenedor" style="max-width: 760px;">
+
+    <div class="paz-toggle-wrap">
+      <div class="paz-toggle-btns">
+        <button class="paz-toggle-btn activo" type="button" data-paz="negativa" style="--accent: var(--terracota);">Paz negativa</button>
+        <button class="paz-toggle-btn" type="button" data-paz="positiva" style="--accent: var(--verde);">Paz positiva</button>
+      </div>
+
+      <div class="paz-toggle-panel" data-panel="negativa">
+        <h3 style="color: var(--terracota);">Paz negativa</h3>
+        <p>Es la ausencia de violencia directa: guerra, delincuencia armada, agresión física entre personas o grupos. Es la definición más intuitiva y también la más fácil de medir, porque se puede contar en homicidios, secuestros o enfrentamientos armados.</p>
+        <div class="paz-toggle-ejemplo"><strong>Ejemplo:</strong> una colonia donde bajan los homicidios y las balaceras tiene, en este sentido, más paz negativa que antes.</div>
+      </div>
+
+      <div class="paz-toggle-panel" data-panel="positiva" hidden>
+        <h3 style="color: var(--verde);">Paz positiva</h3>
+        <p>Es la presencia activa de las condiciones que hacen posible una convivencia justa: instituciones que funcionan, oportunidades repartidas con cierta equidad, acceso real a salud y educación, y confianza entre vecinos y hacia las autoridades. Sin esas condiciones, la ausencia de violencia directa suele ser frágil y temporal.</p>
+        <div class="paz-toggle-ejemplo"><strong>Ejemplo:</strong> esa misma colonia, además de tener menos violencia, cuenta con parques que la gente usa, escuelas con buenos resultados y formas de resolver conflictos sin llegar a los golpes.</div>
+      </div>
+    </div>
+
+    <p class="texto-parrafo" style="max-width: none; margin-top: 20px;">Ninguna de las dos basta por sí sola. Una comunidad puede estar en calma y seguir cargando exclusión, desconfianza o injusticias que tarde o temprano generan más violencia. Por eso en CIPMEX investigamos las dos caras del fenómeno, no solo una.</p>
+
+  </div>
+</div>
+
+<div class="mini-grid">
+  <div class="contenedor" style="max-width: 760px;">
+    <span class="label">LOS TRES TIPOS DE VIOLENCIA</span>
+    <p class="texto-parrafo" style="max-width: none; margin-bottom: 20px;">Galtung también propuso un segundo mapa, que usamos para explicar de dónde viene la violencia que medimos. Elige cada tipo para ver su definición y un ejemplo.</p>
+
+    <div class="violencia-explorador">
+      <div class="violencia-nodos">
+        <button class="violencia-nodo activo" type="button" data-tipo="directa" style="--accent: var(--terracota);">
+          <i class="ti ti-bolt" aria-hidden="true"></i>
+          <span>Directa</span>
+        </button>
+        <button class="violencia-nodo" type="button" data-tipo="estructural" style="--accent: var(--morado);">
+          <i class="ti ti-building-bank" aria-hidden="true"></i>
+          <span>Estructural</span>
+        </button>
+        <button class="violencia-nodo" type="button" data-tipo="cultural" style="--accent: var(--azul);">
+          <i class="ti ti-message-2" aria-hidden="true"></i>
+          <span>Cultural</span>
+        </button>
+      </div>
+
+      <div class="violencia-panel">
+        <div data-tipo-panel="directa">
+          <h3 style="color: var(--terracota);">Violencia directa</h3>
+          <p>Es la más visible: un daño físico o psicológico que una persona o un grupo ejerce sobre otra, de forma identificable.</p>
+          <div class="violencia-ejemplo"><strong>Ejemplo:</strong> un asalto, un homicidio, un secuestro.</div>
+        </div>
+        <div data-tipo-panel="estructural" hidden>
+          <h3 style="color: var(--morado);">Violencia estructural</h3>
+          <p>Es la desigualdad y la exclusión que quedan incrustadas en las instituciones y en la forma en que se reparten los recursos, sin que haya siempre un agresor identificable.</p>
+          <div class="violencia-ejemplo"><strong>Ejemplo:</strong> la falta de acceso a servicios de salud en ciertas zonas, o un sistema judicial que trata distinto según el nivel socioeconómico.</div>
+        </div>
+        <div data-tipo-panel="cultural" hidden>
+          <h3 style="color: var(--azul);">Violencia cultural</h3>
+          <p>Son las creencias, normas y discursos que legitiman a las otras dos. Abren la puerta para que la violencia directa y la estructural se sostengan en el tiempo.</p>
+          <div class="violencia-ejemplo"><strong>Ejemplo:</strong> normalizar el uso de la fuerza para resolver conflictos, o discursos que deshumanizan a un grupo entero.</div>
+        </div>
+      </div>
+    </div>
+
+    <p class="texto-parrafo" style="max-width: none; margin-top: 20px;">Investigar la paz, para nosotros, significa mirar las tres capas al mismo tiempo. No basta con contar homicidios: hay que entender qué instituciones y qué narrativas los sostienen.</p>
+  </div>
+</div>
+
+<div class="franja-gris">
+  <div class="contenedor">
+    <span class="label">CÓMO LLEGAMOS HASTA AQUÍ</span>
+    <div class="temas-lista">
+      <div class="tema">
+        <div class="tema-icono" style="background: var(--azul);"><i class="ti ti-book" style="color: white;" aria-hidden="true"></i></div>
+        <div>
+          <h4>1969</h4>
+          <p>Johan Galtung publica "Violence, Peace and Peace Research" y propone la distinción entre paz negativa y positiva.</p>
+        </div>
+      </div>
+      <div class="tema">
+        <div class="tema-icono" style="background: var(--morado);"><i class="ti ti-triangle" style="color: white;" aria-hidden="true"></i></div>
+        <div>
+          <h4>Décadas siguientes</h4>
+          <p>El campo de los estudios de paz crece y suma la idea de violencia estructural y cultural.</p>
+        </div>
+      </div>
+      <div class="tema">
+        <div class="tema-icono" style="background: var(--terracota);"><i class="ti ti-map-pin" style="color: white;" aria-hidden="true"></i></div>
+        <div>
+          <h4>2015</h4>
+          <p>Nace CIPMEX, con la convicción de que México necesita investigación propia sobre estos temas, no solo marcos importados.</p>
+        </div>
+      </div>
+      <div class="tema">
+        <div class="tema-icono" style="background: var(--verde);"><i class="ti ti-current-location" style="color: white;" aria-hidden="true"></i></div>
+        <div>
+          <h4>Hoy</h4>
+          <p>Aplicamos este marco a proyectos concretos, desde espacios públicos urbanos hasta política de seguridad.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="mini-grid">
+  <div class="contenedor">
+    <span class="label">CÓMO LO APLICAMOS</span>
+    <div class="servicios-grid">
+      <div class="servicio-item" style="--accent: var(--azul);">
+        <div class="servicio-top">
+          <div class="servicio-icono"><i class="ti ti-microscope" aria-hidden="true"></i></div>
+          <span class="servicio-num">01</span>
+        </div>
+        <h4>Investigación</h4>
+        <p>Medimos violencia directa y también documentamos las condiciones estructurales y culturales detrás de ella.</p>
+      </div>
+      <div class="servicio-item" style="--accent: var(--morado);">
+        <div class="servicio-top">
+          <div class="servicio-icono"><i class="ti ti-briefcase" aria-hidden="true"></i></div>
+          <span class="servicio-num">02</span>
+        </div>
+        <h4>Consultoría estratégica</h4>
+        <p>Ayudamos a gobiernos y empresas a diseñar acciones que atiendan las causas, no solo los síntomas.</p>
+      </div>
+      <div class="servicio-item" style="--accent: var(--terracota);">
+        <div class="servicio-top">
+          <div class="servicio-icono"><i class="ti ti-book-2" aria-hidden="true"></i></div>
+          <span class="servicio-num">03</span>
+        </div>
+        <h4>Educación para la paz</h4>
+        <p>Llevamos esta forma de entender la paz a las aulas, desde primaria hasta espacios universitarios.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="contenedor" style="padding: 8px 0 40px;">
+  <div class="equipo-cta">
+    <p class="equipo-cta-titulo">¿Quieres ver este marco aplicado a un caso real?</p>
+    <a href="case-studies.html" class="btn">Ver case studies</a>
+  </div>
 </div>
 
 <footer class="rico">
@@ -96,6 +234,61 @@ window.addEventListener('scroll', function () {
 <div class="copyright">
   <p>CIPMEX · Centro de Investigación para la Paz México, A.C. · Paz que se piensa, paz que se construye</p>
 </div>
+
+<script>
+window.addEventListener('scroll', function () {
+  var hw = document.getElementById('headerWrap');
+  if (window.scrollY > 20) { hw.classList.add('scrolled'); } else { hw.classList.remove('scrolled'); }
+});
+
+(function () {
+  var items = document.querySelectorAll('.servicio-item');
+  if (!items.length) return;
+  if (!('IntersectionObserver' in window)) {
+    items.forEach(function (el) { el.classList.add('visible'); });
+    return;
+  }
+  var obs = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        obs.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  items.forEach(function (el) { obs.observe(el); });
+})();
+
+(function () {
+  var btns = document.querySelectorAll('.paz-toggle-btn');
+  var panels = document.querySelectorAll('.paz-toggle-panel');
+  btns.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      btns.forEach(function (b) { b.classList.remove('activo'); });
+      btn.classList.add('activo');
+      var target = btn.getAttribute('data-paz');
+      panels.forEach(function (p) {
+        p.hidden = p.getAttribute('data-panel') !== target;
+      });
+    });
+  });
+})();
+
+(function () {
+  var nodos = document.querySelectorAll('.violencia-nodo');
+  var paneles = document.querySelectorAll('[data-tipo-panel]');
+  nodos.forEach(function (nodo) {
+    nodo.addEventListener('click', function () {
+      nodos.forEach(function (n) { n.classList.remove('activo'); });
+      nodo.classList.add('activo');
+      var target = nodo.getAttribute('data-tipo');
+      paneles.forEach(function (p) {
+        p.hidden = p.getAttribute('data-tipo-panel') !== target;
+      });
+    });
+  });
+})();
+</script>
 
 </body>
 </html>
