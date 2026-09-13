@@ -192,10 +192,10 @@ footer.rico { background: var(--azul); padding: 32px 0; margin-top: 8px; }
 .marco-destacado p { font-size: 19px; font-weight: 700; color: white; line-height: 1.6; margin: 0 auto 20px; max-width: 520px; }
 .marco-destacado a { font-size: 14px; color: white; font-weight: 600; border-bottom: 1.5px solid var(--terracota); padding-bottom: 2px; text-decoration: none; }
 
-.mini-grid { background: white; padding: 44px 24px; }
+.mini-grid { background: white; padding: 44px 0; }
 .mini-grid .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 18px; }
 
-.valores-fotos { background: white; padding: 44px 24px; }
+.valores-fotos { background: white; padding: 44px 0; }
 .trabajo-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 18px; }
 .trabajo-card { border-radius: 14px; padding: 22px; background: white; border: 1.5px solid var(--borde); transition: box-shadow 0.2s ease, border-color 0.2s ease; }
 .trabajo-card:hover { box-shadow: 0 12px 28px rgba(8,69,140,0.16); border-color: var(--accent, var(--terracota)); }
@@ -231,7 +231,8 @@ footer.rico { background: var(--azul); padding: 32px 0; margin-top: 8px; }
 .servicio-item:hover .servicio-num { opacity: 1; }
 .servicio-item h4 { font-size: 15px; font-weight: 700; color: var(--azul); margin-bottom: 6px; }
 .servicio-item p { font-size: 13.5px; color: var(--texto-muted); line-height: 1.6; margin: 0; }
-.cs-mini-grid { background: white; padding: 40px 24px; }
+.marquee-bloque { background: white; padding: 40px 0; }
+.cs-mini-grid { background: white; padding: 40px 0; }
 .cs-mini-grid .grid-cs { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 14px; }
 .cs-mini-grid .card { padding: 16px; }
 .cs-mini-grid .etiqueta-leer { font-family: 'Roboto Mono', monospace; font-size: 10px; }
