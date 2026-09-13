@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.33.0/dist/tabler-icons.min.css">
-<link rel="stylesheet" href="style.css?v=27">
+<link rel="stylesheet" href="style.css?v=28">
 </head>
 <body>
 
@@ -362,14 +362,30 @@
 
 <div class="mini-grid">
   <div class="contenedor">
-    <span class="label">LABORATORIO DE CASOS</span>
-    <p class="texto-parrafo" style="max-width: none; margin-bottom: 20px;">Pon el marco a prueba con casos documentados de la historia reciente, no necesariamente ligados al trabajo de CIPMEX. En cada tarjeta, ubica el caso en el espectro entre paz negativa y paz positiva, y compara tu lectura con cómo lo documentan las fuentes.</p>
 
-    <div class="casos-grid" id="casosGrid"></div>
-
-    <div style="text-align: center; margin-top: 28px;">
-      <button class="btn" type="button" id="casosVerMas">Ver más casos</button>
+    <div class="laboratorio-banner">
+      <div class="laboratorio-banner-foto" style="background: linear-gradient(135deg, var(--azul-claro), var(--morado));"></div>
+      <div class="laboratorio-banner-overlay"></div>
+      <h2 class="laboratorio-banner-titulo">Laboratorio de casos</h2>
     </div>
+
+    <div class="laboratorio-caja">
+      <p class="texto-parrafo" style="max-width: none; margin-bottom: 24px;">Pon el marco a prueba con casos documentados de la historia reciente, no necesariamente ligados al trabajo de CIPMEX. Arrastra el control al punto del espectro donde ubicarías cada caso, y compara tu lectura con cómo lo documentan las fuentes. Resuelve un caso para desbloquear el siguiente.</p>
+
+      <div class="laboratorio-progreso">
+        <span class="laboratorio-progreso-texto">Caso <span id="labActual">1</span> de <span id="labTotal">6</span></span>
+        <div class="laboratorio-progreso-barra"><div class="laboratorio-progreso-relleno" id="labProgresoRelleno" style="width: 16.6%;"></div></div>
+      </div>
+
+      <div id="casoActualContenedor"></div>
+
+      <div class="laboratorio-completo" id="laboratorioCompleto" hidden>
+        <i class="ti ti-confetti" aria-hidden="true"></i>
+        <p>Completaste los 6 casos del laboratorio.</p>
+        <button class="btn" type="button" id="laboratorioReiniciar">Volver a empezar</button>
+      </div>
+    </div>
+
   </div>
 </div>
 
@@ -582,77 +598,106 @@ window.addEventListener('scroll', function () {
     }
   ];
 
-  var grid = document.getElementById('casosGrid');
-  var verMasBtn = document.getElementById('casosVerMas');
-  if (!grid || !verMasBtn) return;
-  var visiblesIniciales = 4;
+  var contenedor = document.getElementById('casoActualContenedor');
+  var labActualEl = document.getElementById('labActual');
+  var labProgresoRelleno = document.getElementById('labProgresoRelleno');
+  var laboratorioCompleto = document.getElementById('laboratorioCompleto');
+  var reiniciarBtn = document.getElementById('laboratorioReiniciar');
+  if (!contenedor) return;
 
-  casos.forEach(function (c, i) {
-    var card = document.createElement('div');
-    card.className = 'caso-card' + (i >= visiblesIniciales ? ' oculto' : '');
+  var indice = 0;
+
+  function renderCaso(i) {
+    var c = casos[i];
+    var esUltimo = i === casos.length - 1;
+
+    if (labActualEl) labActualEl.textContent = String(i + 1);
+    if (labProgresoRelleno) labProgresoRelleno.style.width = ((i / casos.length) * 100) + '%';
 
     var videoPill = c.videoUrl
       ? '<a class="caso-video-pill" href="' + c.videoUrl + '" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>' + c.videoNombre + '</a>'
       : '';
 
-    var puntosHtml = '';
-    for (var v = 1; v <= 5; v++) {
-      puntosHtml += '<button class="caso-punto" type="button" data-valor="' + v + '" title="' + etiquetasEspectro[v - 1] + '"></button>';
-    }
-
-    card.innerHTML =
-      '<div class="caso-foto" style="background: linear-gradient(135deg, ' + c.accent + ', var(--azul-oscuro));">' +
-        videoPill +
-        '<span class="caso-foto-tag">FOTO</span>' +
-      '</div>' +
-      '<div class="caso-contenido">' +
-        '<h3>' + c.titulo + '</h3>' +
-        '<p class="caso-contexto">' + c.resumen + '</p>' +
-        '<div class="caso-espectro-etiquetas"><span>Paz negativa</span><span>Paz positiva</span></div>' +
-        '<div class="caso-espectro-puntos">' + puntosHtml + '</div>' +
-        '<div class="caso-respuesta">' +
-          '<span class="caso-veredicto"></span>' +
-          '<p class="caso-explicacion"></p>' +
-          '<p class="caso-fuentes"></p>' +
+    contenedor.innerHTML =
+      '<div class="caso-card">' +
+        '<div class="caso-foto" style="background: linear-gradient(135deg, ' + c.accent + ', var(--azul-oscuro));">' +
+          videoPill +
+          '<span class="caso-foto-tag">FOTO</span>' +
+        '</div>' +
+        '<div class="caso-contenido">' +
+          '<h3>' + c.titulo + '</h3>' +
+          '<p class="caso-contexto">' + c.resumen + '</p>' +
+          '<div class="caso-slider-wrap">' +
+            '<div class="caso-slider-etiqueta" id="casoSliderEtiqueta">' + etiquetasEspectro[2] + '</div>' +
+            '<div class="caso-slider-track-wrap">' +
+              '<input type="range" class="caso-slider" id="casoSlider" min="1" max="5" step="1" value="3">' +
+              '<div class="caso-marcador-doc" id="casoMarcadorDoc" hidden></div>' +
+            '</div>' +
+            '<div class="caso-slider-extremos"><span>Paz negativa</span><span>Paz positiva</span></div>' +
+          '</div>' +
+          '<button class="btn" type="button" id="casoConfirmar">Comparar con las fuentes</button>' +
+          '<div class="caso-respuesta" id="casoRespuesta">' +
+            '<span class="caso-veredicto"></span>' +
+            '<p class="caso-explicacion"></p>' +
+            '<p class="caso-fuentes"></p>' +
+            '<button class="btn-secundario" type="button" id="casoSiguiente">' + (esUltimo ? 'Ver resultado final' : 'Siguiente caso →') + '</button>' +
+          '</div>' +
         '</div>' +
       '</div>';
 
-    var puntos = card.querySelectorAll('.caso-punto');
-    var respuestaEl = card.querySelector('.caso-respuesta');
-    var veredictoEl = card.querySelector('.caso-veredicto');
-    var explicacionEl = card.querySelector('.caso-explicacion');
-    var fuentesEl = card.querySelector('.caso-fuentes');
+    var slider = document.getElementById('casoSlider');
+    var etiquetaEl = document.getElementById('casoSliderEtiqueta');
+    var confirmarBtn = document.getElementById('casoConfirmar');
+    var respuesta = document.getElementById('casoRespuesta');
+    var veredictoEl = respuesta.querySelector('.caso-veredicto');
+    var explicacionEl = respuesta.querySelector('.caso-explicacion');
+    var fuentesEl = respuesta.querySelector('.caso-fuentes');
+    var siguienteBtn = document.getElementById('casoSiguiente');
+    var marcadorDoc = document.getElementById('casoMarcadorDoc');
 
-    puntos.forEach(function (punto) {
-      punto.addEventListener('click', function () {
-        var valorUsuario = parseInt(punto.getAttribute('data-valor'), 10);
-        puntos.forEach(function (p) { p.classList.remove('elegido', 'documentado'); });
-        punto.classList.add('elegido');
-        var puntoDoc = card.querySelector('.caso-punto[data-valor="' + c.valorDocumentado + '"]');
-        if (puntoDoc) puntoDoc.classList.add('documentado');
-
-        veredictoEl.textContent = valorUsuario === c.valorDocumentado
-          ? 'Coincide con las fuentes: ' + etiquetasEspectro[c.valorDocumentado - 1] + '.'
-          : 'Tú: ' + etiquetasEspectro[valorUsuario - 1] + '. Fuentes: ' + etiquetasEspectro[c.valorDocumentado - 1] + '.';
-        explicacionEl.textContent = c.explicacion;
-        fuentesEl.innerHTML = '¿Quieres profundizar? Lee más en <a href="' + c.fuenteUrl + '" target="_blank" rel="noopener">' + c.fuenteNombre + '</a>.';
-        respuestaEl.classList.add('visible');
-      });
+    slider.addEventListener('input', function () {
+      etiquetaEl.textContent = etiquetasEspectro[parseInt(slider.value, 10) - 1];
     });
 
-    grid.appendChild(card);
-  });
+    confirmarBtn.addEventListener('click', function () {
+      var valorUsuario = parseInt(slider.value, 10);
+      slider.disabled = true;
+      confirmarBtn.style.display = 'none';
 
-  var revelado = false;
-  verMasBtn.addEventListener('click', function () {
-    if (!revelado) {
-      grid.querySelectorAll('.caso-card.oculto').forEach(function (c) { c.classList.remove('oculto'); });
-      revelado = true;
-      verMasBtn.textContent = 'Explorar case studies de CIPMEX →';
-    } else {
-      window.location.href = 'case-studies.html';
-    }
-  });
+      var pct = ((c.valorDocumentado - 1) / 4) * 100;
+      marcadorDoc.style.left = pct + '%';
+      marcadorDoc.hidden = false;
+
+      veredictoEl.textContent = valorUsuario === c.valorDocumentado
+        ? 'Coincide con las fuentes: ' + etiquetasEspectro[c.valorDocumentado - 1] + '.'
+        : 'Tú: ' + etiquetasEspectro[valorUsuario - 1] + '. Fuentes: ' + etiquetasEspectro[c.valorDocumentado - 1] + '.';
+      explicacionEl.textContent = c.explicacion;
+      fuentesEl.innerHTML = '¿Quieres profundizar? Lee más en <a href="' + c.fuenteUrl + '" target="_blank" rel="noopener">' + c.fuenteNombre + '</a>.';
+      respuesta.classList.add('visible');
+
+      if (labProgresoRelleno) labProgresoRelleno.style.width = (((i + 1) / casos.length) * 100) + '%';
+    });
+
+    siguienteBtn.addEventListener('click', function () {
+      if (i + 1 < casos.length) {
+        indice = i + 1;
+        renderCaso(indice);
+      } else {
+        contenedor.innerHTML = '';
+        if (laboratorioCompleto) laboratorioCompleto.hidden = false;
+      }
+    });
+  }
+
+  renderCaso(indice);
+
+  if (reiniciarBtn) {
+    reiniciarBtn.addEventListener('click', function () {
+      if (laboratorioCompleto) laboratorioCompleto.hidden = true;
+      indice = 0;
+      renderCaso(indice);
+    });
+  }
 })();
 </script>
 

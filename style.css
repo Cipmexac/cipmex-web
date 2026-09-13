@@ -399,44 +399,63 @@ footer.rico { background: var(--azul); padding: 32px 0; margin-top: 8px; }
 .pilar-back-overlay { position: absolute; inset: 0; background: linear-gradient(rgba(5,26,50,0.4), rgba(5,26,50,0.58)); }
 .pilar-back p { position: relative; z-index: 1; font-size: 12.5px; line-height: 1.55; margin: 0; max-width: 94%; color: #fff; text-shadow: 0 1px 5px rgba(0,0,0,0.4); }
 
-/* Laboratorio de casos: grid de tarjetas, cada una con foto/video y su propio espectro */
-.casos-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-.caso-card { border: 1.5px solid var(--borde); border-radius: 14px; overflow: hidden; background: white; transition: box-shadow 0.2s ease, border-color 0.2s ease; }
-.caso-card:hover { box-shadow: 0 10px 24px rgba(8,69,140,0.14); }
-.caso-card.oculto { display: none; }
+/* Laboratorio de casos: banner tipo foto-hero + caja de laboratorio + un caso a la vez con slider */
+.laboratorio-banner { position: relative; overflow: hidden; border-radius: 20px 20px 0 0; min-height: 190px; display: flex; align-items: center; justify-content: center; }
+.laboratorio-banner-foto { position: absolute; inset: 0; }
+.laboratorio-banner-overlay { position: absolute; inset: 0; background: linear-gradient(rgba(5,26,50,0.6), rgba(5,26,50,0.72)); }
+.laboratorio-banner-titulo { position: relative; z-index: 1; color: #fff; font-size: 26px; margin: 0; text-align: center; text-shadow: 0 2px 10px rgba(0,0,0,0.35); }
+
+.laboratorio-caja { border: 1.5px solid var(--borde); border-top: none; border-radius: 0 0 16px 16px; background: var(--fondo-card); padding: 32px 32px 36px; }
+
+.laboratorio-progreso { display: flex; align-items: center; gap: 14px; margin-bottom: 30px; }
+.laboratorio-progreso-texto { font-family: 'Roboto Mono', monospace; font-size: 11px; color: var(--texto-muted); text-transform: uppercase; letter-spacing: 0.03em; white-space: nowrap; }
+.laboratorio-progreso-barra { flex: 1; height: 6px; border-radius: 4px; background: var(--borde); overflow: hidden; }
+.laboratorio-progreso-relleno { height: 100%; background: var(--terracota); border-radius: 4px; transition: width 0.4s ease; }
+
+.laboratorio-completo { text-align: center; padding: 44px 20px; }
+.laboratorio-completo i { font-size: 36px; color: var(--terracota); }
+.laboratorio-completo p { font-size: 15px; color: var(--gris); margin: 14px 0 22px; }
+
+.caso-card { border: 1.5px solid var(--borde); border-radius: 14px; overflow: hidden; background: white; max-width: 620px; margin: 0 auto; }
 .caso-foto { position: relative; width: 100%; aspect-ratio: 16 / 9; }
 .caso-foto .caso-foto-tag { position: absolute; bottom: 10px; right: 12px; font-size: 10px; color: rgba(255,255,255,0.65); font-family: 'Roboto Mono', monospace; }
 .caso-video-pill { position: absolute; top: 10px; left: 10px; display: flex; align-items: center; gap: 6px; background: rgba(5,26,50,0.72); color: white; font-size: 11px; font-weight: 700; padding: 6px 10px; border-radius: 20px; text-decoration: none; font-family: 'Inter', sans-serif; }
 .caso-video-pill:hover { background: var(--terracota); }
 .caso-video-pill svg { width: 12px; height: 12px; flex-shrink: 0; }
-.caso-contenido { padding: 20px; }
-.caso-contenido h3 { font-size: 15px; color: var(--azul); margin: 0 0 8px; }
-.caso-contenido p.caso-contexto { font-size: 13px; color: var(--gris); line-height: 1.6; margin: 0 0 18px; }
+.caso-contenido { padding: 24px 26px 28px; }
+.caso-contenido h3 { font-size: 17px; color: var(--azul); margin: 0 0 10px; }
+.caso-contenido p.caso-contexto { font-size: 13.5px; color: var(--gris); line-height: 1.6; margin: 0 0 26px; }
 
-.caso-espectro-etiquetas { display: flex; justify-content: space-between; font-family: 'Roboto Mono', monospace; font-size: 9.5px; color: var(--texto-muted); text-transform: uppercase; letter-spacing: 0.03em; }
-.caso-espectro-puntos { display: flex; gap: 5px; margin: 22px 0 20px; }
-.caso-punto { flex: 1; height: 32px; border-radius: 7px; border: 1.5px solid var(--borde); background: white; cursor: pointer; position: relative; padding: 0; transition: border-color 0.2s ease, background 0.2s ease; }
-.caso-punto:hover { border-color: var(--azul); }
-.caso-punto.elegido { border-color: var(--azul); background: var(--azul); }
-.caso-punto.elegido::after { content: "Tú"; position: absolute; top: -18px; left: 50%; transform: translateX(-50%); font-size: 9px; font-family: 'Roboto Mono', monospace; color: var(--azul); font-weight: 700; }
-.caso-punto.documentado { border-color: var(--terracota); box-shadow: inset 0 0 0 2px var(--terracota); }
-.caso-punto.documentado::before { content: "Fuentes"; position: absolute; bottom: -16px; left: 50%; transform: translateX(-50%); font-size: 8px; font-family: 'Roboto Mono', monospace; color: var(--terracota); font-weight: 700; white-space: nowrap; }
+/* Slider arrastrable con etiqueta dinámica de zona */
+.caso-slider-wrap { margin: 0 0 22px; }
+.caso-slider-etiqueta { text-align: center; font-family: 'Roboto Mono', monospace; font-size: 11px; font-weight: 700; color: var(--azul); text-transform: uppercase; letter-spacing: 0.03em; margin-bottom: 16px; }
+.caso-slider-track-wrap { position: relative; display: flex; align-items: center; }
+.caso-slider { -webkit-appearance: none; appearance: none; width: 100%; height: 6px; border-radius: 4px; background: linear-gradient(90deg, var(--azul-claro), var(--borde) 50%, var(--terracota)); outline: none; cursor: grab; margin: 0; }
+.caso-slider:active { cursor: grabbing; }
+.caso-slider::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 22px; height: 22px; border-radius: 50%; background: var(--azul); border: 3px solid white; box-shadow: 0 1px 6px rgba(8,69,140,0.45); cursor: grab; }
+.caso-slider::-webkit-slider-thumb:active { cursor: grabbing; }
+.caso-slider::-moz-range-thumb { width: 22px; height: 22px; border-radius: 50%; background: var(--azul); border: 3px solid white; box-shadow: 0 1px 6px rgba(8,69,140,0.45); cursor: grab; }
+.caso-slider::-moz-range-thumb:active { cursor: grabbing; }
+.caso-slider:disabled { opacity: 0.55; }
+.caso-marcador-doc { position: absolute; top: 50%; width: 12px; height: 12px; border-radius: 50%; background: var(--terracota); border: 2px solid white; box-shadow: 0 1px 4px rgba(0,0,0,0.35); transform: translate(-50%, -50%); pointer-events: none; z-index: 2; }
+.caso-slider-extremos { display: flex; justify-content: space-between; font-family: 'Roboto Mono', monospace; font-size: 9.5px; color: var(--texto-muted); text-transform: uppercase; letter-spacing: 0.03em; margin-top: 10px; }
 
-.caso-respuesta { display: none; background: var(--fondo-card); border-radius: 10px; padding: 14px 16px; }
+.caso-respuesta { display: none; background: white; border: 1px solid var(--borde); border-radius: 10px; padding: 16px 18px; margin-top: 6px; }
 .caso-respuesta.visible { display: block; }
 .caso-veredicto { display: block; font-family: 'Roboto Mono', monospace; font-size: 10px; text-transform: uppercase; letter-spacing: 0.02em; color: var(--terracota); margin-bottom: 8px; }
 .caso-explicacion { font-size: 12.5px; color: var(--gris); line-height: 1.6; margin: 0 0 10px; }
-.caso-fuentes { font-size: 11px; color: var(--texto-muted); margin: 0; }
+.caso-fuentes { font-size: 11px; color: var(--texto-muted); margin: 0 0 14px; }
 .caso-fuentes a { color: var(--azul); text-decoration: none; font-weight: 600; }
 .caso-fuentes a:hover { color: var(--terracota); }
 
-@media (max-width: 900px) {
-  .casos-grid { grid-template-columns: repeat(2, 1fr); }
-}
+.btn-secundario { display: inline-block; background: transparent; border: 1.5px solid var(--azul); color: var(--azul); padding: 10px 20px; border-radius: 6px; font-size: 13px; font-weight: 600; cursor: pointer; text-decoration: none; transition: background 0.2s ease, color 0.2s ease; font-family: 'Inter', sans-serif; }
+.btn-secundario:hover { background: var(--azul); color: white; }
+
 @media (max-width: 720px) {
   .pilares-grid { grid-template-columns: repeat(2, 1fr); }
-  .casos-grid { grid-template-columns: 1fr; }
-  .caso-espectro-puntos { margin: 26px 0 22px; }
+  .laboratorio-caja { padding: 24px 18px 30px; }
+  .laboratorio-banner { min-height: 150px; }
+  .laboratorio-banner-titulo { font-size: 21px; }
 }
 
 /* Cita de Galtung en esta página: foto más grande que el default de .cita-foto */
