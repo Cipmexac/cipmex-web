@@ -8,6 +8,12 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css?v=8">
 </head>
+  <script>
+window.addEventListener('scroll', function () {
+  var hw = document.getElementById('headerWrap');
+  if (window.scrollY > 20) { hw.classList.add('scrolled'); } else { hw.classList.remove('scrolled'); }
+});
+</script>
 <body>
 <div class="contenedor">
   <header>
