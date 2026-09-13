@@ -136,4 +136,36 @@ section h2 { font-size: 20px; font-weight: 600; margin-bottom: 16px; color: var(
 .valor .desc { font-size: 13px; color: var(--texto-muted); margin: 0; }
 
 .cifras-banda { display: flex; gap: 48px; padding: 32px 0; border-top: 1px solid var(--borde); border-bottom: 1px solid var(--borde); flex-wrap: wrap; }
-.cifra .numero { font-family: 'Roboto Mono', monospace; font-size: 32px; font-weight: 600; color: var(--azul);
+.cifra .numero { font-family: 'Roboto Mono', monospace; font-size: 32px; font-weight: 600; color: var(--azul); display: block; }
+.cifra .etiqueta { font-size: 13px; color: var(--texto-muted); margin-top: 4px; }
+
+.foto-banda img { width: 100%; display: block; border-radius: 14px; object-fit: cover; }
+.foto-banda .caption { font-family: 'Roboto Mono', monospace; font-size: 12px; color: var(--texto-muted); margin-top: 10px; }
+
+footer.rico { background: var(--azul); padding: 32px 0; margin-top: 8px; }
+.footer-grid { display: grid; grid-template-columns: 1.3fr 1px 1fr 1px 1fr 1px 1fr; gap: 20px; align-items: center; }
+.footer-logo-col { min-width: 0; }
+.footer-logo-col img { height: 68px; max-width: 100%; display: block; margin-bottom: 8px; }
+.footer-logo-col p { font-family: 'Roboto Mono', monospace; font-size: 12px; color: #E8EEF3; margin: 0; }
+.footer-sep { width: 1px; height: 50px; background: rgba(255,255,255,0.2); justify-self: center; }
+.footer-grid h5 { font-size: 13px; font-weight: 700; color: white; margin-bottom: 10px; }
+.footer-grid p, .footer-grid a { font-size: 12px; color: #C9D4DE; margin-bottom: 6px; display: block; text-decoration: none; }
+.footer-grid .redes { display: flex; gap: 12px; margin-top: 4px; }
+.footer-grid .redes a { display: flex; }
+.copyright { background: var(--azul-oscuro); padding: 14px 0; text-align: center; }
+.copyright p { font-size: 11px; color: #8FA3B8; }
+
+@media (max-width: 720px) {
+  nav ul { display: none; }
+  .hero-flex { flex-direction: column; }
+  .hero-foto { min-height: 120px; }
+  .pub-grid { grid-template-columns: 1fr; }
+  .cs-grid { grid-template-columns: 1fr; }
+  .mision-vision { grid-template-columns: 1fr; }
+  .valores-grid { grid-template-columns: 1fr; }
+  .cifras-banda { gap: 28px; }
+  .equipo-grid { grid-template-columns: 1fr 1fr; }
+  .apoyo-grid { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; }
+  .footer-sep { display: none; }
+}
