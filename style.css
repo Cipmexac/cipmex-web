@@ -624,3 +624,16 @@ footer.rico { background: var(--azul); padding: 32px 0; margin-top: 8px; }
   .columna-portada { height: 240px; }
   .columna-cabecera h1 { font-size: 24px; }
 }
+
+/* Insignia del medio en columna individual: circulito con iniciales por ahora; en cuanto subas el logo real, cambia el <span>SOL</span> por <img src="ruta-del-logo"> dentro de .columna-medio-logo-circulo */
+.columna-medio-logo-circulo { width: 22px; height: 22px; border-radius: 50%; background: var(--azul); color: white; font-family: 'Roboto Mono', monospace; font-size: 8px; font-weight: 700; display: flex; align-items: center; justify-content: center; overflow: hidden; flex-shrink: 0; }
+.columna-medio-logo-circulo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+/* Autor con foto circular en la cabecera de una columna */
+.columna-autor-chip { display: inline-flex; align-items: center; gap: 8px; font-weight: 600; color: var(--gris); }
+.columna-autor-foto { width: 26px; height: 26px; border-radius: 50%; overflow: hidden; flex-shrink: 0; background: var(--fondo-card); }
+.columna-autor-foto img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+/* Fotos reales dentro de tarjetas de publicación (antes solo eran fondos de color) */
+.semblanza-pub-grid .foto { position: relative; }
+.pub-foto img, .recientes-card-foto img, .semblanza-pub-grid .foto img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
