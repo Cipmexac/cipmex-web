@@ -580,3 +580,26 @@ footer.rico { background: var(--azul); padding: 32px 0; margin-top: 8px; }
   .recientes-card { width: 190px; }
   .temas-grid { grid-template-columns: 1fr; }
 }
+
+/* Casos de impacto: portada — extiende .pub-card con un dato numérico destacado */
+.pub-stat { font-family: 'Roboto Mono', monospace; font-size: 12.5px; color: var(--texto-muted); margin: 0 0 14px; }
+.pub-stat-num { font-weight: 700; color: var(--azul); font-size: 16px; margin-right: 4px; }
+.pub-grid.impacto-grid { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+
+/* Casos de impacto: página de un caso individual, resultados clave estilo "número + descripción" con divisores, inspirado en formatos de case study de consultoría */
+.resultados-clave { margin: 8px 0 8px; }
+.resultado-item { display: flex; align-items: baseline; gap: 24px; padding: 22px 0; border-bottom: 1px solid var(--borde); }
+.resultado-item:first-child { padding-top: 0; }
+.resultado-item:last-child { border-bottom: none; }
+.resultado-num { font-family: 'Roboto Mono', monospace; font-size: 34px; font-weight: 700; color: var(--azul); min-width: 96px; flex-shrink: 0; }
+.resultado-desc { font-size: 14.5px; color: var(--gris); line-height: 1.6; }
+
+.lista-simple { margin: 14px 0 0; padding-left: 20px; }
+.lista-simple li { font-size: 14.5px; color: var(--gris); line-height: 1.85; margin-bottom: 4px; }
+
+.caso-meta { font-family: 'Roboto Mono', monospace; font-size: 12.5px; color: rgba(255,255,255,0.7); margin-top: 6px; }
+
+@media (max-width: 720px) {
+  .resultado-item { gap: 14px; }
+  .resultado-num { font-size: 26px; min-width: 70px; }
+}
