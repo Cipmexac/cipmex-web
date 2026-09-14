@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.33.0/dist/tabler-icons.min.css">
-<link rel="stylesheet" href="style.css?v=35">
+<link rel="stylesheet" href="style.css?v=36">
 </head>
   <script>
 window.addEventListener('scroll', function () {
@@ -86,7 +86,20 @@ window.addEventListener('scroll', function () {
       <p class="label" style="margin: 0;">Publicaciones recientes</p>
       <a href="publicaciones-columnas.html" class="ver-todos">Ver todas las columnas →</a>
     </div>
-    <div class="pub-grid">
+    <div class="pub-grid" style="grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));">
+      <a href="columna-11s-25-anos.html" class="pub-card">
+        <div class="pub-foto" style="background: linear-gradient(135deg, var(--azul), var(--azul-claro));">
+          <span class="pub-tag">Columna</span>
+        </div>
+        <div class="pub-contenido">
+          <h3>11-S: 25 años después</h3>
+          <p class="pub-resumen">A 25 años de los atentados del 11 de septiembre, qué aprendimos sobre responder a la violencia con más violencia y qué significa construir paz.</p>
+          <div class="pub-meta">
+            <span>Alejandra Nurko Benbassat · sep 2026</span>
+            <span class="pub-leer">Leer →</span>
+          </div>
+        </div>
+      </a>
       <a href="#" class="pub-card">
         <div class="pub-foto" style="background: linear-gradient(135deg, var(--azul), var(--terracota));">
           <span class="pub-tag">Columna</span>
