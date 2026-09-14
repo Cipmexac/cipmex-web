@@ -6,7 +6,8 @@
 <title>CIPMEX · Centro de Investigación para la Paz México</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=33">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.33.0/dist/tabler-icons.min.css">
+<link rel="stylesheet" href="style.css?v=34">
 </head>
   <script>
 window.addEventListener('scroll', function () {
@@ -81,33 +82,50 @@ window.addEventListener('scroll', function () {
 <div class="contenedor">
 
   <section>
-    <p class="label">Publicaciones recientes</p>
-    <div class="card pub-destacada" style="--accent: #c97b4a;">
-      <div class="foto" style="background: linear-gradient(135deg, #08458c, #c97b4a);"><span>FOTO</span></div>
-      <div class="texto">
-        <span class="etiqueta" style="color: #c97b4a; background: #FBF0E9;">Columna</span>
-        <h3>Por qué se repiten las crisis</h3>
-        <p class="fecha">14 ago 2026 · 4 min de lectura</p>
-        <p class="desc">Un análisis sobre por qué crisis como Ceuta se repiten cada pocos años en distintas partes del mundo.</p>
-      </div>
+    <div class="label-fila">
+      <p class="label" style="margin: 0;">Publicaciones recientes</p>
+      <a href="publicaciones-columnas.html" class="ver-todos">Ver todas las columnas →</a>
     </div>
     <div class="pub-grid">
-      <div class="card" style="--accent: #7b5ea7;">
-        <div class="foto" style="background: linear-gradient(135deg, #7b5ea7, #5a8db8);"><span>FOTO</span></div>
-        <div class="contenido">
-          <span class="etiqueta" style="color: #7b5ea7;">Investigación</span>
-          <h4>Género y privación de la libertad</h4>
-          <p class="card-desc">Estudio en tres cárceles mexicanas.</p>
+      <a href="#" class="pub-card">
+        <div class="pub-foto" style="background: linear-gradient(135deg, var(--azul), var(--terracota));">
+          <span class="pub-tag">Columna</span>
         </div>
-      </div>
-      <div class="card" style="--accent: #c97b4a;">
-        <div class="foto" style="background: linear-gradient(135deg, #c97b4a, #497a6d);"><span>FOTO</span></div>
-        <div class="contenido">
-          <span class="etiqueta" style="color: #c97b4a;">Columna</span>
-          <h4>De la cancha al algoritmo</h4>
-          <p class="card-desc">Redes sociales y polarización tras el Mundial.</p>
+        <div class="pub-contenido">
+          <h3>Por qué se repiten las crisis</h3>
+          <p class="pub-resumen">Un análisis sobre por qué crisis como Ceuta se repiten cada pocos años en distintas partes del mundo.</p>
+          <div class="pub-meta">
+            <span>14 ago 2026</span>
+            <span class="pub-leer">Leer →</span>
+          </div>
         </div>
-      </div>
+      </a>
+      <a href="#" class="pub-card">
+        <div class="pub-foto" style="background: linear-gradient(135deg, var(--morado), var(--azul-claro));">
+          <span class="pub-tag">Investigación</span>
+        </div>
+        <div class="pub-contenido">
+          <h3>Género y privación de la libertad</h3>
+          <p class="pub-resumen">Estudio en tres cárceles mexicanas sobre las condiciones de las mujeres privadas de su libertad.</p>
+          <div class="pub-meta">
+            <span>[mes, año]</span>
+            <span class="pub-leer">Leer →</span>
+          </div>
+        </div>
+      </a>
+      <a href="#" class="pub-card">
+        <div class="pub-foto" style="background: linear-gradient(135deg, var(--terracota), var(--verde));">
+          <span class="pub-tag">Columna</span>
+        </div>
+        <div class="pub-contenido">
+          <h3>De la cancha al algoritmo</h3>
+          <p class="pub-resumen">Redes sociales y polarización tras el Mundial: cómo se conectan el deporte y el discurso público.</p>
+          <div class="pub-meta">
+            <span>[mes, año]</span>
+            <span class="pub-leer">Leer →</span>
+          </div>
+        </div>
+      </a>
     </div>
   </section>
 
@@ -219,31 +237,48 @@ window.addEventListener('scroll', function () {
 <div class="franja-gris">
   <div class="contenedor">
     <p class="label">Nuestros temas</p>
-    <div class="temas-lista">
-      <div class="card tema" style="--accent: #08458c;">
-        <div class="tema-icono" style="background: #E6EEF7;">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#08458c" stroke-width="2"><path d="M12 3 L22 20 L2 20 Z"/><line x1="12" y1="9" x2="12" y2="14"/><circle cx="12" cy="17" r="0.5" fill="#08458c"/></svg>
-        </div>
-        <div><h4>Violencia estructural</h4><p>Cómo se distribuye el riesgo en la sociedad.</p></div>
-      </div>
-      <div class="card tema" style="--accent: #5a8db8;">
-        <div class="tema-icono" style="background: #EAF1F7;">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5a8db8" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12 H21 M12 3 C 8 7, 8 17, 12 21 C 16 17, 16 7, 12 3 Z"/></svg>
-        </div>
-        <div><h4>Riesgo geopolítico</h4><p>Contexto internacional y su efecto en México.</p></div>
-      </div>
-      <div class="card tema" style="--accent: #7b5ea7;">
-        <div class="tema-icono" style="background: #F1EBF5;">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#7b5ea7" stroke-width="2"><path d="M12 21 C 4 15, 2 9, 6 6 C 9 4, 12 6, 12 9 C 12 6, 15 4, 18 6 C 22 9, 20 15, 12 21 Z"/></svg>
-        </div>
-        <div><h4>Género y paz</h4><p>Violencia de género y construcción de paz.</p></div>
-      </div>
-      <div class="card tema" style="--accent: #497a6d;">
-        <div class="tema-icono" style="background: #EAF1EE;">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#497a6d" stroke-width="2"><path d="M3 5 C 7 3, 10 4, 12 6 C 14 4, 17 3, 21 5 V 18 C 17 16, 14 17, 12 19 C 10 17, 7 16, 3 18 Z"/></svg>
-        </div>
-        <div><h4>Educación para la paz</h4><p>Formación temprana en derechos humanos.</p></div>
-      </div>
+    <p class="texto-parrafo" style="max-width: none; margin-bottom: 4px;">Columnas de opinión e investigaciones de nuestro equipo, agrupadas por tema y sin importar en qué medio o formato se publicaron.</p>
+    <div class="temas-grid">
+      <a href="publicaciones-tema-mexico.html" class="tema-card">
+        <div class="tema-card-icono" style="background: var(--azul);"><i class="ti ti-flag" aria-hidden="true"></i></div>
+        <span class="tema-card-nombre">México</span>
+        <span class="tema-card-ver">Ver publicaciones →</span>
+      </a>
+      <a href="publicaciones-tema-mundo.html" class="tema-card">
+        <div class="tema-card-icono" style="background: var(--verde);"><i class="ti ti-world" aria-hidden="true"></i></div>
+        <span class="tema-card-nombre">Mundo</span>
+        <span class="tema-card-ver">Ver publicaciones →</span>
+      </a>
+      <a href="publicaciones-tema-geopolitica.html" class="tema-card">
+        <div class="tema-card-icono" style="background: var(--azul-oscuro);"><i class="ti ti-map-2" aria-hidden="true"></i></div>
+        <span class="tema-card-nombre">Geopolítica</span>
+        <span class="tema-card-ver">Ver publicaciones →</span>
+      </a>
+      <a href="publicaciones-tema-reflexion.html" class="tema-card">
+        <div class="tema-card-icono" style="background: var(--terracota);"><i class="ti ti-bulb" aria-hidden="true"></i></div>
+        <span class="tema-card-nombre">Reflexión</span>
+        <span class="tema-card-ver">Ver publicaciones →</span>
+      </a>
+      <a href="publicaciones-tema-violencia.html" class="tema-card">
+        <div class="tema-card-icono" style="background: var(--morado);"><i class="ti ti-alert-triangle" aria-hidden="true"></i></div>
+        <span class="tema-card-nombre">Violencia estructural</span>
+        <span class="tema-card-ver">Ver publicaciones →</span>
+      </a>
+      <a href="publicaciones-tema-genero.html" class="tema-card">
+        <div class="tema-card-icono" style="background: var(--azul-claro);"><i class="ti ti-heart-handshake" aria-hidden="true"></i></div>
+        <span class="tema-card-nombre">Género y paz</span>
+        <span class="tema-card-ver">Ver publicaciones →</span>
+      </a>
+      <a href="publicaciones-tema-educacion.html" class="tema-card">
+        <div class="tema-card-icono" style="background: var(--verde);"><i class="ti ti-school" aria-hidden="true"></i></div>
+        <span class="tema-card-nombre">Educación para la paz</span>
+        <span class="tema-card-ver">Ver publicaciones →</span>
+      </a>
+      <a href="publicaciones-tema-cohesion.html" class="tema-card">
+        <div class="tema-card-icono" style="background: var(--azul);"><i class="ti ti-users-group" aria-hidden="true"></i></div>
+        <span class="tema-card-nombre">Cohesión social</span>
+        <span class="tema-card-ver">Ver publicaciones →</span>
+      </a>
     </div>
   </div>
 </div>

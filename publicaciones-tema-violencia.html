@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Fernando de la Parra · CIPMEX</title>
+<title>Violencia estructural · Temas · CIPMEX</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.33.0/dist/tabler-icons.min.css">
@@ -20,7 +20,7 @@
     <nav>
       <ul>
         <li><a href="index.html">Inicio</a></li>
-        <li class="nav-item-dropdown activo">
+        <li class="nav-item-dropdown">
           <span>Sobre nosotros</span>
           <div class="dropdown-menu">
             <a href="quienes-somos.html">Quiénes somos</a>
@@ -28,7 +28,7 @@
             <a href="que-es-la-paz.html">¿Qué es la paz?</a>
           </div>
         </li>
-        <li class="nav-item-dropdown">
+        <li class="nav-item-dropdown activo">
           <span>Publicaciones</span>
           <div class="dropdown-menu">
             <a href="publicaciones.html">Todas las publicaciones</a>
@@ -46,59 +46,25 @@
 </div>
 </div>
 
-<div class="contenedor">
-  <div class="semblanza-hero" style="--accent: var(--azul-claro);">
-    <div class="semblanza-hero-texto">
-      <a href="equipo.html" class="ver-todos" style="display:inline-block;margin-bottom:14px;">← Equipo CIPMEX</a>
-      <div class="semblanza-kicker">
-        <div class="barra"></div>
-        <span>Equipo CIPMEX</span>
-      </div>
-      <h1>Fernando de la Parra</h1>
-      <p class="semblanza-rol">Investigador</p>
-      <p class="semblanza-bio-texto clamp">Escribe aquí la semblanza de Fernando de la Parra: su trayectoria académica y profesional, su formación, sus líneas de investigación y su papel en la fundación de CIPMEX. Puedes incluir también su experiencia previa, publicaciones destacadas, y cualquier reconocimiento relevante. Este es un texto de relleno para que puedas ver cómo se ve el párrafo completo una vez que se expande con "Leer más", así que puedes escribir aquí todo lo que quieras sin preocuparte por el largo.</p>
-      <button class="semblanza-leermas" type="button">Leer más →</button>
+<div class="banner-pagina">
+  <div class="contenedor">
+    <a href="publicaciones-columnas.html" class="volver-link">← Columnas de opinión</a>
+    <div class="hero-kicker">
+      <div class="barra" style="background: var(--morado);"></div>
+      <p>TEMA: VIOLENCIA ESTRUCTURAL</p>
     </div>
-    <div class="semblanza-foto">
-      <img src="img/fernando-de-la-parra.jpg" alt="Fernando de la Parra">
-    </div>
+    <h1>Violencia estructural</h1>
   </div>
 </div>
 
-<div class="contenedor">
-  <div class="semblanza-divisor"></div>
+<div class="mini-grid">
+  <div class="contenedor">
+    <span class="label">DE TODOS LOS MEDIOS</span>
+    <p class="texto-parrafo" style="max-width: none; margin-bottom: 8px;">Columnas de opinión e investigaciones de nuestro equipo sobre cómo se distribuye el riesgo y la desigualdad dentro de la sociedad, sin importar en qué medio o formato se publicaron.</p>
 
-  <div class="semblanza-publicaciones">
-    <p class="semblanza-pub-intro"><strong>Publicaciones recientes</strong> escritas por Fernando de la Parra.</p>
-    <div class="semblanza-pub-grid">
-      <div class="card">
-        <div class="foto" style="background: linear-gradient(135deg, var(--azul), var(--azul-claro));"><span>FOTO</span></div>
-        <div class="contenido">
-          <h4>Título de la publicación (pendiente)</h4>
-          <p class="desc">Aquí aparecerá un resumen breve cuando conectemos esto a la página de publicaciones.</p>
-        </div>
-      </div>
-      <div class="card">
-        <div class="foto" style="background: linear-gradient(135deg, var(--terracota), var(--morado));"><span>FOTO</span></div>
-        <div class="contenido">
-          <h4>Título de la publicación (pendiente)</h4>
-          <p class="desc">Aquí aparecerá un resumen breve cuando conectemos esto a la página de publicaciones.</p>
-        </div>
-      </div>
-      <div class="card">
-        <div class="foto" style="background: linear-gradient(135deg, var(--verde), var(--azul-claro));"><span>FOTO</span></div>
-        <div class="contenido">
-          <h4>Título de la publicación (pendiente)</h4>
-          <p class="desc">Aquí aparecerá un resumen breve cuando conectemos esto a la página de publicaciones.</p>
-        </div>
-      </div>
-      <div class="card">
-        <div class="foto" style="background: linear-gradient(135deg, var(--azul-oscuro), var(--terracota));"><span>FOTO</span></div>
-        <div class="contenido">
-          <h4>Título de la publicación (pendiente)</h4>
-          <p class="desc">Aquí aparecerá un resumen breve cuando conectemos esto a la página de publicaciones.</p>
-        </div>
-      </div>
+    <div class="tema-vacio">
+      <i class="ti ti-alert-triangle" aria-hidden="true"></i>
+      <p>Todavía no hay publicaciones con esta etiqueta, pero ya las estamos armando — la paz tampoco se construyó en un día. Vuelve pronto.</p>
     </div>
   </div>
 </div>
@@ -144,14 +110,6 @@
 window.addEventListener('scroll', function () {
   var hw = document.getElementById('headerWrap');
   if (window.scrollY > 20) { hw.classList.add('scrolled'); } else { hw.classList.remove('scrolled'); }
-});
-
-document.querySelectorAll('.semblanza-leermas').forEach(function (btn) {
-  btn.addEventListener('click', function () {
-    var texto = btn.previousElementSibling;
-    texto.classList.toggle('clamp');
-    btn.textContent = texto.classList.contains('clamp') ? 'Leer más →' : 'Leer menos ←';
-  });
 });
 </script>
 
