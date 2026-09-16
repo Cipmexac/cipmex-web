@@ -401,9 +401,10 @@ footer.rico { background: var(--azul); padding: 32px 0; margin-top: 8px; }
 .laboratorio-completo-ctas { display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; padding-bottom: 8px; }
 
 .caso-card { border: 1.5px solid var(--borde); border-radius: 14px; overflow: hidden; background: white; max-width: 620px; margin: 0 auto; }
-.caso-foto { position: relative; width: 100%; aspect-ratio: 16 / 9; }
+.caso-foto { position: relative; width: 100%; aspect-ratio: 16 / 9; overflow: hidden; }
 .caso-foto .caso-foto-tag { position: absolute; bottom: 10px; right: 12px; font-size: 10px; color: rgba(255,255,255,0.65); font-family: 'Roboto Mono', monospace; }
-.caso-video-pill { position: absolute; top: 10px; left: 10px; display: flex; align-items: center; gap: 6px; background: rgba(5,26,50,0.72); color: white; font-size: 11px; font-weight: 700; padding: 6px 10px; border-radius: 20px; text-decoration: none; font-family: 'Inter', sans-serif; }
+.caso-foto img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.caso-video-pill { position: absolute; top: 10px; left: 10px; z-index: 2; display: flex; align-items: center; gap: 6px; background: rgba(5,26,50,0.72); color: white; font-size: 11px; font-weight: 700; padding: 6px 10px; border-radius: 20px; text-decoration: none; font-family: 'Inter', sans-serif; }
 .caso-video-pill:hover { background: var(--terracota); }
 .caso-video-pill svg { width: 12px; height: 12px; flex-shrink: 0; }
 .caso-contenido { padding: 24px 26px 28px; }
@@ -448,8 +449,9 @@ footer.rico { background: var(--azul); padding: 32px 0; margin-top: 8px; }
 /* Fichas técnicas de ejemplos reales dentro del explorador de violencia */
 .violencia-fichas { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 14px; margin-top: 4px; }
 .ficha-caso { overflow: hidden; cursor: default; }
-.ficha-caso .ficha-foto { width: 100%; aspect-ratio: 16 / 10; display: flex; align-items: center; justify-content: center; }
+.ficha-caso .ficha-foto { width: 100%; aspect-ratio: 16 / 10; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
 .ficha-caso .ficha-foto span { font-size: 10px; color: white; font-family: 'Roboto Mono', monospace; }
+.ficha-caso .ficha-foto img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .ficha-caso .ficha-contenido { padding: 14px; }
 .ficha-caso h4 { font-size: 13.5px; font-weight: 700; margin: 0 0 6px; color: var(--gris); line-height: 1.35; }
 .ficha-caso p.ficha-desc { font-size: 12.5px; color: var(--texto-muted); line-height: 1.55; margin: 0 0 10px; }
