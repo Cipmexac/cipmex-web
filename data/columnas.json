@@ -1,0 +1,32 @@
+[
+  {
+    "id": "11s-25-anos",
+    "titulo": "11-S: 25 años después",
+    "resumen": "A 25 años de los atentados del 11 de septiembre, qué aprendimos sobre responder a la violencia con más violencia y qué significa construir paz.",
+    "medio": "El Sol de México",
+    "autor": "Alejandra Nurko Benbassat",
+    "autorSlug": "alejandra",
+    "autorFoto": "img/alejandra-nurko.jpg",
+    "tema": "Violencia estructural",
+    "temaSlug": "violencia",
+    "fecha": "2026-09-13",
+    "portada": "img/columnas/portada-11s-25-anos.jpg",
+    "link": "publicaciones/columnas/11s-25-anos.html",
+    "original": "https://oem.com.mx/elsoldemexico/analisis/11-s-25-anos-despues-32025809"
+  },
+  {
+    "id": "cuando-la-violencia-empieza-a-gobernar",
+    "titulo": "Cuando la violencia empieza a gobernar",
+    "resumen": "Qué nos dice la caravana de animales que huyó del santuario Ostok en Sinaloa sobre la pérdida de capacidad institucional frente a la violencia.",
+    "medio": "El Sol de México",
+    "autor": "Thali Kleinfinger",
+    "autorSlug": "thali",
+    "autorFoto": "img/thali-kleinfinger.jpg",
+    "tema": "Violencia estructural",
+    "temaSlug": "violencia",
+    "fecha": "2026-09-04",
+    "portada": "img/columnas/portada-caravana-ostok.jpg",
+    "link": "publicaciones/columnas/cuando-la-violencia-empieza-a-gobernar.html",
+    "original": "https://oem.com.mx/elsoldemexico/analisis/cuando-la-violencia-empieza-a-gobernar-31885516"
+  }
+]

@@ -7,12 +7,14 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.33.0/dist/tabler-icons.min.css">
-<link rel="stylesheet" href="style.css?v=37">
+<link rel="stylesheet" href="style.css?v=40">
 </head>
-  <script>
-window.addEventListener('scroll', function () {
-  var hw = document.getElementById('headerWrap');
-  if (window.scrollY > 20) { hw.classList.add('scrolled'); } else { hw.classList.remove('scrolled'); }
+  <script src="js/site.js"></script>
+<script src="js/columnas.js"></script>
+<script>
+var base = '';
+CIPMEXColumnas.cargar(base, function (data) {
+  CIPMEXColumnas.renderPubCards('pubRecientesGrid', CIPMEXColumnas.limitar(data, 3), {base: base});
 });
 </script>
 <body>
@@ -39,27 +41,30 @@ window.addEventListener('scroll', function () {
       <ul>
         <li><a href="index.html">Inicio</a></li>
         <li class="nav-item-dropdown">
-          <span>Sobre nosotros</span>
+          <span>Sobre nosotros <i class="ti ti-chevron-down chevron" aria-hidden="true"></i></span>
           <div class="dropdown-menu">
             <a href="quienes-somos.html">Quiénes somos</a>
-            <a href="equipo.html">Equipo</a>
+            <a href="equipo/index.html">Equipo</a>
             <a href="que-es-la-paz.html">¿Qué es la paz?</a>
           </div>
         </li>
         <li class="nav-item-dropdown">
-          <span>Publicaciones</span>
+          <span>Publicaciones <i class="ti ti-chevron-down chevron" aria-hidden="true"></i></span>
           <div class="dropdown-menu">
-            <a href="publicaciones.html">Todas las publicaciones</a>
-            <a href="publicaciones-columnas.html">Columnas de opinión</a>
-            <a href="publicaciones-investigacion.html">Publicaciones e investigación</a>
-            <a href="publicaciones-lecturas.html">Lecturas comentadas</a>
+            <a href="publicaciones/index.html">Todas las publicaciones</a>
+            <a href="publicaciones/columnas.html">Columnas de opinión</a>
+            <a href="publicaciones/investigacion.html">Publicaciones e investigación</a>
+            <a href="publicaciones/lecturas.html">Lecturas comentadas</a>
           </div>
         </li>
-        <li><a href="casos-de-impacto.html">Impacto</a></li>
+        <li><a href="casos/index.html">Impacto</a></li>
         <li><a href="contacto.html">Contacto</a></li>
       </ul>
     </nav>
     <a href="contacto.html" class="btn">Contactar</a>
+    <button class="menu-toggle" id="menuToggle" type="button" aria-label="Abrir menú" aria-expanded="false">
+      <i class="ti ti-menu-2" aria-hidden="true"></i>
+    </button>
   </header>
 </div>
 </div>
@@ -84,132 +89,64 @@ window.addEventListener('scroll', function () {
   <section>
     <div class="label-fila">
       <p class="label" style="margin: 0;">Publicaciones recientes</p>
-      <a href="publicaciones-columnas.html" class="ver-todos">Ver todas las columnas →</a>
+      <a href="publicaciones/columnas.html" class="ver-todos">Ver todas las columnas →</a>
     </div>
-    <div class="pub-grid" style="grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));">
-      <a href="columna-11s-25-anos.html" class="pub-card">
-        <div class="pub-foto">
-          <img src="img/columnas/portada-11s-25-anos.jpg" alt="11-S: 25 años después">
-          <span class="pub-tag">Columna</span>
-        </div>
-        <div class="pub-contenido">
-          <h3>11-S: 25 años después</h3>
-          <p class="pub-resumen">A 25 años de los atentados del 11 de septiembre, qué aprendimos sobre responder a la violencia con más violencia y qué significa construir paz.</p>
-          <div class="pub-meta">
-            <span>Alejandra Nurko Benbassat · sep 2026</span>
-            <span class="pub-leer">Leer →</span>
-          </div>
-        </div>
-      </a>
-      <a href="columna-cuando-la-violencia-empieza-a-gobernar.html" class="pub-card">
-        <div class="pub-foto">
-          <img src="img/columnas/portada-caravana-ostok.jpg" alt="Cuando la violencia empieza a gobernar">
-          <span class="pub-tag">Columna</span>
-        </div>
-        <div class="pub-contenido">
-          <h3>Cuando la violencia empieza a gobernar</h3>
-          <p class="pub-resumen">Qué nos dice la caravana de animales que huyó del santuario Ostok en Sinaloa sobre la pérdida de capacidad institucional frente a la violencia.</p>
-          <div class="pub-meta">
-            <span>Thali Kleinfinger · sep 2026</span>
-            <span class="pub-leer">Leer →</span>
-          </div>
-        </div>
-      </a>
-      <a href="#" class="pub-card">
-        <div class="pub-foto" style="background: linear-gradient(135deg, var(--azul), var(--terracota));">
-          <span class="pub-tag">Columna</span>
-        </div>
-        <div class="pub-contenido">
-          <h3>Por qué se repiten las crisis</h3>
-          <p class="pub-resumen">Un análisis sobre por qué crisis como Ceuta se repiten cada pocos años en distintas partes del mundo.</p>
-          <div class="pub-meta">
-            <span>14 ago 2026</span>
-            <span class="pub-leer">Leer →</span>
-          </div>
-        </div>
-      </a>
-      <a href="#" class="pub-card">
-        <div class="pub-foto" style="background: linear-gradient(135deg, var(--morado), var(--azul-claro));">
-          <span class="pub-tag">Investigación</span>
-        </div>
-        <div class="pub-contenido">
-          <h3>Género y privación de la libertad</h3>
-          <p class="pub-resumen">Estudio en tres cárceles mexicanas sobre las condiciones de las mujeres privadas de su libertad.</p>
-          <div class="pub-meta">
-            <span>[mes, año]</span>
-            <span class="pub-leer">Leer →</span>
-          </div>
-        </div>
-      </a>
-      <a href="#" class="pub-card">
-        <div class="pub-foto" style="background: linear-gradient(135deg, var(--terracota), var(--verde));">
-          <span class="pub-tag">Columna</span>
-        </div>
-        <div class="pub-contenido">
-          <h3>De la cancha al algoritmo</h3>
-          <p class="pub-resumen">Redes sociales y polarización tras el Mundial: cómo se conectan el deporte y el discurso público.</p>
-          <div class="pub-meta">
-            <span>[mes, año]</span>
-            <span class="pub-leer">Leer →</span>
-          </div>
-        </div>
-      </a>
-    </div>
+    <div class="pub-grid" id="pubRecientesGrid" style="grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));"></div>
   </section>
 
 <section>
   <p class="label">Equipo</p>
   <div class="equipo-cards">
-    <a href="semblanza-mauricio.html" class="persona-card">
+    <a href="equipo/mauricio.html" class="persona-card">
       <div class="card-inner">
         <div class="foto-cuadrada"><img src="img/mauricio-meschoulam.jpg" alt="Mauricio Meschoulam"></div>
         <p class="nombre-card">Mauricio<br>Meschoulam</p>
       </div>
       <span class="rol-fuera">Director y Fundador</span>
     </a>
-    <a href="semblanza-daniela.html" class="persona-card">
+    <a href="equipo/daniela.html" class="persona-card">
       <div class="card-inner">
         <div class="foto-cuadrada"><img src="img/daniela-manzanarez.jpg" alt="Daniela Manzanarez"></div>
         <p class="nombre-card">Daniela<br>Manzanarez</p>
       </div>
       <span class="rol-fuera">Coordinadora Operativa</span>
     </a>
-    <a href="semblanza-thali.html" class="persona-card">
+    <a href="equipo/thali.html" class="persona-card">
       <div class="card-inner">
         <div class="foto-cuadrada"><img src="img/thali-kleinfinger.jpg" alt="Thali Kleinfinger"></div>
         <p class="nombre-card">Thali<br>Kleinfinger</p>
       </div>
       <span class="rol-fuera">Coordinadora Académica</span>
     </a>
-    <a href="semblanza-alejandra.html" class="persona-card">
+    <a href="equipo/alejandra.html" class="persona-card">
       <div class="card-inner">
         <div class="foto-cuadrada"><img src="img/alejandra-nurko.jpg" alt="Alejandra Nurko"></div>
         <p class="nombre-card">Alejandra<br>Nurko</p>
       </div>
       <span class="rol-fuera">Coordinadora de Dirección</span>
     </a>
-    <a href="semblanza-fernando.html" class="persona-card">
+    <a href="equipo/fernando.html" class="persona-card">
       <div class="card-inner">
         <div class="foto-cuadrada"><img src="img/fernando-de-la-parra.jpg" alt="Fernando de la Parra"></div>
         <p class="nombre-card">Fernando<br>de la Parra</p>
       </div>
       <span class="rol-fuera">Investigador</span>
     </a>
-    <a href="semblanza-goretty.html" class="persona-card">
+    <a href="equipo/goretty.html" class="persona-card">
       <div class="card-inner">
         <div class="foto-cuadrada"><img src="img/goretty-espindola.jpg" alt="Goretty Espíndola"></div>
         <p class="nombre-card">Goretty<br>Espíndola</p>
       </div>
       <span class="rol-fuera">Investigadora</span>
     </a>
-    <a href="semblanza-maria-paula.html" class="persona-card">
+    <a href="equipo/maria-paula.html" class="persona-card">
       <div class="card-inner">
         <div class="foto-cuadrada"><img src="img/maria-paula-flores.jpg" alt="María Paula Flores"></div>
         <p class="nombre-card">María Paula<br>Flores</p>
       </div>
       <span class="rol-fuera">Investigadora</span>
     </a>
-    <a href="semblanza-alexa.html" class="persona-card">
+    <a href="equipo/alexa.html" class="persona-card">
       <div class="card-inner">
         <div class="foto-cuadrada"><img src="img/alexa-munguia.jpg" alt="Alexa Munguía"></div>
         <p class="nombre-card">Alexa<br>Munguía</p>
@@ -217,26 +154,26 @@ window.addEventListener('scroll', function () {
       <span class="rol-fuera">Investigadora</span>
     </a>
   </div>
-  <a href="equipo.html" class="ver-todos" style="display: inline-block; margin-top: 18px;">Conoce al equipo completo →</a>
+  <a href="equipo/index.html" class="ver-todos" style="display: inline-block; margin-top: 18px;">Conoce al equipo completo →</a>
 </section>
 
   <section>
     <div class="label-fila">
       <p class="label" style="margin: 0;">Casos de impacto</p>
-      <a href="casos-de-impacto.html" class="ver-todos">Ver todos →</a>
+      <a href="casos/index.html" class="ver-todos">Ver todos →</a>
     </div>
     <div class="cs-grid">
-      <a href="caso-inmujeres.html" class="card" style="--accent: #c97b4a; text-decoration: none;">
+      <a href="casos/inmujeres.html" class="card" style="--accent: #c97b4a; text-decoration: none;">
         <span class="etiqueta" style="color: #c97b4a;">Leer →</span>
         <h3>Inmujeres: un manual que se quedó a operar</h3>
         <p class="stat">[resultado]</p>
       </a>
-      <a href="caso-cana.html" class="card" style="--accent: #7b5ea7; text-decoration: none;">
+      <a href="casos/cana.html" class="card" style="--accent: #7b5ea7; text-decoration: none;">
         <span class="etiqueta" style="color: #7b5ea7;">Leer →</span>
         <h3>La Cana: entender la cárcel desde adentro</h3>
         <p class="stat">3 cárceles</p>
       </a>
-      <a href="caso-onc.html" class="card" style="--accent: #497a6d; text-decoration: none;">
+      <a href="casos/onc.html" class="card" style="--accent: #497a6d; text-decoration: none;">
         <span class="etiqueta" style="color: #497a6d;">Leer →</span>
         <h3>ONC: un índice que no existía</h3>
         <p class="stat">1° en México</p>
@@ -267,42 +204,42 @@ window.addEventListener('scroll', function () {
     <p class="label">Nuestros temas</p>
     <p class="texto-parrafo" style="max-width: none; margin-bottom: 4px;">Columnas de opinión e investigaciones de nuestro equipo, agrupadas por tema y sin importar en qué medio o formato se publicaron.</p>
     <div class="temas-grid">
-      <a href="publicaciones-tema-mexico.html" class="tema-card">
+      <a href="publicaciones/temas/mexico.html" class="tema-card">
         <div class="tema-card-icono" style="background: var(--azul);"><i class="ti ti-flag" aria-hidden="true"></i></div>
         <span class="tema-card-nombre">México</span>
         <span class="tema-card-ver">Ver publicaciones →</span>
       </a>
-      <a href="publicaciones-tema-mundo.html" class="tema-card">
+      <a href="publicaciones/temas/mundo.html" class="tema-card">
         <div class="tema-card-icono" style="background: var(--verde);"><i class="ti ti-world" aria-hidden="true"></i></div>
         <span class="tema-card-nombre">Mundo</span>
         <span class="tema-card-ver">Ver publicaciones →</span>
       </a>
-      <a href="publicaciones-tema-geopolitica.html" class="tema-card">
+      <a href="publicaciones/temas/geopolitica.html" class="tema-card">
         <div class="tema-card-icono" style="background: var(--azul-oscuro);"><i class="ti ti-map-2" aria-hidden="true"></i></div>
         <span class="tema-card-nombre">Geopolítica</span>
         <span class="tema-card-ver">Ver publicaciones →</span>
       </a>
-      <a href="publicaciones-tema-reflexion.html" class="tema-card">
+      <a href="publicaciones/temas/reflexion.html" class="tema-card">
         <div class="tema-card-icono" style="background: var(--terracota);"><i class="ti ti-bulb" aria-hidden="true"></i></div>
         <span class="tema-card-nombre">Reflexión</span>
         <span class="tema-card-ver">Ver publicaciones →</span>
       </a>
-      <a href="publicaciones-tema-violencia.html" class="tema-card">
+      <a href="publicaciones/temas/violencia.html" class="tema-card">
         <div class="tema-card-icono" style="background: var(--morado);"><i class="ti ti-alert-triangle" aria-hidden="true"></i></div>
         <span class="tema-card-nombre">Violencia estructural</span>
         <span class="tema-card-ver">Ver publicaciones →</span>
       </a>
-      <a href="publicaciones-tema-genero.html" class="tema-card">
+      <a href="publicaciones/temas/genero.html" class="tema-card">
         <div class="tema-card-icono" style="background: var(--azul-claro);"><i class="ti ti-heart-handshake" aria-hidden="true"></i></div>
         <span class="tema-card-nombre">Género y paz</span>
         <span class="tema-card-ver">Ver publicaciones →</span>
       </a>
-      <a href="publicaciones-tema-educacion.html" class="tema-card">
+      <a href="publicaciones/temas/educacion.html" class="tema-card">
         <div class="tema-card-icono" style="background: var(--verde);"><i class="ti ti-school" aria-hidden="true"></i></div>
         <span class="tema-card-nombre">Educación para la paz</span>
         <span class="tema-card-ver">Ver publicaciones →</span>
       </a>
-      <a href="publicaciones-tema-cohesion.html" class="tema-card">
+      <a href="publicaciones/temas/cohesion.html" class="tema-card">
         <div class="tema-card-icono" style="background: var(--azul);"><i class="ti ti-users-group" aria-hidden="true"></i></div>
         <span class="tema-card-nombre">Cohesión social</span>
         <span class="tema-card-ver">Ver publicaciones →</span>
@@ -333,7 +270,7 @@ window.addEventListener('scroll', function () {
       <div>
         <h5>Enlaces</h5>
         <a href="quienes-somos.html">Quiénes somos</a>
-        <a href="publicaciones.html">Publicaciones</a>
+        <a href="publicaciones/index.html">Publicaciones</a>
         <a href="contacto.html">Contacto</a>
       </div>
       <div class="footer-sep"></div>

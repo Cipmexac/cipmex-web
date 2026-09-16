@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.33.0/dist/tabler-icons.min.css">
-<link rel="stylesheet" href="style.css?v=35">
+<link rel="stylesheet" href="style.css?v=40">
 </head>
 <body>
 
@@ -21,27 +21,30 @@
       <ul>
         <li><a href="index.html">Inicio</a></li>
         <li class="nav-item-dropdown activo">
-          <span>Sobre nosotros</span>
+          <span>Sobre nosotros <i class="ti ti-chevron-down chevron" aria-hidden="true"></i></span>
           <div class="dropdown-menu">
             <a href="quienes-somos.html">Quiénes somos</a>
-            <a href="equipo.html">Equipo</a>
+            <a href="equipo/index.html">Equipo</a>
             <a href="que-es-la-paz.html">¿Qué es la paz?</a>
           </div>
         </li>
         <li class="nav-item-dropdown">
-          <span>Publicaciones</span>
+          <span>Publicaciones <i class="ti ti-chevron-down chevron" aria-hidden="true"></i></span>
           <div class="dropdown-menu">
-            <a href="publicaciones.html">Todas las publicaciones</a>
-            <a href="publicaciones-columnas.html">Columnas de opinión</a>
-            <a href="publicaciones-investigacion.html">Publicaciones e investigación</a>
-            <a href="publicaciones-lecturas.html">Lecturas comentadas</a>
+            <a href="publicaciones/index.html">Todas las publicaciones</a>
+            <a href="publicaciones/columnas.html">Columnas de opinión</a>
+            <a href="publicaciones/investigacion.html">Publicaciones e investigación</a>
+            <a href="publicaciones/lecturas.html">Lecturas comentadas</a>
           </div>
         </li>
-        <li><a href="casos-de-impacto.html">Impacto</a></li>
+        <li><a href="casos/index.html">Impacto</a></li>
         <li><a href="contacto.html">Contacto</a></li>
       </ul>
     </nav>
     <a href="contacto.html" class="btn">Contactar</a>
+    <button class="menu-toggle" id="menuToggle" type="button" aria-label="Abrir menú" aria-expanded="false">
+      <i class="ti ti-menu-2" aria-hidden="true"></i>
+    </button>
   </header>
 </div>
 </div>
@@ -394,7 +397,7 @@
         <p class="laboratorio-perfil-stat" id="perfilStat"></p>
         <div class="laboratorio-completo-ctas">
           <button class="btn-secundario" type="button" id="laboratorioReiniciar">Volver a empezar</button>
-          <a class="btn" href="publicaciones.html">Lee nuestro análisis de coyuntura →</a>
+          <a class="btn" href="publicaciones/index.html">Lee nuestro análisis de coyuntura →</a>
         </div>
       </div>
     </div>
@@ -437,7 +440,7 @@
 <div class="contenedor" style="padding: 8px 0 40px;">
   <div class="equipo-cta">
     <p class="equipo-cta-titulo">¿Quieres ver este marco aplicado a un caso real?</p>
-    <a href="casos-de-impacto.html" class="btn">Ver casos de impacto</a>
+    <a href="casos/index.html" class="btn">Ver casos de impacto</a>
   </div>
 </div>
 
@@ -452,7 +455,7 @@
       <div>
         <h5>Enlaces</h5>
         <a href="quienes-somos.html">Quiénes somos</a>
-        <a href="publicaciones.html">Publicaciones</a>
+        <a href="publicaciones/index.html">Publicaciones</a>
         <a href="contacto.html">Contacto</a>
       </div>
       <div class="footer-sep"></div>
@@ -478,30 +481,8 @@
   <p>CIPMEX · Centro de Investigación para la Paz México, A.C. · Paz que se piensa, paz que se construye</p>
 </div>
 
+<script src="js/site.js"></script>
 <script>
-window.addEventListener('scroll', function () {
-  var hw = document.getElementById('headerWrap');
-  if (window.scrollY > 20) { hw.classList.add('scrolled'); } else { hw.classList.remove('scrolled'); }
-});
-
-(function () {
-  var items = document.querySelectorAll('.servicio-item');
-  if (!items.length) return;
-  if (!('IntersectionObserver' in window)) {
-    items.forEach(function (el) { el.classList.add('visible'); });
-    return;
-  }
-  var obs = new IntersectionObserver(function (entries) {
-    entries.forEach(function (entry) {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        obs.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.15 });
-  items.forEach(function (el) { obs.observe(el); });
-})();
-
 (function () {
   var btns = document.querySelectorAll('.paz-toggle-btn');
   var panels = document.querySelectorAll('.paz-toggle-panel');
@@ -528,16 +509,6 @@ window.addEventListener('scroll', function () {
       paneles.forEach(function (p) {
         p.hidden = p.getAttribute('data-tipo-panel') !== target;
       });
-    });
-  });
-})();
-
-/* Pilares: click/tap para voltear, además del hover en escritorio */
-(function () {
-  var pilares = document.querySelectorAll('.pilar-outer');
-  pilares.forEach(function (p) {
-    p.addEventListener('click', function () {
-      p.classList.toggle('flipped');
     });
   });
 })();

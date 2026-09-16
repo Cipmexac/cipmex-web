@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reflexión · Temas · CIPMEX</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.33.0/dist/tabler-icons.min.css">
+<link rel="stylesheet" href="../../style.css?v=40">
+</head>
+<body>
+
+<div class="header-wrap" id="headerWrap">
+<div class="contenedor">
+  <header>
+    <a href="../../index.html" class="logo">
+      <img src="../../img/logo-cipmex-header.png" alt="CIPMEX">
+    </a>
+    <nav>
+      <ul>
+        <li><a href="../../index.html">Inicio</a></li>
+        <li class="nav-item-dropdown">
+          <span>Sobre nosotros <i class="ti ti-chevron-down chevron" aria-hidden="true"></i></span>
+          <div class="dropdown-menu">
+            <a href="../../quienes-somos.html">Quiénes somos</a>
+            <a href="../../equipo/index.html">Equipo</a>
+            <a href="../../que-es-la-paz.html">¿Qué es la paz?</a>
+          </div>
+        </li>
+        <li class="nav-item-dropdown activo">
+          <span>Publicaciones <i class="ti ti-chevron-down chevron" aria-hidden="true"></i></span>
+          <div class="dropdown-menu">
+            <a href="../../publicaciones/index.html">Todas las publicaciones</a>
+            <a href="../../publicaciones/columnas.html">Columnas de opinión</a>
+            <a href="../../publicaciones/investigacion.html">Publicaciones e investigación</a>
+            <a href="../../publicaciones/lecturas.html">Lecturas comentadas</a>
+          </div>
+        </li>
+        <li><a href="../../casos/index.html">Impacto</a></li>
+        <li><a href="../../contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+    <a href="../../contacto.html" class="btn">Contactar</a>
+    <button class="menu-toggle" id="menuToggle" type="button" aria-label="Abrir menú" aria-expanded="false">
+      <i class="ti ti-menu-2" aria-hidden="true"></i>
+    </button>
+  </header>
+</div>
+</div>
+
+<div class="banner-pagina">
+  <div class="contenedor">
+    <a href="../../publicaciones/columnas.html" class="volver-link">← Columnas de opinión</a>
+    <div class="hero-kicker">
+      <div class="barra" style="background: var(--terracota);"></div>
+      <p>TEMA: REFLEXIÓN</p>
+    </div>
+    <h1>Columnas e investigaciones de reflexión</h1>
+  </div>
+</div>
+
+<div class="mini-grid">
+  <div class="contenedor">
+    <span class="label">DE TODOS LOS MEDIOS</span>
+    <p class="texto-parrafo" style="max-width: none; margin-bottom: 8px;">Columnas de opinión e investigaciones más reflexivas de nuestro equipo, sin importar en qué medio o formato se publicaron.</p>
+
+    <div class="pub-grid" id="pubTemaReflexionGrid"></div>
+  </div>
+</div>
+
+<footer class="rico">
+  <div class="contenedor">
+    <div class="footer-grid">
+      <div class="footer-logo-col">
+        <img src="../../img/logo-cipmex-completo.png" alt="CIPMEX">
+        <p>Paz que se piensa,<br>paz que se construye</p>
+      </div>
+      <div class="footer-sep"></div>
+      <div>
+        <h5>Enlaces</h5>
+        <a href="../../quienes-somos.html">Quiénes somos</a>
+        <a href="../../publicaciones/index.html">Publicaciones</a>
+        <a href="../../contacto.html">Contacto</a>
+      </div>
+      <div class="footer-sep"></div>
+      <div>
+        <h5>Contacto</h5>
+        <p>contacto@cipmex.org</p>
+        <p>Ciudad de México</p>
+      </div>
+      <div class="footer-sep"></div>
+      <div>
+        <h5>Síguenos</h5>
+        <div class="redes">
+          <a href="#" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C9D4DE" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+          <a href="#" aria-label="LinkedIn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C9D4DE" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="3"/><line x1="7" y1="10" x2="7" y2="17"/><circle cx="7" cy="7" r="0.6" fill="#C9D4DE"/><path d="M11 17 V10 M11 13 C 11 10, 16 10, 16 13 V17"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C9D4DE" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M14 8 H12.5 C 11.5 8, 11 8.5, 11 9.5 V12 H14 L13.5 15 H11 V21"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="copyright">
+  <p>CIPMEX · Centro de Investigación para la Paz México, A.C. · Paz que se piensa, paz que se construye</p>
+</div>
+
+<script src="../../js/site.js"></script>
+<script src="../../js/columnas.js"></script>
+<script>
+var base = '../../';
+CIPMEXColumnas.cargar(base, function (data) {
+  CIPMEXColumnas.renderPubCards('pubTemaReflexionGrid', CIPMEXColumnas.porTema(data, 'reflexion'), {base: base});
+});
+</script>
+
+</body>
+</html>
