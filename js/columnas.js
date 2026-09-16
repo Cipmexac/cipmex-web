@@ -12,6 +12,20 @@
   var MESES = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio',
     'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'];
 
+  /* Logo por medio: con poner el nombre del medio en columnas.json alcanza,
+     no hace falta escribir la ruta del logo cada vez. Si se agrega un medio
+     nuevo, se agrega su logo aquí una sola vez y ya queda disponible para
+     siempre. c.medioLogo en el JSON sigue funcionando como excepción manual
+     si algún día hace falta. */
+  var LOGOS_POR_MEDIO = {
+    'El Sol de México': 'img/logo-sol-de-mexico.jpg',
+    'El Universal': 'img/logo-el-universal.jpg',
+    'N+ Opinión': 'img/logo-nmas.jpg'
+  };
+  function logoDeMedio(c) {
+    return c.medioLogo || LOGOS_POR_MEDIO[c.medio] || null;
+  }
+
   function formatMes(fechaISO) {
     var partes = fechaISO.split('-');
     var mes = MESES[parseInt(partes[1], 10) - 1];
@@ -68,17 +82,22 @@
     ocultarVacio(opts.vacioSelector);
     mostrarContenedor(el);
     el.innerHTML = lista.map(function (c) {
+      var logo = logoDeMedio(c);
+      var medioCirculo = logo ?
+        '<span class="pub-medio-circulo" title="' + c.medio + '"><img src="' + base + logo + '" alt="' + c.medio + '"></span>' : '';
+      var tiempo = c.tiempoLectura ? (' · ' + c.tiempoLectura) : '';
       return '' +
         '<a href="' + base + c.link + '" class="pub-card">' +
         '<div class="pub-foto">' +
         '<img src="' + base + c.portada + '" alt="' + c.titulo + '">' +
         '<span class="pub-tag">Columna</span>' +
+        medioCirculo +
         '</div>' +
         '<div class="pub-contenido">' +
         '<h3>' + c.titulo + '</h3>' +
         '<p class="pub-resumen">' + c.resumen + '</p>' +
         '<div class="pub-meta">' +
-        '<span>' + c.autor + ' · ' + formatMes(c.fecha) + '</span>' +
+        '<span>' + c.autor + ' · ' + formatMes(c.fecha) + tiempo + '</span>' +
         '<span class="pub-leer">Leer →</span>' +
         '</div>' +
         '</div>' +
@@ -93,6 +112,7 @@
     var el = document.getElementById(containerId);
     if (!el || !lista.length) return;
     el.innerHTML = lista.map(function (c) {
+      var tiempo = c.tiempoLectura ? (' · ' + c.tiempoLectura) : '';
       return '' +
         '<a href="' + base + c.link + '" class="recientes-card">' +
         '<div class="recientes-card-foto">' +
@@ -101,7 +121,7 @@
         '</div>' +
         '<div class="recientes-card-cuerpo">' +
         '<h4>' + c.titulo + '</h4>' +
-        '<p class="recientes-card-fecha">' + formatMes(c.fecha) + '</p>' +
+        '<p class="recientes-card-fecha">' + formatMes(c.fecha) + tiempo + '</p>' +
         '</div>' +
         '</a>';
     }).join('');
