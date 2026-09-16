@@ -114,6 +114,7 @@ section h2 { font-size: 20px; font-weight: 600; margin-bottom: 16px; color: var(
 .apoyo p { font-size: 13px; color: var(--texto-muted); margin-bottom: 16px; }
 .apoyo-foto { background: linear-gradient(135deg, var(--verde), var(--azul)); border-radius: 10px; height: 120px; display: flex; align-items: center; justify-content: center; overflow: hidden; }
 .apoyo-foto span { font-size: 10px; color: white; font-family: 'Roboto Mono', monospace; }
+.apoyo-foto img { width: 100%; height: 100%; object-fit: cover; }
 
 footer.rico { background: var(--azul); padding: 32px 0; margin-top: 8px; }
 .footer-grid { display: grid; grid-template-columns: 1.3fr 1px 1fr 1px 1fr 1px 1fr; gap: 20px; align-items: center; }
@@ -135,7 +136,8 @@ footer.rico { background: var(--azul); padding: 32px 0; margin-top: 8px; }
 
 /* Foto de portada como tarjeta flotante con título y texto encima, estilo GBM */
 .foto-hero-titulo { position: relative; overflow: hidden; border-radius: 20px; min-height: 420px; display: flex; align-items: center; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
-.foto-hero-bg { position: absolute; inset: 0; }
+.foto-hero-bg { position: absolute; inset: 0; background: linear-gradient(135deg, var(--azul-claro), var(--verde)); }
+.foto-hero-bg img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .foto-hero-overlay { position: absolute; inset: 0; background: linear-gradient(100deg, rgba(5,26,50,0.85) 0%, rgba(5,26,50,0.55) 38%, rgba(5,26,50,0.1) 72%); }
 .foto-hero-etiqueta { position: absolute; bottom: 16px; right: 24px; font-size: 10px; color: rgba(255,255,255,0.5); font-family: 'Roboto Mono', monospace; z-index: 1; }
 .foto-hero-texto { position: relative; z-index: 1; padding: 56px 48px; max-width: 560px; }
@@ -148,8 +150,9 @@ footer.rico { background: var(--azul); padding: 32px 0; margin-top: 8px; }
 .hero-qs-foto { flex: 0.8; min-width: 200px; background: linear-gradient(135deg, var(--verde), var(--azul)); display: flex; align-items: center; justify-content: center; }
 .hero-qs-foto span { font-size: 10px; color: rgba(255,255,255,0.75); font-family: 'Roboto Mono', monospace; }
 
-.foto-divisora { display: flex; align-items: center; justify-content: center; padding: 24px; min-height: 240px; border-radius: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
+.foto-divisora { display: flex; align-items: center; justify-content: center; padding: 24px; min-height: 240px; border-radius: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); overflow: hidden; }
 .foto-divisora span { font-size: 11px; color: rgba(255,255,255,0.85); font-family: 'Roboto Mono', monospace; }
+.foto-divisora img { width: 100%; height: 100%; object-fit: cover; border-radius: 10px; }
 
 /* Fotos integradas a la página, combinadas con foto-divisora: gana foto-divisora (esquinas redondas + sombra) */
 .foto-pagina.foto-divisora { border-radius: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); margin-bottom: 0; }
