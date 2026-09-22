@@ -5,7 +5,7 @@
     "resumen": "A 25 años de los atentados del 11 de septiembre, qué aprendimos sobre responder a la violencia con más violencia y qué significa construir paz.",
     "medio": "El Sol de México",
     "tiempoLectura": "2 min",
-    "autor": "Alejandra Nurko Benbassat",
+    "autor": "Alejandra Nurko",
     "autorSlug": "alejandra",
     "autorFoto": "img/alejandra-nurko.jpg",
     "tema": "Violencia estructural",
