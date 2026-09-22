@@ -5,7 +5,7 @@
     "resumen": "A 25 años de los atentados del 11 de septiembre, qué aprendimos sobre responder a la violencia con más violencia y qué significa construir paz.",
     "medio": "El Sol de México",
     "tiempoLectura": "2 min",
-    "autor": "Alejandra Nurko Benbassat",
+    "autor": "Alejandra Nurko",
     "autorSlug": "alejandra",
     "autorFoto": "img/alejandra-nurko.jpg",
     "tema": "Violencia estructural",
@@ -46,5 +46,21 @@
     "portada": "img/columnas/portada-capitalismo-tardio-idolos.jpg",
     "link": "publicaciones/columnas/capitalismo-tardio-necesita-idolos.html",
     "original": "https://oem.com.mx/elsoldemexico/analisis/el-capitalismo-tardio-necesita-idolos-31663795"
+  },
+  {
+    "id": "doce-respuestas-para-pensar-la-paz",
+    "titulo": "Doce respuestas para pensar la paz",
+    "resumen": "Un video escolar donde doce adolescentes nombran los problemas estructurales de México muestra que estas carencias no son aisladas, y que la voz de las nuevas generaciones es parte activa de la paz positiva.",
+    "medio": "El Sol de México",
+    "tiempoLectura": "2 min",
+    "autor": "María Paula Flores",
+    "autorSlug": "maria-paula",
+    "autorFoto": "img/maria-paula-flores.jpg",
+    "tema": "México",
+    "temaSlug": "mexico",
+    "fecha": "2026-09-18",
+    "portada": "img/columnas/portada-doce-respuestas-paz.jpg",
+    "link": "publicaciones/columnas/doce-respuestas-para-pensar-la-paz.html",
+    "original": "https://oem.com.mx/elsoldemexico/analisis/doce-respuestas-para-pensar-la-paz-32132200"
   }
 ]
