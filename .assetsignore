@@ -1,0 +1,3 @@
+.git .git/**
+
+Ignora la carpeta .git al desplegar
