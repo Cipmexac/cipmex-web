@@ -5,7 +5,7 @@
     "resumen": "A 25 años de los atentados del 11 de septiembre, qué aprendimos sobre responder a la violencia con más violencia y qué significa construir paz.",
     "medio": "El Sol de México",
     "tiempoLectura": "2 min",
-    "autor": "Alejandra Nurko",
+    "autor": "Alejandra Nurko Benbassat",
     "autorSlug": "alejandra",
     "autorFoto": "img/alejandra-nurko.jpg",
     "tema": "Violencia estructural",
@@ -62,5 +62,21 @@
     "portada": "img/columnas/portada-doce-respuestas-paz.jpg",
     "link": "publicaciones/columnas/doce-respuestas-para-pensar-la-paz.html",
     "original": "https://oem.com.mx/elsoldemexico/analisis/doce-respuestas-para-pensar-la-paz-32132200"
+  },
+  {
+    "id": "por-que-se-repiten-las-crisis",
+    "titulo": "¿Por qué se repiten las crisis?",
+    "resumen": "El cruce migratorio en Ceuta y sus 96 muertes se explican con el triángulo de la violencia: lo que se ve, las estructuras que lo producen y las narrativas que lo hacen aceptable.",
+    "medio": "El Sol de México",
+    "tiempoLectura": "2 min",
+    "autor": "Fernando de la Parra",
+    "autorSlug": "fernando",
+    "autorFoto": "img/fernando-de-la-parra.jpg",
+    "tema": "Violencia estructural",
+    "temaSlug": "violencia",
+    "fecha": "2026-08-14",
+    "portada": "img/columnas/portada-ceuta-crisis.jpg",
+    "link": "publicaciones/columnas/por-que-se-repiten-las-crisis.html",
+    "original": "https://oem.com.mx/elsoldemexico/analisis/por-que-se-repiten-las-crisis-31557876"
   }
 ]
