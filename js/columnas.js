@@ -49,7 +49,10 @@
     return data.filter(function (c) { return c.autorSlug === autorSlug; });
   }
   function porTema(data, temaSlug) {
-    return data.filter(function (c) { return c.temaSlug === temaSlug; });
+    return data.filter(function (c) {
+      if (Array.isArray(c.temaSlug)) return c.temaSlug.indexOf(temaSlug) !== -1;
+      return c.temaSlug === temaSlug;
+    });
   }
   function limitar(data, n) {
     return data.slice(0, n);
