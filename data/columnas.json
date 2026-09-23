@@ -78,5 +78,21 @@
     "portada": "img/columnas/portada-ceuta-crisis.jpg",
     "link": "publicaciones/columnas/por-que-se-repiten-las-crisis.html",
     "original": "https://oem.com.mx/elsoldemexico/analisis/por-que-se-repiten-las-crisis-31557876"
+  },
+  {
+    "id": "paz-bajo-la-lluvia",
+    "titulo": "La paz bajo la lluvia",
+    "resumen": "Las inundaciones recurrentes en la Ciudad de México no son solo un problema hidráulico, sino una forma de violencia estructural que concentra el riesgo siempre en las mismas comunidades.",
+    "medio": "El Sol de México",
+    "tiempoLectura": "2 min",
+    "autor": "Alexa Munguía",
+    "autorSlug": "alexa",
+    "autorFoto": "img/alexa-munguia.jpg",
+    "tema": ["México", "Violencia estructural"],
+    "temaSlug": ["mexico", "violencia"],
+    "fecha": "2026-07-31",
+    "portada": "img/columnas/portada-paz-bajo-la-lluvia.jpg",
+    "link": "publicaciones/columnas/paz-bajo-la-lluvia.html",
+    "original": "https://oem.com.mx/elsoldemexico/analisis/la-paz-bajo-la-lluvia-31364178"
   }
 ]
