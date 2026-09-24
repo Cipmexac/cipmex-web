@@ -110,5 +110,21 @@
     "portada": "img/columnas/portada-no-le-debes-nada.jpg",
     "link": "publicaciones/columnas/no-le-debes-nada.html",
     "original": "https://oem.com.mx/elsoldemexico/analisis/no-le-debes-nada-a-nadie-o-si-31258267"
+  },
+  {
+    "id": "la-promesa-rota-de-la-jubilacion",
+    "titulo": "La promesa rota de la jubilación",
+    "resumen": "La baja recaudación fiscal de México y el diseño de las Afore explican por qué el sistema de pensiones actual perpetúa la desigualdad en vez de garantizar una vejez digna.",
+    "medio": "El Sol de México",
+    "tiempoLectura": "2 min",
+    "autor": "María Paula Flores",
+    "autorSlug": "maria-paula",
+    "autorFoto": "img/maria-paula-flores.jpg",
+    "tema": "México",
+    "temaSlug": "mexico",
+    "fecha": "2026-07-17",
+    "portada": "img/columnas/portada-promesa-rota-jubilacion.jpg",
+    "link": "publicaciones/columnas/promesa-rota-jubilacion.html",
+    "original": "https://oem.com.mx/elsoldemexico/analisis/la-promesa-rota-de-la-jubilacion-31153823"
   }
 ]
