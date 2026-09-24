@@ -94,5 +94,21 @@
     "portada": "img/columnas/portada-paz-bajo-la-lluvia.jpg",
     "link": "publicaciones/columnas/paz-bajo-la-lluvia.html",
     "original": "https://oem.com.mx/elsoldemexico/analisis/la-paz-bajo-la-lluvia-31364178"
+  },
+  {
+    "id": "no-le-debes-nada-a-nadie",
+    "titulo": "No le debes nada a nadie... ¿o sí?",
+    "resumen": "Frente al individualismo creciente y la soledad juvenil en aumento, los estudios de paz recuerdan que la interdependencia entre personas genera responsabilidades que sostienen la convivencia.",
+    "medio": "El Sol de México",
+    "tiempoLectura": "2 min",
+    "autor": "Daniela Manzanarez",
+    "autorSlug": "daniela",
+    "autorFoto": "img/daniela-manzanarez.jpg",
+    "tema": "Cohesión social",
+    "temaSlug": "cohesion",
+    "fecha": "2026-07-24",
+    "portada": "img/columnas/portada-no-le-debes-nada.jpg",
+    "link": "publicaciones/columnas/no-le-debes-nada.html",
+    "original": "https://oem.com.mx/elsoldemexico/analisis/no-le-debes-nada-a-nadie-o-si-31258267"
   }
 ]
