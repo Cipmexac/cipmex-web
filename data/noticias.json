@@ -6,5 +6,13 @@
     "tag": "Investigación propia",
     "fecha": "2026-08-01",
     "portada": "img/noticias/espacio-publico-paz.jpg"
+  },
+  {
+    "id": "socios-formadores-tec-monterrey",
+    "titulo": "Formamos a futuros internacionalistas",
+    "resumen": "Somos socios formadores del Tecnológico de Monterrey, Campus Ciudad de México, en el curso \"Conflict and Negotiation\", donde impartimos clases sobre resolución de conflictos y construcción de paz.",
+    "tag": "Docencia",
+    "fecha": "2026-09-01",
+    "portada": "img/noticias/tec-monterrey.jpg"
   }
 ]
