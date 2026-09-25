@@ -188,5 +188,20 @@
     "portada": "img/columnas/portada-el-tiempo-como-condicion-de-paz.jpg",
     "link": "publicaciones/columnas/el-tiempo-como-condicion-de-paz.html",
     "original": "https://oem.com.mx/elsoldemexico/analisis/el-tiempo-como-condicion-de-paz-30772866"
+  },
+  {
+    "id": "90-minutos-de-paz",
+    "titulo": "90 minutos de paz",
+    "resumen": "Mientras México celebraba el partido inaugural del Mundial, maestros, madres buscadoras y otros colectivos seguían protestando. El fútbol muestra nuestra capacidad de generar identidad compartida, pero también quién queda fuera de ella.",
+    "medio": "El Sol de México",
+    "tiempoLectura": "3 min",
+    "autor": "Sebastian Litmanovich",
+    "autorSlug": "sebastian-litmanovich",
+    "tema": ["México", "Cohesión social"],
+    "temaSlug": ["mexico", "cohesion"],
+    "fecha": "2026-06-19",
+    "portada": "img/columnas/portada-90-minutos-de-paz.jpg",
+    "link": "publicaciones/columnas/90-minutos-de-paz.html",
+    "original": "https://oem.com.mx/elsoldemexico/analisis/90-minutos-de-paz-30623069"
   }
 ]
