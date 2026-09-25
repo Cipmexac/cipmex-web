@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.33.0/dist/tabler-icons.min.css">
-<link rel="stylesheet" href="style.css?v=35">
+<link rel="stylesheet" href="style.css?v=40">
 </head>
 <body>
 
@@ -21,27 +21,36 @@
       <ul>
         <li><a href="index.html">Inicio</a></li>
         <li class="nav-item-dropdown">
-          <span>Sobre nosotros</span>
+          <span>Sobre nosotros <i class="ti ti-chevron-down chevron" aria-hidden="true"></i></span>
           <div class="dropdown-menu">
             <a href="quienes-somos.html">Quiénes somos</a>
-            <a href="equipo.html">Equipo</a>
+            <a href="equipo/index.html">Equipo</a>
             <a href="que-es-la-paz.html">¿Qué es la paz?</a>
           </div>
         </li>
         <li class="nav-item-dropdown activo">
-          <span>Publicaciones</span>
+          <span>Publicaciones <i class="ti ti-chevron-down chevron" aria-hidden="true"></i></span>
           <div class="dropdown-menu">
-            <a href="publicaciones.html">Todas las publicaciones</a>
-            <a href="publicaciones-columnas.html">Columnas de opinión</a>
-            <a href="publicaciones-investigacion.html">Publicaciones e investigación</a>
-            <a href="publicaciones-lecturas.html">Lecturas comentadas</a>
+            <a href="publicaciones/index.html">Todas las publicaciones</a>
+            <a href="publicaciones/columnas.html">Columnas de opinión</a>
+            <a href="publicaciones/investigacion.html">Publicaciones e investigación</a>
+            <a href="publicaciones/lecturas.html">Lecturas comentadas</a>
           </div>
         </li>
-        <li><a href="casos-de-impacto.html">Impacto</a></li>
+        <li class="nav-item-dropdown">
+          <span>Impacto <i class="ti ti-chevron-down chevron" aria-hidden="true"></i></span>
+          <div class="dropdown-menu">
+            <a href="casos/index.html">Casos de impacto</a>
+            <a href="noticias/index.html">Noticias</a>
+          </div>
+        </li>
         <li><a href="contacto.html">Contacto</a></li>
       </ul>
     </nav>
     <a href="contacto.html" class="btn">Contactar</a>
+    <button class="menu-toggle" id="menuToggle" type="button" aria-label="Abrir menú" aria-expanded="false">
+      <i class="ti ti-menu-2" aria-hidden="true"></i>
+    </button>
   </header>
 </div>
 </div>
@@ -62,7 +71,7 @@
     <p class="texto-parrafo" style="max-width: none; margin-bottom: 4px;">Publicamos en distintos formatos según la audiencia y el momento: análisis de coyuntura para el público general, investigación propia y en revistas especializadas para quienes toman decisiones, y lecturas comentadas que documentan cómo llegamos a nuestras propias conclusiones a partir de lo que otros han investigado.</p>
 
     <div class="servicios-grid">
-      <a href="publicaciones-columnas.html" class="servicio-item" style="--accent: var(--terracota);">
+      <a href="publicaciones/columnas.html" class="servicio-item" style="--accent: var(--terracota);">
         <div class="servicio-top">
           <div class="servicio-icono"><i class="ti ti-news" aria-hidden="true"></i></div>
           <span class="servicio-num">01</span>
@@ -70,7 +79,7 @@
         <h4>Columnas de opinión</h4>
         <p>Análisis de coyuntura en El Sol de México, y próximamente en Substack.</p>
       </a>
-      <a href="publicaciones-investigacion.html" class="servicio-item" style="--accent: var(--azul);">
+      <a href="publicaciones/investigacion.html" class="servicio-item" style="--accent: var(--azul);">
         <div class="servicio-top">
           <div class="servicio-icono"><i class="ti ti-file-text" aria-hidden="true"></i></div>
           <span class="servicio-num">02</span>
@@ -78,7 +87,7 @@
         <h4>Publicaciones e investigación</h4>
         <p>Artículos en revistas de paz y reportes propios; algunos alimentan nuestros casos de impacto.</p>
       </a>
-      <a href="publicaciones-lecturas.html" class="servicio-item" style="--accent: var(--morado);">
+      <a href="publicaciones/lecturas.html" class="servicio-item" style="--accent: var(--morado);">
         <div class="servicio-top">
           <div class="servicio-icono"><i class="ti ti-bulb" aria-hidden="true"></i></div>
           <span class="servicio-num">03</span>
@@ -101,7 +110,7 @@
       <div>
         <h5>Enlaces</h5>
         <a href="quienes-somos.html">Quiénes somos</a>
-        <a href="publicaciones.html">Publicaciones</a>
+        <a href="publicaciones/index.html">Publicaciones</a>
         <a href="contacto.html">Contacto</a>
       </div>
       <div class="footer-sep"></div>
@@ -127,12 +136,8 @@
   <p>CIPMEX · Centro de Investigación para la Paz México, A.C. · Paz que se piensa, paz que se construye</p>
 </div>
 
+<script src="js/site.js"></script>
 <script>
-window.addEventListener('scroll', function () {
-  var hw = document.getElementById('headerWrap');
-  if (window.scrollY > 20) { hw.classList.add('scrolled'); } else { hw.classList.remove('scrolled'); }
-});
-
 (function () {
   var items = document.querySelectorAll('.servicio-item');
   if (!items.length) return;
