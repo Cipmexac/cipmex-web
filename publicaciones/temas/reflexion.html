@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Reflexión · Temas · CIPMEX</title>
+<title>Violencia · Temas · CIPMEX</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.33.0/dist/tabler-icons.min.css">
@@ -53,19 +53,19 @@
   <div class="contenedor">
     <a href="../../publicaciones/columnas.html" class="volver-link">← Columnas de opinión</a>
     <div class="hero-kicker">
-      <div class="barra" style="background: var(--terracota);"></div>
-      <p>TEMA: REFLEXIÓN</p>
+      <div class="barra" style="background: var(--rojo);"></div>
+      <p>TEMA: VIOLENCIA</p>
     </div>
-    <h1>Columnas e investigaciones de reflexión</h1>
+    <h1>Columnas e investigaciones sobre violencia y seguridad</h1>
   </div>
 </div>
 
 <div class="mini-grid">
   <div class="contenedor">
     <span class="label">DE TODOS LOS MEDIOS</span>
-    <p class="texto-parrafo" style="max-width: none; margin-bottom: 8px;">Columnas de opinión e investigaciones más reflexivas de nuestro equipo, sin importar en qué medio o formato se publicaron.</p>
+    <p class="texto-parrafo" style="max-width: none; margin-bottom: 8px;">Columnas de opinión e investigaciones de nuestro equipo sobre violencia y seguridad, sin importar en qué medio o formato se publicaron.</p>
 
-    <div class="pub-grid" id="pubTemaReflexionGrid"></div>
+    <div class="pub-grid" id="pubTemaViolenciaGrid"></div>
   </div>
 </div>
 
@@ -111,7 +111,7 @@
 <script>
 var base = '../../';
 CIPMEXColumnas.cargar(base, function (data) {
-  CIPMEXColumnas.renderPubCards('pubTemaReflexionGrid', CIPMEXColumnas.porTema(data, 'reflexion'), {base: base});
+  CIPMEXColumnas.renderPubCards('pubTemaViolenciaGrid', CIPMEXColumnas.porTema(data, 'violencia'), {base: base});
 });
 </script>
 
