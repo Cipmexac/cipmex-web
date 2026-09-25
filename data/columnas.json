@@ -32,6 +32,21 @@
     "original": "https://oem.com.mx/elsoldemexico/analisis/cuando-la-violencia-empieza-a-gobernar-31885516"
   },
   {
+    "id": "el-derecho-a-habitar",
+    "titulo": "El derecho a habitar",
+    "resumen": "Entre la gentrificación, los topes a la renta y la ocupación de las banquetas por comercios, el acceso a la Ciudad de México se ha vuelto una cuestión de capacidad de pago que rompe con la paz urbana.",
+    "medio": "El Sol de México",
+    "tiempoLectura": "2 min",
+    "autor": "Azul Miranda",
+    "autorSlug": "azul-miranda",
+    "tema": ["México", "Violencia estructural"],
+    "temaSlug": ["mexico", "violencia"],
+    "fecha": "2026-08-28",
+    "portada": "img/columnas/portada-el-derecho-a-habitar.jpg",
+    "link": "publicaciones/columnas/el-derecho-a-habitar.html",
+    "original": "https://oem.com.mx/elsoldemexico/analisis/el-derecho-a-habitar-31772383"
+  },
+  {
     "id": "capitalismo-tardio-necesita-idolos",
     "titulo": "El capitalismo tardío necesita ídolos",
     "resumen": "La colaboración entre BTS y Google Gemini muestra cómo el poder suave de la cultura pop ayuda a suavizar la percepción pública sobre la inteligencia artificial y las grandes tecnológicas.",
