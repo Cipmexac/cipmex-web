@@ -14,5 +14,13 @@
     "tag": "Docencia",
     "fecha": "2026-09-01",
     "portada": "img/noticias/tec-monterrey.jpg"
+  },
+  {
+    "id": "clases-universidad-anahuac",
+    "titulo": "Llevamos la construcción de paz a las aulas de la Anáhuac",
+    "resumen": "Impartimos clases sobre resolución de conflictos y construcción de paz en la Universidad Anáhuac, Campus Norte.",
+    "tag": "Docencia",
+    "fecha": "2026-03-01",
+    "portada": "img/noticias/universidad-anahuac.jpg"
   }
 ]
