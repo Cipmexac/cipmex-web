@@ -71,50 +71,7 @@
     <span class="label">ACTUALIZACIONES DEL CENTRO</span>
     <p class="texto-parrafo" style="max-width: none; margin-bottom: 8px;">Aquí compartimos lo que va pasando dentro de CIPMEX: investigaciones que arrancamos, proyectos en marcha, resultados y eventos en los que participamos.</p>
 
-    <div class="pub-grid" id="pubNoticiasGrid">
-      <a href="#" class="pub-card">
-        <div class="pub-foto" style="background: linear-gradient(135deg, var(--terracota), var(--azul-oscuro));">
-          <span class="pub-tag">Investigación propia</span>
-          <span class="pub-foto-tag">FOTO</span>
-        </div>
-        <div class="pub-contenido">
-          <h3>Las calles también construyen paz</h3>
-          <p class="pub-resumen">Arrancamos una investigación propia sobre cómo la apropiación del espacio urbano fortalece la convivencia y reduce la violencia en las comunidades.</p>
-          <div class="pub-meta">
-            <span>CIPMEX · septiembre 2026</span>
-            <span class="pub-leer">Leer más →</span>
-          </div>
-        </div>
-      </a>
-      <a href="#" class="pub-card">
-        <div class="pub-foto" style="background: linear-gradient(135deg, var(--azul), var(--morado));">
-          <span class="pub-tag">Evento</span>
-          <span class="pub-foto-tag">FOTO</span>
-        </div>
-        <div class="pub-contenido">
-          <h3>[Título de la noticia]</h3>
-          <p class="pub-resumen">[Qué pasó y por qué importa para el trabajo de CIPMEX.]</p>
-          <div class="pub-meta">
-            <span>CIPMEX · [mes, año]</span>
-            <span class="pub-leer">Leer más →</span>
-          </div>
-        </div>
-      </a>
-      <a href="#" class="pub-card">
-        <div class="pub-foto" style="background: linear-gradient(135deg, var(--verde), var(--azul-claro));">
-          <span class="pub-tag">Comunicado</span>
-          <span class="pub-foto-tag">FOTO</span>
-        </div>
-        <div class="pub-contenido">
-          <h3>[Título de la noticia]</h3>
-          <p class="pub-resumen">[Qué pasó y por qué importa para el trabajo de CIPMEX.]</p>
-          <div class="pub-meta">
-            <span>CIPMEX · [mes, año]</span>
-            <span class="pub-leer">Leer más →</span>
-          </div>
-        </div>
-      </a>
-    </div>
+    <div class="pub-grid" id="pubNoticiasGrid"></div>
   </div>
 </div>
 
@@ -156,6 +113,13 @@
 </div>
 
 <script src="../js/site.js"></script>
+<script src="../js/noticias.js"></script>
+<script>
+var base = '../';
+CIPMEXNoticias.cargar(base, function (data) {
+  CIPMEXNoticias.renderPubCards('pubNoticiasGrid', data, {base: base});
+});
+</script>
 
 </body>
 </html>
