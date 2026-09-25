@@ -22,5 +22,13 @@
     "tag": "Docencia",
     "fecha": "2026-03-01",
     "portada": "img/noticias/universidad-anahuac.jpg"
+  },
+  {
+    "id": "indice-inclusion-lgbtqi-pnud",
+    "titulo": "Presentamos el Índice de Inclusión LGBTQI+ en la sede del PNUD",
+    "resumen": "Participamos, junto con el Observatorio Nacional Ciudadano, en la presentación del Índice de Inclusión LGBTQI+ en la sede del PNUD en México, proyecto que realizamos en conjunto con el organismo.",
+    "tag": "Evento",
+    "fecha": "2026-06-01",
+    "portada": "img/noticias/indice-inclusion-lgbtqi-pnud.jpg"
   }
 ]
