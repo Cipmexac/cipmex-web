@@ -142,21 +142,21 @@
     "portada": "img/columnas/portada-transicion-ecologica-poder.jpg",
     "link": "publicaciones/columnas/transicion-ecologica-poder.html",
     "original": "https://oem.com.mx/elsoldemexico/analisis/la-transicion-ecologica-tambien-redistribuye-el-poder-31038134"
+  },
+  {
+    "id": "urbanidad-digna-esta-en-chino",
+    "titulo": "¿Urbanidad digna? ... ¡Está en chino!",
+    "resumen": "El modelo urbano de Shenzhen, que combina metro, vivienda y servicios públicos en un mismo desarrollo vertical, ofrece lecciones para pensar la movilidad y la paz positiva en las ciudades mexicanas.",
+    "medio": "El Sol de México",
+    "tiempoLectura": "2 min",
+    "autor": "Goretty Espíndola",
+    "autorSlug": "goretty",
+    "autorFoto": "img/goretty-espindola.jpg",
+    "tema": ["México", "Cohesión social"],
+    "temaSlug": ["mexico", "cohesion"],
+    "fecha": "2026-07-03",
+    "portada": "img/columnas/portada-urbanidad-digna-chino.jpg",
+    "link": "publicaciones/columnas/urbanidad-digna-esta-en-chino.html",
+    "original": "https://oem.com.mx/elsoldemexico/analisis/urbanidad-digna-esta-en-chino-30900540"
   }
 ]
-{
-  "id": "urbanidad-digna-esta-en-chino",
-  "titulo": "¿Urbanidad digna? ... ¡Está en chino!",
-  "resumen": "El modelo urbano de Shenzhen, que combina metro, vivienda y servicios públicos en un mismo desarrollo vertical, ofrece lecciones para pensar la movilidad y la paz positiva en las ciudades mexicanas.",
-  "medio": "El Sol de México",
-  "tiempoLectura": "2 min",
-  "autor": "Goretty Espíndola",
-  "autorSlug": "goretty",
-  "autorFoto": "img/goretty-espindola.jpg",
-  "tema": ["México", "Cohesión social"],
-  "temaSlug": ["mexico", "cohesion"],
-  "fecha": "2026-07-03",
-  "portada": "img/columnas/portada-urbanidad-digna-chino.jpg",
-  "link": "publicaciones/columnas/urbanidad-digna-esta-en-chino.html",
-  "original": "https://oem.com.mx/elsoldemexico/analisis/urbanidad-digna-esta-en-chino-30900540"
-}
