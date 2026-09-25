@@ -1,177 +1,166 @@
-[
-  {
-    "id": "11s-25-anos",
-    "titulo": "11-S: 25 años después",
-    "resumen": "A 25 años de los atentados del 11 de septiembre, qué aprendimos sobre responder a la violencia con más violencia y qué significa construir paz.",
-    "medio": "El Sol de México",
-    "tiempoLectura": "2 min",
-    "autor": "Alejandra Nurko Benbassat",
-    "autorSlug": "alejandra",
-    "autorFoto": "img/alejandra-nurko.jpg",
-    "tema": "Violencia estructural",
-    "temaSlug": "violencia",
-    "fecha": "2026-09-13",
-    "portada": "img/columnas/portada-11s-25-anos.jpg",
-    "link": "publicaciones/columnas/11s-25-anos.html",
-    "original": "https://oem.com.mx/elsoldemexico/analisis/11-s-25-anos-despues-32025809"
-  },
-  {
-    "id": "cuando-la-violencia-empieza-a-gobernar",
-    "titulo": "Cuando la violencia empieza a gobernar",
-    "resumen": "Qué nos dice la caravana de animales que huyó del santuario Ostok en Sinaloa sobre la pérdida de capacidad institucional frente a la violencia.",
-    "medio": "El Sol de México",
-    "tiempoLectura": "3 min",
-    "autor": "Thali Kleinfinger",
-    "autorSlug": "thali",
-    "autorFoto": "img/thali-kleinfinger.jpg",
-    "tema": "Violencia estructural",
-    "temaSlug": "violencia",
-    "fecha": "2026-09-04",
-    "portada": "img/columnas/portada-caravana-ostok.jpg",
-    "link": "publicaciones/columnas/cuando-la-violencia-empieza-a-gobernar.html",
-    "original": "https://oem.com.mx/elsoldemexico/analisis/cuando-la-violencia-empieza-a-gobernar-31885516"
-  },
-  {
-    "id": "el-derecho-a-habitar",
-    "titulo": "El derecho a habitar",
-    "resumen": "Entre la gentrificación, los topes a la renta y la ocupación de las banquetas por comercios, el acceso a la Ciudad de México se ha vuelto una cuestión de capacidad de pago que rompe con la paz urbana.",
-    "medio": "El Sol de México",
-    "tiempoLectura": "2 min",
-    "autor": "Azul Miranda",
-    "autorSlug": "azul-miranda",
-    "tema": ["México", "Violencia estructural"],
-    "temaSlug": ["mexico", "violencia"],
-    "fecha": "2026-08-28",
-    "portada": "img/columnas/portada-el-derecho-a-habitar.jpg",
-    "link": "publicaciones/columnas/el-derecho-a-habitar.html",
-    "original": "https://oem.com.mx/elsoldemexico/analisis/el-derecho-a-habitar-31772383"
-  },
-  {
-    "id": "capitalismo-tardio-necesita-idolos",
-    "titulo": "El capitalismo tardío necesita ídolos",
-    "resumen": "La colaboración entre BTS y Google Gemini muestra cómo el poder suave de la cultura pop ayuda a suavizar la percepción pública sobre la inteligencia artificial y las grandes tecnológicas.",
-    "medio": "El Sol de México",
-    "tiempoLectura": "2 min",
-    "autor": "Goretty Espíndola",
-    "autorSlug": "goretty",
-    "autorFoto": "img/goretty-espindola.jpg",
-    "tema": "Geopolítica",
-    "temaSlug": "geopolitica",
-    "fecha": "2026-08-21",
-    "portada": "img/columnas/portada-capitalismo-tardio-idolos.jpg",
-    "link": "publicaciones/columnas/capitalismo-tardio-necesita-idolos.html",
-    "original": "https://oem.com.mx/elsoldemexico/analisis/el-capitalismo-tardio-necesita-idolos-31663795"
-  },
-  {
-    "id": "doce-respuestas-para-pensar-la-paz",
-    "titulo": "Doce respuestas para pensar la paz",
-    "resumen": "Un video escolar donde doce adolescentes nombran los problemas estructurales de México muestra que estas carencias no son aisladas, y que la voz de las nuevas generaciones es parte activa de la paz positiva.",
-    "medio": "El Sol de México",
-    "tiempoLectura": "2 min",
-    "autor": "María Paula Flores",
-    "autorSlug": "maria-paula",
-    "autorFoto": "img/maria-paula-flores.jpg",
-    "tema": "México",
-    "temaSlug": "mexico",
-    "fecha": "2026-09-18",
-    "portada": "img/columnas/portada-doce-respuestas-paz.jpg",
-    "link": "publicaciones/columnas/doce-respuestas-para-pensar-la-paz.html",
-    "original": "https://oem.com.mx/elsoldemexico/analisis/doce-respuestas-para-pensar-la-paz-32132200"
-  },
-  {
-    "id": "por-que-se-repiten-las-crisis",
-    "titulo": "¿Por qué se repiten las crisis?",
-    "resumen": "El cruce migratorio en Ceuta y sus 96 muertes se explican con el triángulo de la violencia: lo que se ve, las estructuras que lo producen y las narrativas que lo hacen aceptable.",
-    "medio": "El Sol de México",
-    "tiempoLectura": "2 min",
-    "autor": "Fernando de la Parra",
-    "autorSlug": "fernando",
-    "autorFoto": "img/fernando-de-la-parra.jpg",
-    "tema": "Violencia estructural",
-    "temaSlug": "violencia",
-    "fecha": "2026-08-14",
-    "portada": "img/columnas/portada-ceuta-crisis.jpg",
-    "link": "publicaciones/columnas/por-que-se-repiten-las-crisis.html",
-    "original": "https://oem.com.mx/elsoldemexico/analisis/por-que-se-repiten-las-crisis-31557876"
-  },
-  {
-    "id": "paz-bajo-la-lluvia",
-    "titulo": "La paz bajo la lluvia",
-    "resumen": "Las inundaciones recurrentes en la Ciudad de México no son solo un problema hidráulico, sino una forma de violencia estructural que concentra el riesgo siempre en las mismas comunidades.",
-    "medio": "El Sol de México",
-    "tiempoLectura": "2 min",
-    "autor": "Alexa Munguía",
-    "autorSlug": "alexa",
-    "autorFoto": "img/alexa-munguia.jpg",
-    "tema": ["México", "Violencia estructural"],
-    "temaSlug": ["mexico", "violencia"],
-    "fecha": "2026-07-31",
-    "portada": "img/columnas/portada-paz-bajo-la-lluvia.jpg",
-    "link": "publicaciones/columnas/paz-bajo-la-lluvia.html",
-    "original": "https://oem.com.mx/elsoldemexico/analisis/la-paz-bajo-la-lluvia-31364178"
-  },
-  {
-    "id": "no-le-debes-nada-a-nadie",
-    "titulo": "No le debes nada a nadie... ¿o sí?",
-    "resumen": "Frente al individualismo creciente y la soledad juvenil en aumento, los estudios de paz recuerdan que la interdependencia entre personas genera responsabilidades que sostienen la convivencia.",
-    "medio": "El Sol de México",
-    "tiempoLectura": "2 min",
-    "autor": "Daniela Manzanarez",
-    "autorSlug": "daniela",
-    "autorFoto": "img/daniela-manzanarez.jpg",
-    "tema": "Cohesión social",
-    "temaSlug": "cohesion",
-    "fecha": "2026-07-24",
-    "portada": "img/columnas/portada-no-le-debes-nada.jpg",
-    "link": "publicaciones/columnas/no-le-debes-nada.html",
-    "original": "https://oem.com.mx/elsoldemexico/analisis/no-le-debes-nada-a-nadie-o-si-31258267"
-  },
-  {
-    "id": "la-promesa-rota-de-la-jubilacion",
-    "titulo": "La promesa rota de la jubilación",
-    "resumen": "La baja recaudación fiscal de México y el diseño de las Afore explican por qué el sistema de pensiones actual perpetúa la desigualdad en vez de garantizar una vejez digna.",
-    "medio": "El Sol de México",
-    "tiempoLectura": "2 min",
-    "autor": "María Paula Flores",
-    "autorSlug": "maria-paula",
-    "autorFoto": "img/maria-paula-flores.jpg",
-    "tema": "México",
-    "temaSlug": "mexico",
-    "fecha": "2026-07-17",
-    "portada": "img/columnas/portada-promesa-rota-jubilacion.jpg",
-    "link": "publicaciones/columnas/promesa-rota-jubilacion.html",
-    "original": "https://oem.com.mx/elsoldemexico/analisis/la-promesa-rota-de-la-jubilacion-31153823"
-  },
-  {
-    "id": "transicion-ecologica-redistribuye-poder",
-    "titulo": "La transición ecológica también redistribuye el poder",
-    "resumen": "El caso de la planta de amoníaco en Topolobampo muestra que la gobernanza climática también es una disputa por quién decide, quién queda fuera y quién carga con las consecuencias.",
-    "medio": "El Sol de México",
-    "tiempoLectura": "2 min",
-    "autor": "Thali Kleinfinger",
-    "autorSlug": "thali",
-    "autorFoto": "img/thali-kleinfinger.jpg",
-    "tema": ["México", "Geopolítica"],
-    "temaSlug": ["mexico", "geopolitica"],
-    "fecha": "2026-07-10",
-    "portada": "img/columnas/portada-transicion-ecologica-poder.jpg",
-    "link": "publicaciones/columnas/transicion-ecologica-poder.html",
-    "original": "https://oem.com.mx/elsoldemexico/analisis/la-transicion-ecologica-tambien-redistribuye-el-poder-31038134"
-  },
-  {
-    "id": "urbanidad-digna-esta-en-chino",
-    "titulo": "¿Urbanidad digna? ... ¡Está en chino!",
-    "resumen": "El modelo urbano de Shenzhen, que combina metro, vivienda y servicios públicos en un mismo desarrollo vertical, ofrece lecciones para pensar la movilidad y la paz positiva en las ciudades mexicanas.",
-    "medio": "El Sol de México",
-    "tiempoLectura": "2 min",
-    "autor": "Goretty Espíndola",
-    "autorSlug": "goretty",
-    "autorFoto": "img/goretty-espindola.jpg",
-    "tema": ["México", "Cohesión social"],
-    "temaSlug": ["mexico", "cohesion"],
-    "fecha": "2026-07-03",
-    "portada": "img/columnas/portada-urbanidad-digna-chino.jpg",
-    "link": "publicaciones/columnas/urbanidad-digna-esta-en-chino.html",
-    "original": "https://oem.com.mx/elsoldemexico/analisis/urbanidad-digna-esta-en-chino-30900540"
+/* CIPMEX — catálogo de columnas.
+   Lee data/columnas.json (una entrada por columna publicada) y arma las
+   tarjetas en cada página que las lista: inicio, publicaciones/columnas,
+   las páginas de medio (Sol/Universal/N+), las de tema, y la semblanza de
+   cada autor/a. Agregar una columna nueva = agregar una entrada a ese
+   archivo; ninguna página necesita tocarse a mano.
+
+   `base` es la ruta relativa desde la página actual hasta la raíz del
+   sitio: "" en la raíz, "../" dentro de /equipo/ o /publicaciones/,
+   "../../" dentro de /publicaciones/temas/ o /publicaciones/columnas/. */
+(function (global) {
+  var MESES = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio',
+    'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'];
+
+  /* Logo por medio: con poner el nombre del medio en columnas.json alcanza,
+     no hace falta escribir la ruta del logo cada vez. Si se agrega un medio
+     nuevo, se agrega su logo aquí una sola vez y ya queda disponible para
+     siempre. c.medioLogo en el JSON sigue funcionando como excepción manual
+     si algún día hace falta. */
+  var LOGOS_POR_MEDIO = {
+    'El Sol de México': 'img/logo-sol-de-mexico.jpg',
+    'El Universal': 'img/logo-el-universal.jpg',
+    'N+ Opinión': 'img/logo-nmas.jpg'
+  };
+  function logoDeMedio(c) {
+    return c.medioLogo || LOGOS_POR_MEDIO[c.medio] || null;
   }
-]
+
+  function formatMes(fechaISO) {
+    var partes = fechaISO.split('-');
+    var mes = MESES[parseInt(partes[1], 10) - 1];
+    return mes + ', ' + partes[0];
+  }
+
+  function cargar(base, callback) {
+    fetch(base + 'data/columnas.json')
+      .then(function (r) { return r.json(); })
+      .then(function (data) {
+        data.sort(function (a, b) { return a.fecha < b.fecha ? 1 : -1; });
+        callback(data);
+      })
+      .catch(function () { callback([]); });
+  }
+
+  function porMedio(data, medio) {
+    return data.filter(function (c) { return c.medio === medio; });
+  }
+  function porAutor(data, autorSlug) {
+    return data.filter(function (c) { return c.autorSlug === autorSlug; });
+  }
+  function porTema(data, temaSlug) {
+    return data.filter(function (c) {
+      if (Array.isArray(c.temaSlug)) return c.temaSlug.indexOf(temaSlug) !== -1;
+      return c.temaSlug === temaSlug;
+    });
+  }
+  function limitar(data, n) {
+    return data.slice(0, n);
+  }
+
+  function ocultarVacio(vacioSelector) {
+    if (!vacioSelector) return;
+    var el = document.querySelector(vacioSelector);
+    if (el) el.style.display = 'none';
+  }
+  function mostrarContenedor(el) {
+    if (el) el.style.display = '';
+  }
+
+  /* Tarjeta estándar (.pub-card): usada en inicio, medio y tema.
+     Si no hay resultados: si se pasó vacioSelector, se deja tal cual el
+     estado vacío bonito que ya tiene la página (no se toca nada). Si no,
+     se muestra un mensaje genérico dentro del propio contenedor. */
+  function renderPubCards(containerId, lista, opts) {
+    opts = opts || {};
+    var base = opts.base || '';
+    var el = document.getElementById(containerId);
+    if (!el) return;
+    if (!lista.length) {
+      if (opts.vacioSelector) return;
+      el.innerHTML = '<p class="texto-muted" style="grid-column: 1 / -1;">Todavía no hay columnas publicadas aquí. Vuelve pronto.</p>';
+      mostrarContenedor(el);
+      return;
+    }
+    ocultarVacio(opts.vacioSelector);
+    mostrarContenedor(el);
+    el.innerHTML = lista.map(function (c) {
+      var logo = logoDeMedio(c);
+      var medioCirculo = logo ?
+        '<span class="pub-medio-circulo" title="' + c.medio + '"><img src="' + base + logo + '" alt="' + c.medio + '"></span>' : '';
+      var tiempo = c.tiempoLectura ? (' · ' + c.tiempoLectura) : '';
+      return '' +
+        '<a href="' + base + c.link + '" class="pub-card">' +
+        '<div class="pub-foto">' +
+        '<img src="' + base + c.portada + '" alt="' + c.titulo + '">' +
+        '<span class="pub-tag">Columna</span>' +
+        medioCirculo +
+        '</div>' +
+        '<div class="pub-contenido">' +
+        '<h3>' + c.titulo + '</h3>' +
+        '<p class="pub-resumen">' + c.resumen + '</p>' +
+        '<div class="pub-meta">' +
+        '<span>' + c.autor + ' · ' + formatMes(c.fecha) + tiempo + '</span>' +
+        '<span class="pub-leer">Leer →</span>' +
+        '</div>' +
+        '</div>' +
+        '</a>';
+    }).join('');
+  }
+
+  /* Tarjeta de la franja "Publicaciones más recientes" (.recientes-card) */
+  function renderMarquee(containerId, lista, opts) {
+    opts = opts || {};
+    var base = opts.base || '';
+    var el = document.getElementById(containerId);
+    if (!el || !lista.length) return;
+    el.innerHTML = lista.map(function (c) {
+      var tiempo = c.tiempoLectura ? (' · ' + c.tiempoLectura) : '';
+      return '' +
+        '<a href="' + base + c.link + '" class="recientes-card">' +
+        '<div class="recientes-card-foto">' +
+        '<img src="' + base + c.portada + '" alt="' + c.titulo + '">' +
+        '<span class="recientes-card-medio">' + c.medio.toUpperCase() + '</span>' +
+        '</div>' +
+        '<div class="recientes-card-cuerpo">' +
+        '<h4>' + c.titulo + '</h4>' +
+        '<p class="recientes-card-fecha">' + formatMes(c.fecha) + tiempo + '</p>' +
+        '</div>' +
+        '</a>';
+    }).join('');
+  }
+
+  /* Tarjeta densa de las páginas de semblanza (.card, sin fecha ni tag) */
+  function renderSemblanza(containerId, lista, opts) {
+    opts = opts || {};
+    var base = opts.base || '';
+    var el = document.getElementById(containerId);
+    if (!el) return;
+    if (!lista.length) {
+      el.innerHTML = '<p class="texto-muted" style="grid-column: 1 / -1;">Todavía no hay publicaciones registradas de esta persona en el catálogo.</p>';
+      return;
+    }
+    el.innerHTML = lista.map(function (c) {
+      return '' +
+        '<a href="' + base + c.link + '" class="card" style="text-decoration:none; color:inherit;">' +
+        '<div class="foto"><img src="' + base + c.portada + '" alt="' + c.titulo + '"></div>' +
+        '<div class="contenido">' +
+        '<h4>' + c.titulo + '</h4>' +
+        '<p class="desc">' + c.resumen + '</p>' +
+        '</div>' +
+        '</a>';
+    }).join('');
+  }
+
+  global.CIPMEXColumnas = {
+    cargar: cargar,
+    porMedio: porMedio,
+    porAutor: porAutor,
+    porTema: porTema,
+    limitar: limitar,
+    formatMes: formatMes,
+    renderPubCards: renderPubCards,
+    renderMarquee: renderMarquee,
+    renderSemblanza: renderSemblanza
+  };
+})(window);
