@@ -228,8 +228,8 @@
     "tiempoLectura": "3 min",
     "autor": "Samuel Behar",
     "autorSlug": "samuel-behar",
-    "tema": ["México", "Violencia estructural"],
-    "temaSlug": ["mexico", "violencia"],
+    "tema": ["Violencia estructural", "México", "Cohesión social"],
+    "temaSlug": ["violencia", "mexico", "cohesion"],
     "fecha": "2026-06-12",
     "portada": "img/columnas/portada-el-huracan-antes-de-la-paz.jpg",
     "link": "publicaciones/columnas/el-huracan-antes-de-la-paz.html",
@@ -243,8 +243,8 @@
     "tiempoLectura": "3 min",
     "autor": "Valentina Berdiales",
     "autorSlug": "valentina-berdiales",
-    "tema": ["México", "Cohesión social"],
-    "temaSlug": ["mexico", "cohesion"],
+    "tema": ["México", "Cohesión social", "Violencia estructural"],
+    "temaSlug": ["mexico", "cohesion", "violencia"],
     "fecha": "2026-06-05",
     "portada": "img/columnas/portada-las-utopias-que-si-existen.jpg",
     "link": "publicaciones/columnas/las-utopias-que-si-existen.html",
@@ -264,5 +264,20 @@
     "portada": "img/columnas/portada-90-minutos-de-paz.jpg",
     "link": "publicaciones/columnas/90-minutos-de-paz.html",
     "original": "https://oem.com.mx/elsoldemexico/analisis/90-minutos-de-paz-30623069"
+  },
+  {
+    "id": "cambiando-el-dilema-del-desarrollo",
+    "titulo": "Cambiando el dilema del desarrollo: el poder de la sociedad civil",
+    "resumen": "Ante megaproyectos y desarrollos que amenazan zonas de alto valor ecológico, la movilización ciudadana demuestra que proteger el medio ambiente y construir bienestar no son objetivos opuestos.",
+    "medio": "El Sol de México",
+    "tiempoLectura": "4 min",
+    "autor": "Natalia Pérez",
+    "autorSlug": "natalia-perez",
+    "tema": "Cohesión social",
+    "temaSlug": "cohesion",
+    "fecha": "2026-05-29",
+    "portada": "img/columnas/portada-cambiando-el-dilema-del-desarrollo.jpg",
+    "link": "publicaciones/columnas/cambiando-el-dilema-del-desarrollo.html",
+    "original": "https://oem.com.mx/elsoldemexico/analisis/cambiando-el-dilema-del-desarrollo-el-poder-de-la-sociedad-civil-30248979"
   }
 ]
