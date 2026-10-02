@@ -78,7 +78,7 @@
 
   <div class="semblanza-publicaciones">
     <p class="semblanza-pub-intro"><strong>Publicaciones recientes</strong> escritas por Victoria Saucedo.</p>
-    <p class="texto-parrafo" style="max-width:none;">Aún no hay publicaciones registradas.</p>
+    <div class="semblanza-pub-grid" id="semblanzaPubGrid"></div>
   </div>
 </div>
 
@@ -120,6 +120,13 @@
 </div>
 
 <script src="../js/site.js"></script>
+<script src="../js/columnas.js"></script>
+<script>
+var base = '../';
+CIPMEXColumnas.cargar(base, function (data) {
+  CIPMEXColumnas.renderSemblanza('semblanzaPubGrid', CIPMEXColumnas.porAutor(data, 'victoria'), {base: base});
+});
+</script>
 
 </body>
 </html>
