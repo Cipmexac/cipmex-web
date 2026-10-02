@@ -279,5 +279,20 @@
     "portada": "img/columnas/portada-cambiando-el-dilema-del-desarrollo.jpg",
     "link": "publicaciones/columnas/cambiando-el-dilema-del-desarrollo.html",
     "original": "https://oem.com.mx/elsoldemexico/analisis/cambiando-el-dilema-del-desarrollo-el-poder-de-la-sociedad-civil-30248979"
+  },
+  {
+    "id": "quien-decide-que-nos-indigna",
+    "titulo": "¿Quién decide qué nos indigna?",
+    "resumen": "Cuando las noticias dejan de ser homogéneas y cada quien recibe una realidad informativa distinta, conviene preguntarse quién interviene en esa construcción y qué conflictos quedan fuera de la conversación.",
+    "medio": "El Sol de México",
+    "tiempoLectura": "3 min",
+    "autor": "Victoria Saucedo",
+    "autorSlug": "victoria",
+    "tema": ["Mundo", "Cohesión social"],
+    "temaSlug": ["mundo", "cohesion"],
+    "fecha": "2026-10-02",
+    "portada": "img/columnas/portada-quien-decide-que-nos-indigna.jpg",
+    "link": "publicaciones/columnas/quien-decide-que-nos-indigna.html",
+    "original": "https://oem.com.mx/elsoldemexico/analisis/quien-decide-que-nos-indigna-32379892"
   }
 ]
