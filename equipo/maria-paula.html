@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Goretty Espíndola · CIPMEX</title>
+<title>María Paula Flores · CIPMEX</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.33.0/dist/tabler-icons.min.css">
@@ -56,20 +56,20 @@
 </div>
 
 <div class="contenedor">
-  <div class="semblanza-hero" style="--accent: var(--azul-oscuro);">
+  <div class="semblanza-hero" style="--accent: var(--azul);">
     <div class="semblanza-hero-texto">
       <a href="../equipo/index.html" class="ver-todos" style="display:inline-block;margin-bottom:14px;">← Equipo CIPMEX</a>
       <div class="semblanza-kicker">
         <div class="barra"></div>
         <span>Equipo CIPMEX</span>
       </div>
-      <h1>Goretty Espíndola</h1>
+      <h1>María Paula Flores</h1>
       <p class="semblanza-rol">Investigadora</p>
-      <p class="semblanza-bio-texto clamp">Internacionalista por la Universidad Iberoamericana, docente, investigadora y amante del cine y la lectura. Trabaja en temas de gobernanza, estudios críticos de género, derechos humanos y cooperación para el desarrollo. Tiene un amplio interés en comprender, analizar y desmantelar los sistemas de poder a través de un lente crítico de construcción de paz y la convicción de que otros mundos son posibles.</p>
+      <p class="semblanza-bio-texto clamp">Licenciada en Relaciones Internacionales por la Universidad Iberoamericana y la UVM, con un diplomado en Análisis Geoestratégico por el Instituto Beatriz Galindo (España). Cuenta con dos años de experiencia en el ámbito privado en el área de Project Management y es investigadora asociada en CIPMEX. También es periodista freelance con colaboraciones en El Sol de México y ELLE México. Sus temas de interés y especialización son desigualdad, transporte público, espacio público y educación financiera como factor de desigualdad.</p>
       <button class="semblanza-leermas" type="button">Leer más →</button>
     </div>
     <div class="semblanza-foto">
-      <img src="../img/goretty-espindola.jpg" alt="Goretty Espíndola">
+      <img src="../img/maria-paula-flores.jpg" alt="María Paula Flores">
     </div>
   </div>
 </div>
@@ -78,7 +78,7 @@
   <div class="semblanza-divisor"></div>
 
   <div class="semblanza-publicaciones">
-    <p class="semblanza-pub-intro"><strong>Publicaciones recientes</strong> escritas por Goretty Espíndola.</p>
+    <p class="semblanza-pub-intro"><strong>Publicaciones recientes</strong> escritas por María Paula Flores.</p>
     <div class="semblanza-pub-grid" id="semblanzaPubGrid"></div>
   </div>
 </div>
@@ -151,7 +151,7 @@ function renderPubs() {
 }
 
 CIPMEXColumnas.cargar(base, function (data) {
-  CIPMEXColumnas.porAutor(data, 'goretty').forEach(function (c) {
+  CIPMEXColumnas.porAutor(data, 'maria-paula').forEach(function (c) {
     pubs.push({titulo: c.titulo, resumen: c.resumen, link: c.link, img: c.portada});
   });
   pendientes--;
@@ -159,7 +159,7 @@ CIPMEXColumnas.cargar(base, function (data) {
 });
 
 CIPMEXInvestigaciones.cargar(base, function (data) {
-  CIPMEXInvestigaciones.porAutor(data, 'goretty').forEach(function (i) {
+  CIPMEXInvestigaciones.porAutor(data, 'maria-paula').forEach(function (i) {
     pubs.push({titulo: i.titulo, resumen: i.resumen, link: i.link, color: CIPMEXInvestigaciones.gradienteDeTipo(i)});
   });
   pendientes--;
