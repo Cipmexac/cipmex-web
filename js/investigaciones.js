@@ -41,7 +41,10 @@
            ordenar por año, para que cada investigación tenga siempre el
            mismo color sin importar en qué página o en qué orden se liste. */
         data.forEach(function (item, idx) { item._paletaIdx = idx; });
-        data.sort(function (a, b) { return (b.anio || 0) - (a.anio || 0); });
+        data.sort(function (a, b) {
+          if ((b.anio || 0) !== (a.anio || 0)) return (b.anio || 0) - (a.anio || 0);
+          return (b.mes || 0) - (a.mes || 0);
+        });
         callback(data);
       })
       .catch(function () { callback([]); });
