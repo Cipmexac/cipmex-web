@@ -9,15 +9,29 @@
    de /publicaciones/investigacion/. */
 (function (global) {
 
-  /* Color de fondo de la tarjeta según el tipo de publicación. Si se
-     agrega un tipo nuevo, se agrega aquí una sola vez. */
-  var GRADIENTE_POR_TIPO = {
-    'Revista de paz': 'linear-gradient(135deg, var(--azul), var(--azul-oscuro))',
-    'Reporte propio': 'linear-gradient(135deg, var(--terracota), var(--morado))',
-    'Investigación con datos': 'linear-gradient(135deg, var(--verde), var(--azul-claro))'
-  };
+  /* Color de fondo de la tarjeta: se rota entre los colores de marca de
+     CIPMEX para que no todas las tarjetas del mismo tipo se vean iguales.
+     Cada investigación siempre recibe el mismo color (se elige a partir de
+     su id, no de su posición en la lista), así que no cambia de una
+     página a otra. Si una investigación necesita un color fijo específico,
+     se le puede poner "color" en investigaciones.json y eso tiene
+     prioridad sobre la rotación. */
+  var PALETA_GRADIENTES = [
+    'linear-gradient(135deg, var(--azul), var(--azul-oscuro))',
+    'linear-gradient(135deg, var(--terracota), var(--morado))',
+    'linear-gradient(135deg, var(--verde), var(--azul-claro))',
+    'linear-gradient(135deg, var(--morado), var(--azul))',
+    'linear-gradient(135deg, var(--azul-claro), var(--verde))',
+    'linear-gradient(135deg, var(--terracota), var(--azul-oscuro))'
+  ];
   function gradienteDeTipo(i) {
-    return i.color || GRADIENTE_POR_TIPO[i.tipo] || 'linear-gradient(135deg, var(--gris), var(--azul-oscuro))';
+    if (i.color) return i.color;
+    var texto = String(i.id || i.titulo || '');
+    var hash = 0;
+    for (var k = 0; k < texto.length; k++) {
+      hash = (hash * 31 + texto.charCodeAt(k)) % PALETA_GRADIENTES.length;
+    }
+    return PALETA_GRADIENTES[Math.abs(hash)];
   }
 
   function cargar(base, callback) {
