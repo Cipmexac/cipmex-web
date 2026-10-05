@@ -93,6 +93,7 @@
     cargar: cargar,
     limitar: limitar,
     porAutor: porAutor,
+    gradienteDeTipo: gradienteDeTipo,
     renderPubCards: renderPubCards,
     renderSemblanza: renderSemblanza
   };
