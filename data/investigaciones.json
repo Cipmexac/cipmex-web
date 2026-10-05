@@ -34,5 +34,17 @@
     "anio": 2016,
     "pdf": "pdf/investigaciones/valores-percepciones-concepciones-educacion-paz.pdf",
     "link": "publicaciones/investigacion/valores-percepciones-concepciones-educacion-paz.html"
+  },
+  {
+    "id": "mass-media-violence-peacebuilding",
+    "titulo": "Mass Media, Violence, and Peacebuilding: A Qualitative Study in Mexico",
+    "resumen": "Ochenta entrevistas que exploran la relación entre medios de comunicación, desconfianza ciudadana y construcción de paz en México, y qué buscan las audiencias en el periodismo que sí les genera confianza.",
+    "tipo": "Revista de paz",
+    "revista": "International Journal of Peace Studies",
+    "autor": "Mauricio Meschoulam",
+    "autorSlug": "mauricio",
+    "anio": 2017,
+    "pdf": "pdf/investigaciones/mass-media-violence-peacebuilding.pdf",
+    "link": "publicaciones/investigacion/mass-media-violence-peacebuilding.html"
   }
 ]
