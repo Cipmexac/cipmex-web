@@ -128,49 +128,42 @@ var base = '../';
 var pubs = [];
 var pendientes = 2;
 
-function listo() {
-  pendientes--;
-  if (pendientes > 0) return;
-  pubs.sort(function (a, b) {
-    if ((b.anio || 0) !== (a.anio || 0)) return (b.anio || 0) - (a.anio || 0);
-    return (b.mes || 0) - (a.mes || 0);
-  });
-  renderPubs();
-}
-
 function renderPubs() {
   var el = document.getElementById('semblanzaPubGrid');
   if (!el) return;
   if (!pubs.length) {
-    el.innerHTML = '';
+    el.innerHTML = '<p class="texto-muted" style="grid-column: 1 / -1;">Todavía no hay publicaciones registradas de esta persona en el catálogo.</p>';
     return;
   }
-  el.innerHTML = pubs.map(function (i) {
+  el.innerHTML = pubs.map(function (p) {
+    var foto = p.img ?
+      '<div class="foto"><img src="' + base + p.img + '" alt="' + p.titulo + '"></div>' :
+      '<div class="foto" style="background: ' + p.color + ';"></div>';
     return '' +
-      '<a href="' + base + i.link + '" class="card" style="text-decoration:none; color:inherit;">' +
-      '<div class="foto" style="background: ' + i._color + ';"></div>' +
+      '<a href="' + base + p.link + '" class="card" style="text-decoration:none; color:inherit;">' +
+      foto +
       '<div class="contenido">' +
-      '<h4>' + i.titulo + '</h4>' +
-      '<p class="desc">' + i.resumen + '</p>' +
+      '<h4>' + p.titulo + '</h4>' +
+      '<p class="desc">' + p.resumen + '</p>' +
       '</div>' +
       '</a>';
   }).join('');
 }
 
 CIPMEXColumnas.cargar(base, function (data) {
-  CIPMEXColumnas.porAutor(data, 'fernando').forEach(function (i) {
-    i._color = CIPMEXColumnas.gradienteDeTipo(i);
-    pubs.push(i);
+  CIPMEXColumnas.porAutor(data, 'fernando').forEach(function (c) {
+    pubs.push({titulo: c.titulo, resumen: c.resumen, link: c.link, img: c.portada});
   });
-  listo();
+  pendientes--;
+  if (!pendientes) renderPubs();
 });
 
 CIPMEXInvestigaciones.cargar(base, function (data) {
   CIPMEXInvestigaciones.porAutor(data, 'fernando').forEach(function (i) {
-    i._color = CIPMEXInvestigaciones.gradienteDeTipo(i);
-    pubs.push(i);
+    pubs.push({titulo: i.titulo, resumen: i.resumen, link: i.link, color: CIPMEXInvestigaciones.gradienteDeTipo(i)});
   });
-  listo();
+  pendientes--;
+  if (!pendientes) renderPubs();
 });
 </script>
 
