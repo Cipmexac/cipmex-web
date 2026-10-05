@@ -127,8 +127,8 @@
     "resumen": "Un análisis de las dimensiones psicológicas, simbólicas, políticas y narrativas del conflicto Hamás-Israel, que explica cómo las respuestas militares de Israel tienden a reforzar, en lugar de debilitar, la narrativa de resistencia de Hamás.",
     "tipo": "Revista de paz",
     "revista": "Revista Mexicana de Ciencias Políticas y Sociales",
-    "autor": "Mauricio Meschoulam",
-    "autorSlug": "mauricio",
+    "autor": "Mauricio Meschoulam, Alejandra Nurko y Fernando de la Parra",
+    "autorSlug": ["mauricio", "alejandra", "fernando"],
     "anio": 2025,
     "pdf": "pdf/investigaciones/legitimidad-narrativa-trampa-asimetrica-hamas-israel.pdf",
     "link": "publicaciones/investigacion/legitimidad-narrativa-trampa-asimetrica-hamas-israel.html"
