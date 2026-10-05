@@ -50,7 +50,6 @@
         '<a href="' + base + i.link + '" class="pub-card">' +
         '<div class="pub-foto" style="background: ' + gradienteDeTipo(i) + ';">' +
         '<span class="pub-tag">' + i.tipo + '</span>' +
-        '<span class="pub-foto-tag">' + (i.autor ? i.autor.split(' ')[0].toUpperCase() : 'CIPMEX') + '</span>' +
         '</div>' +
         '<div class="pub-contenido">' +
         '<h3>' + i.titulo + '</h3>' +
