@@ -120,5 +120,17 @@
     "anio": 2024,
     "pdf": "pdf/investigaciones/gender-incarceration-peacebuilding-women-inmates-mexican-prisons.pdf",
     "link": "publicaciones/investigacion/gender-incarceration-peacebuilding-women-inmates-mexican-prisons.html"
+  },
+  {
+    "id": "legitimidad-narrativa-trampa-asimetrica-hamas-israel",
+    "titulo": "Legitimidad, narrativa y trampa asimétrica: el conflicto Hamás-Israel más allá de lo material",
+    "resumen": "Un análisis de las dimensiones psicológicas, simbólicas, políticas y narrativas del conflicto Hamás-Israel, que explica cómo las respuestas militares de Israel tienden a reforzar, en lugar de debilitar, la narrativa de resistencia de Hamás.",
+    "tipo": "Revista de paz",
+    "revista": "Revista Mexicana de Ciencias Políticas y Sociales",
+    "autor": "Mauricio Meschoulam",
+    "autorSlug": "mauricio",
+    "anio": 2025,
+    "pdf": "pdf/investigaciones/legitimidad-narrativa-trampa-asimetrica-hamas-israel.pdf",
+    "link": "publicaciones/investigacion/legitimidad-narrativa-trampa-asimetrica-hamas-israel.html"
   }
 ]
