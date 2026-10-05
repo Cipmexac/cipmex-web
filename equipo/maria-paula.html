@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>María Paula Flores · CIPMEX</title>
+<title>Goretty Espíndola · CIPMEX</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.33.0/dist/tabler-icons.min.css">
@@ -56,20 +56,20 @@
 </div>
 
 <div class="contenedor">
-  <div class="semblanza-hero" style="--accent: var(--azul);">
+  <div class="semblanza-hero" style="--accent: var(--azul-oscuro);">
     <div class="semblanza-hero-texto">
       <a href="../equipo/index.html" class="ver-todos" style="display:inline-block;margin-bottom:14px;">← Equipo CIPMEX</a>
       <div class="semblanza-kicker">
         <div class="barra"></div>
         <span>Equipo CIPMEX</span>
       </div>
-      <h1>María Paula Flores</h1>
+      <h1>Goretty Espíndola</h1>
       <p class="semblanza-rol">Investigadora</p>
-      <p class="semblanza-bio-texto clamp">Licenciada en Relaciones Internacionales por la Universidad Iberoamericana y la UVM, con un diplomado en Análisis Geoestratégico por el Instituto Beatriz Galindo (España). Cuenta con dos años de experiencia en el ámbito privado en el área de Project Management y es investigadora asociada en CIPMEX. También es periodista freelance con colaboraciones en El Sol de México y ELLE México. Sus temas de interés y especialización son desigualdad, transporte público, espacio público y educación financiera como factor de desigualdad.</p>
+      <p class="semblanza-bio-texto clamp">Internacionalista por la Universidad Iberoamericana, docente, investigadora y amante del cine y la lectura. Trabaja en temas de gobernanza, estudios críticos de género, derechos humanos y cooperación para el desarrollo. Tiene un amplio interés en comprender, analizar y desmantelar los sistemas de poder a través de un lente crítico de construcción de paz y la convicción de que otros mundos son posibles.</p>
       <button class="semblanza-leermas" type="button">Leer más →</button>
     </div>
     <div class="semblanza-foto">
-      <img src="../img/maria-paula-flores.jpg" alt="María Paula Flores">
+      <img src="../img/goretty-espindola.jpg" alt="Goretty Espíndola">
     </div>
   </div>
 </div>
@@ -78,7 +78,7 @@
   <div class="semblanza-divisor"></div>
 
   <div class="semblanza-publicaciones">
-    <p class="semblanza-pub-intro"><strong>Publicaciones recientes</strong> escritas por María Paula Flores.</p>
+    <p class="semblanza-pub-intro"><strong>Publicaciones recientes</strong> escritas por Goretty Espíndola.</p>
     <div class="semblanza-pub-grid" id="semblanzaPubGrid"></div>
   </div>
 </div>
@@ -122,10 +122,48 @@
 
 <script src="../js/site.js"></script>
 <script src="../js/columnas.js"></script>
+<script src="../js/investigaciones.js"></script>
 <script>
 var base = '../';
+var pubs = [];
+var pendientes = 2;
+
+function renderPubs() {
+  var el = document.getElementById('semblanzaPubGrid');
+  if (!el) return;
+  if (!pubs.length) {
+    el.innerHTML = '<p class="texto-muted" style="grid-column: 1 / -1;">Todavía no hay publicaciones registradas de esta persona en el catálogo.</p>';
+    return;
+  }
+  el.innerHTML = pubs.map(function (p) {
+    var foto = p.img ?
+      '<div class="foto"><img src="' + base + p.img + '" alt="' + p.titulo + '"></div>' :
+      '<div class="foto" style="background: ' + p.color + ';"></div>';
+    return '' +
+      '<a href="' + base + p.link + '" class="card" style="text-decoration:none; color:inherit;">' +
+      foto +
+      '<div class="contenido">' +
+      '<h4>' + p.titulo + '</h4>' +
+      '<p class="desc">' + p.resumen + '</p>' +
+      '</div>' +
+      '</a>';
+  }).join('');
+}
+
 CIPMEXColumnas.cargar(base, function (data) {
-  CIPMEXColumnas.renderSemblanza('semblanzaPubGrid', CIPMEXColumnas.porAutor(data, 'maria-paula'), {base: base});
+  CIPMEXColumnas.porAutor(data, 'goretty').forEach(function (c) {
+    pubs.push({titulo: c.titulo, resumen: c.resumen, link: c.link, img: c.portada});
+  });
+  pendientes--;
+  if (!pendientes) renderPubs();
+});
+
+CIPMEXInvestigaciones.cargar(base, function (data) {
+  CIPMEXInvestigaciones.porAutor(data, 'goretty').forEach(function (i) {
+    pubs.push({titulo: i.titulo, resumen: i.resumen, link: i.link, color: CIPMEXInvestigaciones.gradienteDeTipo(i)});
+  });
+  pendientes--;
+  if (!pendientes) renderPubs();
 });
 </script>
 
