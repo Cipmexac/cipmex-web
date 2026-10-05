@@ -58,5 +58,17 @@
     "anio": 2018,
     "pdf": "pdf/investigaciones/values-perceptions-conceptions-peacebuilding-mexican-business.pdf",
     "link": "publicaciones/investigacion/values-perceptions-conceptions-peacebuilding-mexican-business.html"
+  },
+  {
+    "id": "complexity-multilateral-negotiations-simulations",
+    "titulo": "The Complexity of Multilateral Negotiations: Problem or Opportunity? A Qualitative Study of Five Simulations with Mexican Students",
+    "resumen": "Una investigación cualitativa con 118 estudiantes sobre cinco simulaciones de negociación multilateral, que explora cómo estos ejercicios desarrollan conciencia, habilidades y pensamiento creativo frente a la complejidad internacional.",
+    "tipo": "Revista de paz",
+    "revista": "International Studies Perspectives",
+    "autor": "Mauricio Meschoulam",
+    "autorSlug": "mauricio",
+    "anio": 2019,
+    "pdf": "pdf/investigaciones/complexity-multilateral-negotiations-simulations.pdf",
+    "link": "publicaciones/investigacion/complexity-multilateral-negotiations-simulations.html"
   }
 ]
