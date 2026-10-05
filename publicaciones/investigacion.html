@@ -71,50 +71,7 @@
     <span class="label">QUÉ INCLUYE ESTA SECCIÓN</span>
     <p class="texto-parrafo" style="max-width: none; margin-bottom: 8px;">Aquí reunimos nuestros artículos publicados en revistas especializadas en estudios de paz, y los reportes de investigación propia que producimos, del estilo de los que organizaciones como la CANA o el PNUD publican sobre temas de conflicto y desarrollo. Parte de esta investigación es la que después se convierte en <a href="../casos/index.html">casos de impacto</a> documentados con resultados concretos.</p>
 
-    <div class="pub-grid" id="pubInvestigacionGrid">
-      <a href="#" class="pub-card">
-        <div class="pub-foto" style="background: linear-gradient(135deg, var(--azul), var(--azul-oscuro));">
-          <span class="pub-tag">Revista de paz</span>
-          <span class="pub-foto-tag">FOTO</span>
-        </div>
-        <div class="pub-contenido">
-          <h3>[Título del artículo]</h3>
-          <p class="pub-resumen">[Resumen de una línea sobre el tema y el hallazgo principal.]</p>
-          <div class="pub-meta">
-            <span>[Nombre de la revista] · [año]</span>
-            <span class="pub-leer">Leer →</span>
-          </div>
-        </div>
-      </a>
-      <a href="#" class="pub-card">
-        <div class="pub-foto" style="background: linear-gradient(135deg, var(--terracota), var(--morado));">
-          <span class="pub-tag">Reporte propio</span>
-          <span class="pub-foto-tag">FOTO</span>
-        </div>
-        <div class="pub-contenido">
-          <h3>[Título del reporte]</h3>
-          <p class="pub-resumen">[Resumen de una línea sobre la investigación de campo o documental realizada.]</p>
-          <div class="pub-meta">
-            <span>CIPMEX · [año]</span>
-            <span class="pub-leer">Leer →</span>
-          </div>
-        </div>
-      </a>
-      <a href="#" class="pub-card">
-        <div class="pub-foto" style="background: linear-gradient(135deg, var(--verde), var(--azul-claro));">
-          <span class="pub-tag">Investigación con datos</span>
-          <span class="pub-foto-tag">FOTO</span>
-        </div>
-        <div class="pub-contenido">
-          <h3>[Título de la investigación]</h3>
-          <p class="pub-resumen">[Resumen de una línea; nota si alimenta un caso de impacto ya publicado.]</p>
-          <div class="pub-meta">
-            <span>CIPMEX · [año]</span>
-            <span class="pub-leer">Leer →</span>
-          </div>
-        </div>
-      </a>
-    </div>
+    <div class="pub-grid" id="pubInvestigacionGrid"></div>
   </div>
 </div>
 
@@ -135,7 +92,7 @@
       <div class="footer-sep"></div>
       <div>
         <h5>Contacto</h5>
-        <p>contacto@cipmex.org</p>
+        <p>info@cipmex.org</p>
         <p>Ciudad de México</p>
       </div>
       <div class="footer-sep"></div>
@@ -156,6 +113,13 @@
 </div>
 
 <script src="../js/site.js"></script>
+<script src="../js/investigaciones.js"></script>
+<script>
+var base = '../';
+CIPMEXInvestigaciones.cargar(base, function (data) {
+  CIPMEXInvestigaciones.renderPubCards('pubInvestigacionGrid', data, {base: base});
+});
+</script>
 
 </body>
 </html>
