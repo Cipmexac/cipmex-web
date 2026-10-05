@@ -142,5 +142,15 @@
     "anio": 2020,
     "pdf": "pdf/investigaciones/reporte-dialogos-paz-ecatepec.pdf",
     "link": "publicaciones/investigacion/reporte-dialogos-paz-ecatepec.html"
+  },
+  {
+    "id": "genero-privacion-libertad",
+    "titulo": "Género y privación de la libertad",
+    "resumen": "Un reporte con 33 entrevistas a profundidad a mujeres privadas de la libertad en 12 penales de México que explora los vínculos entre la violencia estructural de género y su privación de la libertad, y ofrece recomendaciones para una construcción de paz con perspectiva de género en el sistema penitenciario.",
+    "tipo": "Reporte propio",
+    "autor": "Centro de Investigación para la Paz México (CIPMEX), Universidad Iberoamericana y La Cana, Proyecto de Reinserción Social, A.C.",
+    "anio": 2022,
+    "pdf": "pdf/investigaciones/genero-privacion-libertad.pdf",
+    "link": "publicaciones/investigacion/genero-privacion-libertad.html"
   }
 ]
