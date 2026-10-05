@@ -108,5 +108,17 @@
     "anio": 2021,
     "pdf": "pdf/investigaciones/material-deprivation-human-wealth-local-peacebuilding.pdf",
     "link": "publicaciones/investigacion/material-deprivation-human-wealth-local-peacebuilding.html"
+  },
+  {
+    "id": "gender-incarceration-peacebuilding-women-inmates-mexican-prisons",
+    "titulo": "Gender, Incarceration, and Peacebuilding: A Qualitative Study on Women Inmates in Mexican Prisons with a Peacebuilding Perspective",
+    "resumen": "Un estudio cualitativo con 33 entrevistas a mujeres reclusas en seis regiones de México que revela los vínculos entre el encarcelamiento, la violencia estructural de género y la autopercepción de inocencia de las entrevistadas.",
+    "tipo": "Revista de paz",
+    "revista": "Peace Studies Journal",
+    "autor": "Mauricio Meschoulam",
+    "autorSlug": "mauricio",
+    "anio": 2024,
+    "pdf": "pdf/investigaciones/gender-incarceration-peacebuilding-women-inmates-mexican-prisons.pdf",
+    "link": "publicaciones/investigacion/gender-incarceration-peacebuilding-women-inmates-mexican-prisons.html"
   }
 ]
