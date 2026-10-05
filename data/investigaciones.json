@@ -22,5 +22,17 @@
     "anio": 2015,
     "pdf": "pdf/investigaciones/values-perceptions-peacebuilding-expanded-study.pdf",
     "link": "publicaciones/investigacion/values-perceptions-peacebuilding-expanded-study.html"
+  },
+  {
+    "id": "valores-percepciones-concepciones-educacion-paz",
+    "titulo": "Valores, percepciones, concepciones, educación y construcción de la paz. Un estudio cualitativo en México",
+    "resumen": "Una investigación cualitativa con 80 entrevistas que explora el papel de la educación, junto con la experiencia y la conversación social, en la construcción de percepciones sobre la violencia y la paz en México.",
+    "tipo": "Revista de paz",
+    "revista": "DIDAC",
+    "autor": "Mauricio Meschoulam",
+    "autorSlug": "mauricio",
+    "anio": 2016,
+    "pdf": "pdf/investigaciones/valores-percepciones-concepciones-educacion-paz.pdf",
+    "link": "publicaciones/investigacion/valores-percepciones-concepciones-educacion-paz.html"
   }
 ]
