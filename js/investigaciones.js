@@ -34,6 +34,10 @@
     return data.slice(0, n);
   }
 
+  function porAutor(data, autorSlug) {
+    return data.filter(function (i) { return i.autorSlug === autorSlug; });
+  }
+
   /* Tarjeta de la página de listado (#pubInvestigacionGrid) */
   function renderPubCards(containerId, lista, opts) {
     opts = opts || {};
@@ -63,9 +67,33 @@
     }).join('');
   }
 
+  /* Tarjeta densa de las páginas de semblanza (.card, sin fecha ni tag) */
+  function renderSemblanza(containerId, lista, opts) {
+    opts = opts || {};
+    var base = opts.base || '';
+    var el = document.getElementById(containerId);
+    if (!el) return;
+    if (!lista.length) {
+      el.innerHTML = '';
+      return;
+    }
+    el.innerHTML = lista.map(function (i) {
+      return '' +
+        '<a href="' + base + i.link + '" class="card" style="text-decoration:none; color:inherit;">' +
+        '<div class="foto" style="background: ' + gradienteDeTipo(i) + ';"></div>' +
+        '<div class="contenido">' +
+        '<h4>' + i.titulo + '</h4>' +
+        '<p class="desc">' + i.resumen + '</p>' +
+        '</div>' +
+        '</a>';
+    }).join('');
+  }
+
   global.CIPMEXInvestigaciones = {
     cargar: cargar,
     limitar: limitar,
-    renderPubCards: renderPubCards
+    porAutor: porAutor,
+    renderPubCards: renderPubCards,
+    renderSemblanza: renderSemblanza
   };
 })(window);
