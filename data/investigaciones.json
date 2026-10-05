@@ -46,5 +46,17 @@
     "anio": 2017,
     "pdf": "pdf/investigaciones/mass-media-violence-peacebuilding.pdf",
     "link": "publicaciones/investigacion/mass-media-violence-peacebuilding.html"
+  },
+  {
+    "id": "values-perceptions-conceptions-peacebuilding-mexican-business",
+    "titulo": "Values, Perceptions, Conceptions, and Peacebuilding: A Qualitative Case Study of a Mexican Business",
+    "resumen": "Un estudio de caso con 25 empleados de una de las mejores empresas para trabajar en México, que muestra que los incentivos laborales no bastan para generar sentimientos de paz cuando el entorno fuera del trabajo sigue siendo violento.",
+    "tipo": "Revista de paz",
+    "revista": "Peace Studies Journal",
+    "autor": "Mauricio Meschoulam",
+    "autorSlug": "mauricio",
+    "anio": 2018,
+    "pdf": "pdf/investigaciones/values-perceptions-conceptions-peacebuilding-mexican-business.pdf",
+    "link": "publicaciones/investigacion/values-perceptions-conceptions-peacebuilding-mexican-business.html"
   }
 ]
