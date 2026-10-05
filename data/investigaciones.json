@@ -70,5 +70,17 @@
     "anio": 2019,
     "pdf": "pdf/investigaciones/complexity-multilateral-negotiations-simulations.pdf",
     "link": "publicaciones/investigacion/complexity-multilateral-negotiations-simulations.html"
+  },
+  {
+    "id": "media-violence-peacebuilding-mexico-quantitative-phase",
+    "titulo": "The Media, Violence and Peacebuilding in Mexico. Quantitative Phase of the Research",
+    "resumen": "Una fase cuantitativa a nivel nacional sobre cómo el contacto con las noticias genera sentimientos negativos o positivos, y cómo la percepción de manipulación, sensacionalismo o periodismo de paz influye en el bienestar psicosocial.",
+    "tipo": "Revista de paz",
+    "revista": "Peace Studies Journal",
+    "autor": "Mauricio Meschoulam",
+    "autorSlug": "mauricio",
+    "anio": 2020,
+    "pdf": "pdf/investigaciones/media-violence-peacebuilding-mexico-quantitative-phase.pdf",
+    "link": "publicaciones/investigacion/media-violence-peacebuilding-mexico-quantitative-phase.html"
   }
 ]
