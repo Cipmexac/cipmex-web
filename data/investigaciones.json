@@ -96,5 +96,17 @@
     "mes": 9,
     "pdf": "pdf/investigaciones/work-opportunities-reintegration-women-inmates-peacebuilding.pdf",
     "link": "publicaciones/investigacion/work-opportunities-reintegration-women-inmates-peacebuilding.html"
+  },
+  {
+    "id": "material-deprivation-human-wealth-local-peacebuilding",
+    "titulo": "Material Deprivation and Human Wealth: The Importance of the Local in Peacebuilding",
+    "resumen": "Un estudio cualitativo con 31 entrevistas a profundidad en Ecatepec que explora cómo la carencia material, la desconfianza institucional y las experiencias cercanas moldean las percepciones sobre la violencia y las posibilidades de construir paz a nivel local.",
+    "tipo": "Revista de paz",
+    "revista": "International Journal of Peace Studies",
+    "autor": "Mauricio Meschoulam",
+    "autorSlug": "mauricio",
+    "anio": 2021,
+    "pdf": "pdf/investigaciones/material-deprivation-human-wealth-local-peacebuilding.pdf",
+    "link": "publicaciones/investigacion/material-deprivation-human-wealth-local-peacebuilding.html"
   }
 ]
