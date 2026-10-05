@@ -10,5 +10,17 @@
     "anio": 2014,
     "pdf": "pdf/investigaciones/values-perceptions-conceptions-peacebuilding.pdf",
     "link": "publicaciones/investigacion/values-perceptions-conceptions-peacebuilding.html"
+  },
+  {
+    "id": "values-perceptions-peacebuilding-expanded-study",
+    "titulo": "Values, Perceptions, and Peacebuilding: An Expanded Qualitative Study in Mexico",
+    "resumen": "La ampliación del estudio original de 2014: 80 entrevistas en la Ciudad de México y otras ciudades del país confirman los patrones sociales detrás de las percepciones sobre la violencia y la paz.",
+    "tipo": "Revista de paz",
+    "revista": "International Journal of Peace Studies",
+    "autor": "Mauricio Meschoulam",
+    "autorSlug": "mauricio",
+    "anio": 2015,
+    "pdf": "pdf/investigaciones/values-perceptions-peacebuilding-expanded-study.pdf",
+    "link": "publicaciones/investigacion/values-perceptions-peacebuilding-expanded-study.html"
   }
 ]
