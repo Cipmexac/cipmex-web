@@ -132,5 +132,15 @@
     "anio": 2025,
     "pdf": "pdf/investigaciones/legitimidad-narrativa-trampa-asimetrica-hamas-israel.pdf",
     "link": "publicaciones/investigacion/legitimidad-narrativa-trampa-asimetrica-hamas-israel.html"
+  },
+  {
+    "id": "reporte-dialogos-paz-ecatepec",
+    "titulo": "Reporte Diálogos para la paz en Ecatepec",
+    "resumen": "Un reporte con 31 entrevistas de profundidad que documenta las percepciones sobre violencia, inseguridad y posibilidades de paz en Ecatepec, elaborado para el grupo de Diálogos para la Construcción de Paz de México Posibles.",
+    "tipo": "Reporte propio",
+    "autor": "Centro de Investigación para la Paz México (CIPMEX)",
+    "anio": 2020,
+    "pdf": "pdf/investigaciones/reporte-dialogos-paz-ecatepec.pdf",
+    "link": "publicaciones/investigacion/reporte-dialogos-paz-ecatepec.html"
   }
 ]
