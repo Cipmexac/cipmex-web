@@ -9,35 +9,38 @@
    de /publicaciones/investigacion/. */
 (function (global) {
 
-  /* Color de fondo de la tarjeta: se rota entre los colores de marca de
-     CIPMEX para que no todas las tarjetas del mismo tipo se vean iguales.
-     Cada investigación siempre recibe el mismo color (se elige a partir de
-     su id, no de su posición en la lista), así que no cambia de una
-     página a otra. Si una investigación necesita un color fijo específico,
-     se le puede poner "color" en investigaciones.json y eso tiene
-     prioridad sobre la rotación. */
+  /* Color de fondo de la tarjeta: se asigna solo, en automático. Se
+     reparte una paleta de colores de marca de CIPMEX según el orden en
+     que cada investigación aparece en investigaciones.json (no según su
+     tipo ni su año), rotando entre colores claramente distintos entre sí
+     para que nunca se repita uno igual o parecido justo al lado del
+     anterior. Agregar una investigación nueva no requiere elegir nada a
+     mano: solo se agrega al final del archivo y le toca el siguiente
+     color de la rotación. (Si alguna vez hiciera falta fijar un color
+     específico, poner "color" en esa entrada de investigaciones.json
+     tiene prioridad sobre la rotación). */
   var PALETA_GRADIENTES = [
     'linear-gradient(135deg, var(--azul), var(--azul-oscuro))',
     'linear-gradient(135deg, var(--terracota), var(--morado))',
     'linear-gradient(135deg, var(--verde), var(--azul-claro))',
     'linear-gradient(135deg, var(--morado), var(--azul))',
-    'linear-gradient(135deg, var(--azul-claro), var(--verde))',
-    'linear-gradient(135deg, var(--terracota), var(--azul-oscuro))'
+    'linear-gradient(135deg, var(--terracota), var(--azul-oscuro))',
+    'linear-gradient(135deg, var(--verde), var(--morado))'
   ];
   function gradienteDeTipo(i) {
     if (i.color) return i.color;
-    var texto = String(i.id || i.titulo || '');
-    var hash = 0;
-    for (var k = 0; k < texto.length; k++) {
-      hash = (hash * 31 + texto.charCodeAt(k)) % PALETA_GRADIENTES.length;
-    }
-    return PALETA_GRADIENTES[Math.abs(hash)];
+    var idx = typeof i._paletaIdx === 'number' ? i._paletaIdx : 0;
+    return PALETA_GRADIENTES[idx % PALETA_GRADIENTES.length];
   }
 
   function cargar(base, callback) {
     fetch(base + 'data/investigaciones.json')
       .then(function (r) { return r.json(); })
       .then(function (data) {
+        /* El color se fija según el orden original del archivo, antes de
+           ordenar por año, para que cada investigación tenga siempre el
+           mismo color sin importar en qué página o en qué orden se liste. */
+        data.forEach(function (item, idx) { item._paletaIdx = idx; });
         data.sort(function (a, b) { return (b.anio || 0) - (a.anio || 0); });
         callback(data);
       })
