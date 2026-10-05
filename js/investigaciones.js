@@ -54,8 +54,15 @@
     return data.slice(0, n);
   }
 
+  /* "autorSlug" puede ser un solo autor ("mauricio") o, cuando la
+     investigación tiene varios coautores con página propia en el equipo,
+     una lista de slugs (["mauricio", "alejandra", "fernando"]): así la
+     misma investigación aparece en la semblanza de cada uno. */
   function porAutor(data, autorSlug) {
-    return data.filter(function (i) { return i.autorSlug === autorSlug; });
+    return data.filter(function (i) {
+      if (Array.isArray(i.autorSlug)) return i.autorSlug.indexOf(autorSlug) !== -1;
+      return i.autorSlug === autorSlug;
+    });
   }
 
   /* Tarjeta de la página de listado (#pubInvestigacionGrid) */
