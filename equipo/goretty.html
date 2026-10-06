@@ -128,9 +128,16 @@ var base = '../';
 var pubs = [];
 var pendientes = 2;
 
+// Clave numérica AAAAMMDD para ordenar columnas e investigaciones juntas (más reciente primero)
+function claveFecha(f) {
+  var p = (f || '').split('-');
+  return (+p[0] || 0) * 10000 + (+p[1] || 0) * 100 + (+p[2] || 0);
+}
+
 function renderPubs() {
   var el = document.getElementById('semblanzaPubGrid');
   if (!el) return;
+  pubs.sort(function (a, b) { return b.orden - a.orden; });
   if (!pubs.length) {
     el.innerHTML = '<p class="texto-muted" style="grid-column: 1 / -1;">Todavía no hay publicaciones registradas de esta persona en el catálogo.</p>';
     return;
@@ -152,7 +159,7 @@ function renderPubs() {
 
 CIPMEXColumnas.cargar(base, function (data) {
   CIPMEXColumnas.porAutor(data, 'goretty').forEach(function (c) {
-    pubs.push({titulo: c.titulo, resumen: c.resumen, link: c.link, img: c.portada});
+    pubs.push({titulo: c.titulo, resumen: c.resumen, link: c.link, img: c.portada, orden: claveFecha(c.fecha)});
   });
   pendientes--;
   if (!pendientes) renderPubs();
@@ -160,7 +167,7 @@ CIPMEXColumnas.cargar(base, function (data) {
 
 CIPMEXInvestigaciones.cargar(base, function (data) {
   CIPMEXInvestigaciones.porAutor(data, 'goretty').forEach(function (i) {
-    pubs.push({titulo: i.titulo, resumen: i.resumen, link: i.link, color: CIPMEXInvestigaciones.gradienteDeTipo(i)});
+    pubs.push({titulo: i.titulo, resumen: i.resumen, link: i.link, color: CIPMEXInvestigaciones.gradienteDeTipo(i), orden: (i.anio || 0) * 10000 + (i.mes || 0) * 100});
   });
   pendientes--;
   if (!pendientes) renderPubs();
