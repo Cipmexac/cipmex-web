@@ -1,9 +1,14 @@
 /* CIPMEX — catálogo de columnas.
-   Lee data/columnas.json (una entrada por columna publicada) y arma las
-   tarjetas en cada página que las lista: inicio, publicaciones/columnas,
-   las páginas de medio (Sol/Universal/N+), las de tema, y la semblanza de
-   cada autor/a. Agregar una columna nueva = agregar una entrada a ese
-   archivo; ninguna página necesita tocarse a mano.
+   Lee un archivo JSON por medio (data/columnas-sol.json, data/columnas-nmas.json)
+   y los junta en una sola lista, así que cada página que lista columnas
+   (inicio, publicaciones/columnas, las páginas de medio y de tema, y la
+   semblanza de cada autor/a) sigue funcionando igual. Agregar una columna
+   nueva = agregar una entrada al archivo de su medio; ninguna página necesita
+   tocarse a mano.
+
+   Para sumar un medio nuevo (por ejemplo El Universal): crear su archivo
+   data/columnas-<medio>.json, agregarlo a ARCHIVOS_DE_COLUMNAS aquí abajo y
+   registrar su logo en LOGOS_POR_MEDIO. Eso se hace una sola vez.
 
    `base` es la ruta relativa desde la página actual hasta la raíz del
    sitio: "" en la raíz, "../" dentro de /equipo/ o /publicaciones/,
@@ -12,7 +17,7 @@
   var MESES = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio',
     'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'];
 
-  /* Logo por medio: con poner el nombre del medio en columnas.json alcanza,
+  /* Logo por medio: con poner el nombre del medio en el JSON alcanza,
      no hace falta escribir la ruta del logo cada vez. Si se agrega un medio
      nuevo, se agrega su logo aquí una sola vez y ya queda disponible para
      siempre. c.medioLogo en el JSON sigue funcionando como excepción manual
@@ -32,14 +37,31 @@
     return mes + ', ' + partes[0];
   }
 
+  /* Un archivo por medio. Si alguno falta o falla, los demás se siguen
+     mostrando con normalidad. */
+  var ARCHIVOS_DE_COLUMNAS = [
+    'data/columnas-sol.json',
+    'data/columnas-nmas.json'
+  ];
+
   function cargar(base, callback) {
-    fetch(base + 'data/columnas.json')
-      .then(function (r) { return r.json(); })
-      .then(function (data) {
-        data.sort(function (a, b) { return a.fecha < b.fecha ? 1 : -1; });
-        callback(data);
-      })
-      .catch(function () { callback([]); });
+    var pendientes = ARCHIVOS_DE_COLUMNAS.length;
+    var todas = [];
+    ARCHIVOS_DE_COLUMNAS.forEach(function (archivo) {
+      fetch(base + archivo)
+        .then(function (r) {
+          if (!r.ok) throw new Error(archivo);
+          return r.json();
+        })
+        .then(function (data) { todas = todas.concat(data); })
+        .catch(function () { /* este archivo no se pudo leer: se omite */ })
+        .then(function () {
+          pendientes--;
+          if (pendientes) return;
+          todas.sort(function (a, b) { return a.fecha < b.fecha ? 1 : -1; });
+          callback(todas);
+        });
+    });
   }
 
   function porMedio(data, medio) {
