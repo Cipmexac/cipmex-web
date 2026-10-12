@@ -40,8 +40,14 @@
     "autor": "Daniela Manzanarez",
     "autorSlug": "daniela",
     "autorFoto": "img/daniela-manzanarez.jpg",
-    "tema": ["Violencia estructural", "México"],
-    "temaSlug": ["violencia", "mexico"],
+    "tema": [
+      "Violencia estructural",
+      "México"
+    ],
+    "temaSlug": [
+      "violencia",
+      "mexico"
+    ],
     "fecha": "2026-09-25",
     "portada": "img/columnas/portada-el-antisemitismo-que-aparece-como-pregunta.jpg",
     "link": "publicaciones/columnas/sol/el-antisemitismo-que-aparece-como-pregunta.html",
@@ -55,8 +61,14 @@
     "tiempoLectura": "2 min",
     "autor": "Azul Miranda",
     "autorSlug": "azul-miranda",
-    "tema": ["México", "Violencia estructural"],
-    "temaSlug": ["mexico", "violencia"],
+    "tema": [
+      "México",
+      "Violencia estructural"
+    ],
+    "temaSlug": [
+      "mexico",
+      "violencia"
+    ],
     "fecha": "2026-08-28",
     "portada": "img/columnas/portada-el-derecho-a-habitar.jpg",
     "link": "publicaciones/columnas/sol/el-derecho-a-habitar.html",
@@ -134,8 +146,14 @@
     "autor": "Alexa Munguía",
     "autorSlug": "alexa",
     "autorFoto": "img/alexa-munguia.jpg",
-    "tema": ["México", "Violencia estructural"],
-    "temaSlug": ["mexico", "violencia"],
+    "tema": [
+      "México",
+      "Violencia estructural"
+    ],
+    "temaSlug": [
+      "mexico",
+      "violencia"
+    ],
     "fecha": "2026-07-31",
     "portada": "img/columnas/portada-paz-bajo-la-lluvia.jpg",
     "link": "publicaciones/columnas/sol/paz-bajo-la-lluvia.html",
@@ -182,8 +200,14 @@
     "autor": "Thali Kleinfinger",
     "autorSlug": "thali",
     "autorFoto": "img/thali-kleinfinger.jpg",
-    "tema": ["México", "Geopolítica"],
-    "temaSlug": ["mexico", "geopolitica"],
+    "tema": [
+      "México",
+      "Geopolítica"
+    ],
+    "temaSlug": [
+      "mexico",
+      "geopolitica"
+    ],
     "fecha": "2026-07-10",
     "portada": "img/columnas/portada-transicion-ecologica-poder.jpg",
     "link": "publicaciones/columnas/sol/transicion-ecologica-poder.html",
@@ -198,8 +222,14 @@
     "autor": "Goretty Espíndola",
     "autorSlug": "goretty",
     "autorFoto": "img/goretty-espindola.jpg",
-    "tema": ["México", "Cohesión social"],
-    "temaSlug": ["mexico", "cohesion"],
+    "tema": [
+      "México",
+      "Cohesión social"
+    ],
+    "temaSlug": [
+      "mexico",
+      "cohesion"
+    ],
     "fecha": "2026-07-03",
     "portada": "img/columnas/portada-urbanidad-digna-chino.jpg",
     "link": "publicaciones/columnas/sol/urbanidad-digna-esta-en-chino.html",
@@ -228,8 +258,16 @@
     "tiempoLectura": "3 min",
     "autor": "Samuel Behar",
     "autorSlug": "samuel-behar",
-    "tema": ["Violencia estructural", "México", "Cohesión social"],
-    "temaSlug": ["violencia", "mexico", "cohesion"],
+    "tema": [
+      "Violencia estructural",
+      "México",
+      "Cohesión social"
+    ],
+    "temaSlug": [
+      "violencia",
+      "mexico",
+      "cohesion"
+    ],
     "fecha": "2026-06-12",
     "portada": "img/columnas/portada-el-huracan-antes-de-la-paz.jpg",
     "link": "publicaciones/columnas/sol/el-huracan-antes-de-la-paz.html",
@@ -243,8 +281,16 @@
     "tiempoLectura": "3 min",
     "autor": "Valentina Berdiales",
     "autorSlug": "valentina-berdiales",
-    "tema": ["México", "Cohesión social", "Violencia estructural"],
-    "temaSlug": ["mexico", "cohesion", "violencia"],
+    "tema": [
+      "México",
+      "Cohesión social",
+      "Violencia estructural"
+    ],
+    "temaSlug": [
+      "mexico",
+      "cohesion",
+      "violencia"
+    ],
     "fecha": "2026-06-05",
     "portada": "img/columnas/portada-las-utopias-que-si-existen.jpg",
     "link": "publicaciones/columnas/sol/las-utopias-que-si-existen.html",
@@ -258,8 +304,14 @@
     "tiempoLectura": "3 min",
     "autor": "Sebastian Litmanovich",
     "autorSlug": "sebastian-litmanovich",
-    "tema": ["México", "Cohesión social"],
-    "temaSlug": ["mexico", "cohesion"],
+    "tema": [
+      "México",
+      "Cohesión social"
+    ],
+    "temaSlug": [
+      "mexico",
+      "cohesion"
+    ],
     "fecha": "2026-06-19",
     "portada": "img/columnas/portada-90-minutos-de-paz.jpg",
     "link": "publicaciones/columnas/sol/90-minutos-de-paz.html",
@@ -288,11 +340,41 @@
     "tiempoLectura": "3 min",
     "autor": "Victoria Saucedo",
     "autorSlug": "victoria",
-    "tema": ["Mundo", "Cohesión social"],
-    "temaSlug": ["mundo", "cohesion"],
+    "tema": [
+      "Mundo",
+      "Cohesión social"
+    ],
+    "temaSlug": [
+      "mundo",
+      "cohesion"
+    ],
     "fecha": "2026-10-02",
     "portada": "img/columnas/portada-quien-decide-que-nos-indigna.jpg",
     "link": "publicaciones/columnas/sol/quien-decide-que-nos-indigna.html",
     "original": "https://oem.com.mx/elsoldemexico/analisis/quien-decide-que-nos-indigna-32379892"
+  },
+  {
+    "id": "puede-existir-una-sociedad-pacifica-sin-seguridad-para-las-mujeres",
+    "titulo": "¿Puede existir una sociedad pacífica sin seguridad para las mujeres?",
+    "resumen": "El caso de Jane Doe contra Cornell y la fraternidad Chi Phi muestra que el avance de las mujeres en la educación superior no basta si las instituciones no garantizan su seguridad, condición indispensable para una sociedad pacífica.",
+    "medio": "El Sol de México",
+    "tiempoLectura": "2 min",
+    "autor": "Daniela Tapia",
+    "autorSlug": "daniela-tapia",
+    "autorFoto": "img/daniela-tapia.jpg",
+    "tema": [
+      "Mundo",
+      "Violencia estructural",
+      "Cohesión social"
+    ],
+    "temaSlug": [
+      "mundo",
+      "violencia",
+      "cohesion"
+    ],
+    "fecha": "2026-10-09",
+    "portada": "img/columnas/portada-puede-existir-una-sociedad-pacifica-sin-seguridad-para-las-mujeres.jpg",
+    "link": "publicaciones/columnas/sol/puede-existir-una-sociedad-pacifica-sin-seguridad-para-las-mujeres.html",
+    "original": "https://oem.com.mx/elsoldemexico/analisis/puede-existir-una-sociedad-pacifica-sin-seguridad-para-las-mujeres-32498095"
   }
 ]
