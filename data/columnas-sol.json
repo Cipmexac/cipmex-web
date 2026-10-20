@@ -397,4 +397,77 @@
       "violencia"
     ],
     "fecha": "2026-10-16",
-    "portada": "img/columnas/portada-paz-y-justicia-el-nobe
+    "portada": "img/columnas/portada-paz-y-justicia-el-nobel-2026-a-navi-pillay.jpg",
+    "link": "publicaciones/columnas/sol/paz-y-justicia-el-nobel-2026-a-navi-pillay.html",
+    "original": "https://oem.com.mx/elsoldemexico/analisis/paz-y-justicia-el-nobel-2026-a-navi-pillay-32617221"
+  },
+  {
+    "id": "cuando-el-miedo-se-vuelve-rutina",
+    "titulo": "Cuando el miedo se vuelve rutina",
+    "resumen": "La violencia ya no solo deja víctimas: también cambia nuestras rutinas, erosiona la confianza y normaliza el miedo; construir paz exige recuperar las condiciones para convivir sin él.",
+    "medio": "El Sol de México",
+    "tiempoLectura": "2 min",
+    "autor": "Alejandra Nurko Benbassat",
+    "autorSlug": "alejandra",
+    "autorFoto": "img/alejandra-nurko.jpg",
+    "tema": [
+      "México",
+      "Violencia estructural",
+      "Cohesión social"
+    ],
+    "temaSlug": [
+      "mexico",
+      "violencia",
+      "cohesion"
+    ],
+    "fecha": "2026-05-22",
+    "portada": "img/columnas/portada-cuando-el-miedo-se-vuelve-rutina.jpg",
+    "link": "publicaciones/columnas/sol/cuando-el-miedo-se-vuelve-rutina.html",
+    "original": "https://oem.com.mx/elsoldemexico/analisis/cuando-el-miedo-se-vuelve-rutina-30119130"
+  },
+  {
+    "id": "la-paz-tambien-es-soberania",
+    "titulo": "La paz también es soberanía",
+    "resumen": "Mientras la presión de Washington reaviva el discurso de soberanía, el Estado mexicano ha perdido el control real de regiones enteras; construir paz exige reconstruir instituciones y recuperar la autoridad donde hoy domina el crimen organizado.",
+    "medio": "El Sol de México",
+    "tiempoLectura": "2 min",
+    "autor": "Azul Miranda",
+    "autorSlug": "azul-miranda",
+    "tema": [
+      "México",
+      "Violencia estructural",
+      "Geopolítica"
+    ],
+    "temaSlug": [
+      "mexico",
+      "violencia",
+      "geopolitica"
+    ],
+    "fecha": "2026-05-15",
+    "portada": "img/columnas/portada-la-paz-tambien-es-soberania.jpg",
+    "link": "publicaciones/columnas/sol/la-paz-tambien-es-soberania.html",
+    "original": "https://oem.com.mx/elsoldemexico/analisis/la-paz-tambien-es-soberania-29983939"
+  },
+  {
+    "id": "estamos-listos-para-el-mundial",
+    "titulo": "¿Estamos listos para el mundial?",
+    "resumen": "Pese a la inversión millonaria en luminarias, cámaras y obras para el Mundial 2026, la inseguridad, la impunidad y la desigualdad persisten; un “mundial seguro” exige atender los factores estructurales detrás de las cifras.",
+    "medio": "El Sol de México",
+    "tiempoLectura": "2 min",
+    "autor": "Fernando de la Parra",
+    "autorSlug": "fernando",
+    "autorFoto": "img/fernando-de-la-parra.jpg",
+    "tema": [
+      "México",
+      "Violencia estructural"
+    ],
+    "temaSlug": [
+      "mexico",
+      "violencia"
+    ],
+    "fecha": "2026-05-08",
+    "portada": "img/columnas/portada-estamos-listos-para-el-mundial.jpg",
+    "link": "publicaciones/columnas/sol/estamos-listos-para-el-mundial.html",
+    "original": "https://oem.com.mx/elsoldemexico/analisis/estamos-listos-para-el-mundial-29860076"
+  }
+]
