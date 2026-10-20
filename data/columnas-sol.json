@@ -469,5 +469,27 @@
     "portada": "img/columnas/portada-estamos-listos-para-el-mundial.jpg",
     "link": "publicaciones/columnas/sol/estamos-listos-para-el-mundial.html",
     "original": "https://oem.com.mx/elsoldemexico/analisis/estamos-listos-para-el-mundial-29860076"
+  },
+  {
+    "id": "el-juicio-a-la-ms-13-y-el-costo-de-la-paz-salvadorena",
+    "titulo": "El juicio a la MS-13 y el costo de la “paz” salvadoreña",
+    "resumen": "La caída del 98% en los homicidios en El Salvador y el juicio a 492 líderes de la MS-13 se presentan como prueba de paz, pero el costo es la normalización de medidas excepcionales que debilitan derechos: reducir violencia no equivale a construir paz positiva.",
+    "medio": "El Sol de México",
+    "tiempoLectura": "2 min",
+    "autor": "Daniela Manzanarez",
+    "autorSlug": "daniela",
+    "autorFoto": "img/daniela-manzanarez.jpg",
+    "tema": [
+      "Mundo",
+      "Violencia estructural"
+    ],
+    "temaSlug": [
+      "mundo",
+      "violencia"
+    ],
+    "fecha": "2026-05-01",
+    "portada": "img/columnas/portada-el-juicio-a-la-ms-13-y-el-costo-de-la-paz-salvadorena.jpg",
+    "link": "publicaciones/columnas/sol/el-juicio-a-la-ms-13-y-el-costo-de-la-paz-salvadorena.html",
+    "original": "https://oem.com.mx/elsoldemexico/analisis/el-juicio-a-la-ms-13-y-el-costo-de-la-paz-salvadorena-29756413"
   }
 ]
