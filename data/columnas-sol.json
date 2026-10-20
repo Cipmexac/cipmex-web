@@ -400,5 +400,29 @@
     "portada": "img/columnas/portada-paz-y-justicia-el-nobel-2026-a-navi-pillay.jpg",
     "link": "publicaciones/columnas/sol/paz-y-justicia-el-nobel-2026-a-navi-pillay.html",
     "original": "https://oem.com.mx/elsoldemexico/analisis/paz-y-justicia-el-nobel-2026-a-navi-pillay-32617221"
+  },
+  {
+    "id": "cuando-el-miedo-se-vuelve-rutina",
+    "titulo": "Cuando el miedo se vuelve rutina",
+    "resumen": "La violencia ya no solo deja víctimas: también cambia nuestras rutinas, erosiona la confianza y normaliza el miedo; construir paz exige recuperar las condiciones para convivir sin él.",
+    "medio": "El Sol de México",
+    "tiempoLectura": "2 min",
+    "autor": "Alejandra Nurko Benbassat",
+    "autorSlug": "alejandra",
+    "autorFoto": "img/alejandra-nurko.jpg",
+    "tema": [
+      "México",
+      "Violencia estructural",
+      "Cohesión social"
+    ],
+    "temaSlug": [
+      "mexico",
+      "violencia",
+      "cohesion"
+    ],
+    "fecha": "2026-05-22",
+    "portada": "img/columnas/portada-cuando-el-miedo-se-vuelve-rutina.jpg",
+    "link": "publicaciones/columnas/sol/cuando-el-miedo-se-vuelve-rutina.html",
+    "original": "https://oem.com.mx/elsoldemexico/analisis/cuando-el-miedo-se-vuelve-rutina-30119130"
   }
 ]
