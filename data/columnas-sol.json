@@ -376,5 +376,29 @@
     "portada": "img/columnas/portada-puede-existir-una-sociedad-pacifica-sin-seguridad-para-las-mujeres.jpg",
     "link": "publicaciones/columnas/sol/puede-existir-una-sociedad-pacifica-sin-seguridad-para-las-mujeres.html",
     "original": "https://oem.com.mx/elsoldemexico/analisis/puede-existir-una-sociedad-pacifica-sin-seguridad-para-las-mujeres-32498095"
+  },
+  {
+    "id": "paz-y-justicia-el-nobel-2026-a-navi-pillay",
+    "titulo": "Paz y justicia: el Nobel 2026 a Navi Pillay",
+    "resumen": "El Nobel de la Paz 2026 a la jurista Navi Pillay permite ver cómo investigar crímenes internacionales y garantizar derechos contribuye a la paz positiva, en un momento en que el derecho internacional pierde peso.",
+    "medio": "El Sol de México",
+    "tiempoLectura": "2 min",
+    "autor": "Alexa Munguía",
+    "autorSlug": "alexa",
+    "autorFoto": "img/alexa-munguia.jpg",
+    "tema": [
+      "Mundo",
+      "Geopolítica",
+      "Violencia estructural"
+    ],
+    "temaSlug": [
+      "mundo",
+      "geopolitica",
+      "violencia"
+    ],
+    "fecha": "2026-10-16",
+    "portada": "img/columnas/portada-paz-y-justicia-el-nobel-2026-a-navi-pillay.jpg",
+    "link": "publicaciones/columnas/sol/paz-y-justicia-el-nobel-2026-a-navi-pillay.html",
+    "original": "https://oem.com.mx/elsoldemexico/analisis/paz-y-justicia-el-nobel-2026-a-navi-pillay-32617221"
   }
 ]
