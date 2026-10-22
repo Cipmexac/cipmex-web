@@ -534,5 +534,27 @@
     "portada": "img/columnas/portada-ocio-cultura-y-construccion-de-paz.jpg",
     "link": "publicaciones/columnas/sol/ocio-cultura-y-construccion-de-paz.html",
     "original": "https://oem.com.mx/elsoldemexico/analisis/ocio-cultura-y-construccion-de-paz-29524956"
+  },
+  {
+    "id": "naturaleza-secuestrada-el-estado-ausente-y-la-paz-imposible",
+    "titulo": "Naturaleza secuestrada: el Estado ausente y la paz… imposible",
+    "resumen": "La tala clandestina, el acaparamiento de agua y la minería ilegal en manos del crimen organizado dejan a las personas defensoras del territorio en la orfandad institucional; sin justicia socioambiental y un Estado presente, la paz positiva es imposible.",
+    "medio": "El Sol de México",
+    "tiempoLectura": "2 min",
+    "autor": "Thali Kleinfinger",
+    "autorSlug": "thali",
+    "autorFoto": "img/thali-kleinfinger.jpg",
+    "tema": [
+      "México",
+      "Violencia estructural"
+    ],
+    "temaSlug": [
+      "mexico",
+      "violencia"
+    ],
+    "fecha": "2026-04-10",
+    "portada": "img/columnas/portada-naturaleza-secuestrada-el-estado-ausente-y-la-paz-imposible.jpg",
+    "link": "publicaciones/columnas/sol/naturaleza-secuestrada-el-estado-ausente-y-la-paz-imposible.html",
+    "original": "https://oem.com.mx/elsoldemexico/analisis/naturaleza-secuestrada-el-estado-ausente-y-la-paz-imposible-29412214"
   }
 ]
