@@ -15,6 +15,17 @@
 var base = '';
 CIPMEXColumnas.cargar(base, function (data) {
   CIPMEXColumnas.renderPubCards('pubRecientesGrid', CIPMEXColumnas.limitar(data, 3), {base: base});
+
+  /* Barra superior: la fecha de "Nueva columna en El Sol de México" se toma
+     de la columna más reciente de El Sol en data/columnas-sol.json. */
+  var sol = CIPMEXColumnas.porMedio(data, 'El Sol de México')[0];
+  if (sol && sol.fecha) {
+    var meses = ['ene', 'feb', 'mar', 'abr', 'may', 'jun', 'jul', 'ago', 'sep', 'oct', 'nov', 'dic'];
+    var p = sol.fecha.split('-');
+    var texto = 'Nueva columna en El Sol de México, ' + parseInt(p[2], 10) + ' ' + meses[parseInt(p[1], 10) - 1];
+    var spans = document.querySelectorAll('.ticker .ticker-sol');
+    for (var i = 0; i < spans.length; i++) spans[i].textContent = texto;
+  }
 });
 </script>
 <body>
@@ -23,10 +34,10 @@ CIPMEXColumnas.cargar(base, function (data) {
 
 <div class="ticker-wrap">
   <div class="ticker">
-    <span class="punto">◆</span><span class="texto">Nueva columna en El Sol de México, 14 ago</span>
+    <span class="punto">◆</span><span class="texto ticker-sol">Nueva columna en El Sol de México, 16 oct</span>
     <span class="punto">◆</span><span class="texto">11 años de investigación de campo en México</span>
-    <span class="punto">◆</span><span class="texto">14 publicaciones revisadas por pares</span>
-    <span class="punto">◆</span><span class="texto">Nueva columna en El Sol de México, 14 ago</span>
+    <span class="punto">◆</span><span class="texto">11 publicaciones revisadas por pares</span>
+    <span class="punto">◆</span><span class="texto ticker-sol">Nueva columna en El Sol de México, 16 oct</span>
     <span class="punto">◆</span><span class="texto">11 años de investigación de campo en México</span>
   </div>
 </div>
