@@ -89,23 +89,69 @@
     if (el) el.style.display = '';
   }
 
-  /* Tarjeta estándar (.pub-card): usada en inicio, medio y tema.
-     Si no hay resultados: si se pasó vacioSelector, se deja tal cual el
-     estado vacío bonito que ya tiene la página (no se toca nada). Si no,
-     se muestra un mensaje genérico dentro del propio contenedor. */
-  function renderPubCards(containerId, lista, opts) {
-    opts = opts || {};
-    var base = opts.base || '';
-    var el = document.getElementById(containerId);
-    if (!el) return;
-    if (!lista.length) {
-      if (opts.vacioSelector) return;
-      el.innerHTML = '<p class="texto-muted" style="grid-column: 1 / -1;">Todavía no hay columnas publicadas aquí. Vuelve pronto.</p>';
-      mostrarContenedor(el);
-      return;
+  /* Paginación (opcional): solo se activa si la página pasa opts.porPagina.
+     La página actual vive en la dirección (?pagina=2), así el botón "atrás"
+     y los enlaces compartidos funcionan. Los estilos se inyectan aquí mismo,
+     no hace falta tocar style.css. */
+  function estilosPaginacion() {
+    if (document.getElementById('cipmex-paginacion-css')) return;
+    var s = document.createElement('style');
+    s.id = 'cipmex-paginacion-css';
+    s.textContent =
+      '.paginacion{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:8px;margin:44px 0 8px;}' +
+      '.paginacion a,.paginacion span{display:inline-flex;align-items:center;justify-content:center;min-width:42px;height:42px;padding:0 14px;box-sizing:border-box;border:1px solid #d5dbe3;border-radius:8px;font-family:Inter,sans-serif;font-size:14px;font-weight:600;color:var(--azul,#1d4488);background:#fff;text-decoration:none;transition:background .15s,color .15s,border-color .15s;}' +
+      '.paginacion a:hover{background:#eef2f8;border-color:var(--azul,#1d4488);}' +
+      '.paginacion a.activa{background:var(--azul,#1d4488);border-color:var(--azul,#1d4488);color:#fff;}' +
+      '.paginacion span.deshabilitada{opacity:.4;}' +
+      '.paginacion span.puntos{border:none;background:none;min-width:auto;padding:0 4px;color:#6b7686;}' +
+      '@media (max-width:560px){.paginacion a,.paginacion span{min-width:38px;height:38px;padding:0 10px;}}';
+    document.head.appendChild(s);
+  }
+
+  function paginaDeLaDireccion(total) {
+    var p = parseInt(new URLSearchParams(window.location.search).get('pagina'), 10);
+    if (!p || p < 1) p = 1;
+    if (p > total) p = total;
+    return p;
+  }
+
+  /* Lista de números a mostrar: todos si son pocos; si no, primero, último y
+     los vecinos de la actual, con "…" en los huecos. */
+  function numerosDePagina(actual, total) {
+    var out = [], i;
+    if (total <= 7) {
+      for (i = 1; i <= total; i++) out.push(i);
+      return out;
     }
-    ocultarVacio(opts.vacioSelector);
-    mostrarContenedor(el);
+    var ini = Math.max(2, actual - 1), fin = Math.min(total - 1, actual + 1);
+    out.push(1);
+    if (ini > 2) out.push('…');
+    for (i = ini; i <= fin; i++) out.push(i);
+    if (fin < total - 1) out.push('…');
+    out.push(total);
+    return out;
+  }
+
+  function htmlPaginacion(actual, total) {
+    function enlace(n, texto, clase, etiqueta) {
+      return '<a href="?pagina=' + n + '" data-pag="' + n + '"' +
+        (clase ? ' class="' + clase + '"' : '') +
+        (clase === 'activa' ? ' aria-current="page"' : '') +
+        (etiqueta ? ' aria-label="' + etiqueta + '"' : '') + '>' + texto + '</a>';
+    }
+    var h = '';
+    h += actual > 1 ? enlace(actual - 1, '← Anterior', '', 'Página anterior')
+                    : '<span class="deshabilitada">← Anterior</span>';
+    numerosDePagina(actual, total).forEach(function (n) {
+      h += n === '…' ? '<span class="puntos">…</span>'
+                     : enlace(n, n, n === actual ? 'activa' : '', 'Página ' + n);
+    });
+    h += actual < total ? enlace(actual + 1, 'Siguiente →', '', 'Página siguiente')
+                        : '<span class="deshabilitada">Siguiente →</span>';
+    return h;
+  }
+
+  function pintarTarjetas(el, lista, base) {
     el.innerHTML = lista.map(function (c) {
       var logo = logoDeMedio(c);
       var medioCirculo = logo ?
@@ -128,6 +174,66 @@
         '</div>' +
         '</a>';
     }).join('');
+  }
+
+  /* Tarjeta estándar (.pub-card): usada en inicio, medio y tema.
+     Si no hay resultados: si se pasó vacioSelector, se deja tal cual el
+     estado vacío bonito que ya tiene la página (no se toca nada). Si no,
+     se muestra un mensaje genérico dentro del propio contenedor.
+     Con opts.porPagina (por ejemplo 12) se divide en páginas con botones. */
+  function renderPubCards(containerId, lista, opts) {
+    opts = opts || {};
+    var base = opts.base || '';
+    var el = document.getElementById(containerId);
+    if (!el) return;
+    if (!lista.length) {
+      if (opts.vacioSelector) return;
+      el.innerHTML = '<p class="texto-muted" style="grid-column: 1 / -1;">Todavía no hay columnas publicadas aquí. Vuelve pronto.</p>';
+      mostrarContenedor(el);
+      return;
+    }
+    ocultarVacio(opts.vacioSelector);
+    mostrarContenedor(el);
+
+    var porPagina = opts.porPagina > 0 ? opts.porPagina : 0;
+    if (!porPagina || lista.length <= porPagina) {
+      pintarTarjetas(el, lista, base);
+      return;
+    }
+
+    estilosPaginacion();
+    var total = Math.ceil(lista.length / porPagina);
+    var nav = document.getElementById(containerId + 'Paginacion');
+    if (!nav) {
+      nav = document.createElement('nav');
+      nav.id = containerId + 'Paginacion';
+      nav.className = 'paginacion';
+      nav.setAttribute('aria-label', 'Paginación');
+      el.parentNode.insertBefore(nav, el.nextSibling);
+    }
+
+    function mostrar(pagina, desplazar) {
+      pintarTarjetas(el, lista.slice((pagina - 1) * porPagina, pagina * porPagina), base);
+      nav.innerHTML = htmlPaginacion(pagina, total);
+      if (desplazar) {
+        window.scrollTo({ top: el.getBoundingClientRect().top + window.pageYOffset - 140, behavior: 'smooth' });
+      }
+    }
+
+    nav.addEventListener('click', function (e) {
+      var a = e.target.closest ? e.target.closest('a[data-pag]') : null;
+      if (!a) return;
+      e.preventDefault();
+      var n = parseInt(a.getAttribute('data-pag'), 10);
+      var url = n === 1 ? window.location.pathname : ('?pagina=' + n);
+      window.history.pushState({}, '', url);
+      mostrar(n, true);
+    });
+    window.addEventListener('popstate', function () {
+      mostrar(paginaDeLaDireccion(total), false);
+    });
+
+    mostrar(paginaDeLaDireccion(total), false);
   }
 
   /* Tarjeta de la franja "Publicaciones más recientes" (.recientes-card) */
