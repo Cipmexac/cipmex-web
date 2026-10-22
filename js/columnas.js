@@ -236,6 +236,51 @@
     mostrar(paginaDeLaDireccion(total), false);
   }
 
+  /* Paginación para páginas con tarjetas escritas a mano en el HTML
+     (por ejemplo ex-colaboradores). Toma las .pub-card que ya están dentro
+     del contenedor y muestra solo un grupo por página. */
+  function paginarEstaticas(containerId, porPagina) {
+    var el = document.getElementById(containerId);
+    if (!el || !(porPagina > 0)) return;
+    var tarjetas = Array.prototype.slice.call(el.querySelectorAll('.pub-card'));
+    if (tarjetas.length <= porPagina) return;
+
+    estilosPaginacion();
+    var total = Math.ceil(tarjetas.length / porPagina);
+    var nav = document.getElementById(containerId + 'Paginacion');
+    if (!nav) {
+      nav = document.createElement('nav');
+      nav.id = containerId + 'Paginacion';
+      nav.className = 'paginacion';
+      nav.setAttribute('aria-label', 'Paginación');
+      el.parentNode.insertBefore(nav, el.nextSibling);
+    }
+
+    function mostrar(pagina, desplazar) {
+      tarjetas.forEach(function (t, i) {
+        t.style.display = (i >= (pagina - 1) * porPagina && i < pagina * porPagina) ? '' : 'none';
+      });
+      nav.innerHTML = htmlPaginacion(pagina, total);
+      if (desplazar) {
+        window.scrollTo({ top: el.getBoundingClientRect().top + window.pageYOffset - 140, behavior: 'smooth' });
+      }
+    }
+
+    nav.addEventListener('click', function (e) {
+      var a = e.target.closest ? e.target.closest('a[data-pag]') : null;
+      if (!a) return;
+      e.preventDefault();
+      var n = parseInt(a.getAttribute('data-pag'), 10);
+      window.history.pushState({}, '', n === 1 ? window.location.pathname : ('?pagina=' + n));
+      mostrar(n, true);
+    });
+    window.addEventListener('popstate', function () {
+      mostrar(paginaDeLaDireccion(total), false);
+    });
+
+    mostrar(paginaDeLaDireccion(total), false);
+  }
+
   /* Tarjeta de la franja "Publicaciones más recientes" (.recientes-card) */
   function renderMarquee(containerId, lista, opts) {
     opts = opts || {};
@@ -288,6 +333,7 @@
     limitar: limitar,
     formatMes: formatMes,
     renderPubCards: renderPubCards,
+    paginarEstaticas: paginarEstaticas,
     renderMarquee: renderMarquee,
     renderSemblanza: renderSemblanza
   };
