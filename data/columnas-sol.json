@@ -556,5 +556,27 @@
     "portada": "img/columnas/portada-naturaleza-secuestrada-el-estado-ausente-y-la-paz-imposible.jpg",
     "link": "publicaciones/columnas/sol/naturaleza-secuestrada-el-estado-ausente-y-la-paz-imposible.html",
     "original": "https://oem.com.mx/elsoldemexico/analisis/naturaleza-secuestrada-el-estado-ausente-y-la-paz-imposible-29412214"
+  },
+  {
+    "id": "la-paz-se-construye-no-se-cotiza",
+    "titulo": "La paz se construye, no se cotiza",
+    "resumen": "La ‘Junta para la Paz’ de Trump para Gaza, analizada con la teoría de Galtung: quién se beneficia, quién la diseña y a quién deja fuera. Sin representación palestina ni rendición de cuentas, no hay paz positiva posible.",
+    "medio": "El Sol de México",
+    "tiempoLectura": "2 min",
+    "autor": "Goretty Espíndola",
+    "autorSlug": "goretty",
+    "autorFoto": "img/goretty-espindola.jpg",
+    "tema": [
+      "Mundo",
+      "Geopolítica"
+    ],
+    "temaSlug": [
+      "mundo",
+      "geopolitica"
+    ],
+    "fecha": "2026-03-27",
+    "portada": "img/columnas/portada-la-paz-se-construye-no-se-cotiza.jpg",
+    "link": "publicaciones/columnas/sol/la-paz-se-construye-no-se-cotiza.html",
+    "original": "https://oem.com.mx/elsoldemexico/analisis/la-paz-se-construye-no-se-cotiza-29185628"
   }
 ]
