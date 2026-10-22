@@ -491,5 +491,27 @@
     "portada": "img/columnas/portada-el-juicio-a-la-ms-13-y-el-costo-de-la-paz-salvadorena.jpg",
     "link": "publicaciones/columnas/sol/el-juicio-a-la-ms-13-y-el-costo-de-la-paz-salvadorena.html",
     "original": "https://oem.com.mx/elsoldemexico/analisis/el-juicio-a-la-ms-13-y-el-costo-de-la-paz-salvadorena-29756413"
+  },
+  {
+    "id": "el-trayecto-como-condena",
+    "titulo": "El trayecto como condena",
+    "resumen": "Más de 15 millones de personas se desplazan cada día en el Valle de México entre trayectos largos, inseguridad y un espacio público hostil con el peatón; reconocer la movilidad como pilar de la paz social exige políticas públicas pensadas para todos.",
+    "medio": "El Sol de México",
+    "tiempoLectura": "2 min",
+    "autor": "María Paula Flores",
+    "autorSlug": "maria-paula",
+    "autorFoto": "img/maria-paula-flores.jpg",
+    "tema": [
+      "México",
+      "Violencia estructural"
+    ],
+    "temaSlug": [
+      "mexico",
+      "violencia"
+    ],
+    "fecha": "2026-04-24",
+    "portada": "img/columnas/portada-el-trayecto-como-condena.jpg",
+    "link": "publicaciones/columnas/sol/el-trayecto-como-condena.html",
+    "original": "https://oem.com.mx/elsoldemexico/analisis/el-trayecto-como-condena-29638727"
   }
 ]
