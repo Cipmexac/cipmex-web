@@ -578,5 +578,27 @@
     "portada": "img/columnas/portada-la-paz-se-construye-no-se-cotiza.jpg",
     "link": "publicaciones/columnas/sol/la-paz-se-construye-no-se-cotiza.html",
     "original": "https://oem.com.mx/elsoldemexico/analisis/la-paz-se-construye-no-se-cotiza-29185628"
+  },
+  {
+    "id": "lo-que-no-se-ve-tambien-se-gobierna",
+    "titulo": "Lo que no se ve también se gobierna",
+    "resumen": "Con diez mil personas marchando en Guadalajara por agua limpia y miles de solicitudes por desabasto en Iztapalapa, la crisis del agua muestra que gobernar también es mantener lo que no se ve y anticiparse a los problemas, en lugar de esperar a que sean visibles.",
+    "medio": "El Sol de México",
+    "tiempoLectura": "2 min",
+    "autor": "Thali Kleinfinger",
+    "autorSlug": "thali",
+    "autorFoto": "img/thali-kleinfinger.jpg",
+    "tema": [
+      "México",
+      "Violencia estructural"
+    ],
+    "temaSlug": [
+      "mexico",
+      "violencia"
+    ],
+    "fecha": "2026-10-23",
+    "portada": "img/columnas/portada-lo-que-no-se-ve-tambien-se-gobierna.jpg",
+    "link": "publicaciones/columnas/sol/lo-que-no-se-ve-tambien-se-gobierna.html",
+    "original": "https://oem.com.mx/elsoldemexico/analisis/lo-que-no-se-ve-tambien-se-gobierna-32737406"
   }
 ]
