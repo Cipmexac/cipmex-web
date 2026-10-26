@@ -130,5 +130,27 @@
     "portada": "img/nmas/portada-algunas-claves-para-entender-un-mundo-donde-nada-ocurre-de-manera-aislada.jpg",
     "link": "publicaciones/columnas/nmas/algunas-claves-para-entender-un-mundo-donde-nada-ocurre-de-manera-aislada.html",
     "original": "https://www.nmas.com.mx/opinion/algunas-claves-para-entender-un-mundo-donde-nada-ocurre-de-manera-aislada/"
+  },
+  {
+    "id": "los-huties-contra-arabia-saudita-el-poder-de-combinar-asimetria-y-geografia",
+    "titulo": "Los hutíes contra Arabia Saudita: el poder de combinar asimetría y geografía",
+    "resumen": "Con el ataque al aeropuerto de Riad como punto de partida, la capacidad de los hutíes para combinar tácticas asimétricas, geografía y apoyo iraní explica por qué Arabia Saudita tiene opciones limitadas y por qué el conflicto ya se extiende al mar Rojo y al Cuerno de África.",
+    "medio": "N+ Opinión",
+    "tiempoLectura": "6 min",
+    "autor": "Mauricio Meschoulam",
+    "autorSlug": "mauricio",
+    "autorFoto": "img/mauricio-meschoulam.jpg",
+    "tema": [
+      "Geopolítica",
+      "Mundo"
+    ],
+    "temaSlug": [
+      "geopolitica",
+      "mundo"
+    ],
+    "fecha": "2026-10-25",
+    "portada": "img/nmas/portada-los-huties-contra-arabia-saudita-el-poder-de-combinar-asimetria-y-geografia.jpg",
+    "link": "publicaciones/columnas/nmas/los-huties-contra-arabia-saudita-el-poder-de-combinar-asimetria-y-geografia.html",
+    "original": "https://www.nmas.com.mx/opinion/mauricio-meschoulam-los-huties-contra-arabia-saudita-el-poder-de-combinar-asimetria-y-geografia/"
   }
 ]
