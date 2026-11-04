@@ -600,5 +600,27 @@
     "portada": "img/columnas/portada-lo-que-no-se-ve-tambien-se-gobierna.jpg",
     "link": "publicaciones/columnas/sol/lo-que-no-se-ve-tambien-se-gobierna.html",
     "original": "https://oem.com.mx/elsoldemexico/analisis/lo-que-no-se-ve-tambien-se-gobierna-32737406"
+  },
+  {
+    "id": "confianza-y-violencia",
+    "titulo": "Confianza y violencia",
+    "resumen": "Las protestas estudiantiles en Francia, marcadas por miles de detenciones de menores y episodios de violencia, plantean qué tanta confianza en el Estado pueden construir los adolescentes cuando su primera experiencia de participación política es la represión y el miedo.",
+    "medio": "El Sol de México",
+    "tiempoLectura": "2 min",
+    "autor": "Fernando de la Parra",
+    "autorSlug": "fernando",
+    "autorFoto": "img/fernando-de-la-parra.jpg",
+    "tema": [
+      "Mundo",
+      "Violencia estructural"
+    ],
+    "temaSlug": [
+      "mundo",
+      "violencia"
+    ],
+    "fecha": "2026-10-30",
+    "portada": "img/columnas/portada-confianza-y-violencia.jpg",
+    "link": "publicaciones/columnas/sol/confianza-y-violencia.html",
+    "original": "https://oem.com.mx/elsoldemexico/analisis/confianza-y-violencia-32862370"
   }
 ]
