@@ -82,6 +82,7 @@
     "tiempoLectura": "3 min",
     "autor": "Patricio Álvarez",
     "autorSlug": "patricio",
+    "autorFoto": "img/patricio-alvarez.jpg",
     "tema": "Mundo",
     "temaSlug": "mundo",
     "fecha": "2026-08-07",
@@ -631,6 +632,7 @@
     "tiempoLectura": "2 min",
     "autor": "Patricio Álvarez",
     "autorSlug": "patricio",
+    "autorFoto": "img/patricio-alvarez.jpg",
     "tema": [
       "México",
       "Violencia estructural",
