@@ -622,5 +622,28 @@
     "portada": "img/columnas/portada-confianza-y-violencia.jpg",
     "link": "publicaciones/columnas/sol/confianza-y-violencia.html",
     "original": "https://oem.com.mx/elsoldemexico/analisis/confianza-y-violencia-32862370"
+  },
+  {
+    "id": "la-islamofobia-no-necesita-pasaporte",
+    "titulo": "La islamofobia no necesita pasaporte",
+    "resumen": "Tras los fallos que permiten el hiyab en la foto del pasaporte mexicano, los comentarios de odio en redes y las imágenes generadas con IA revelan una islamofobia que, como violencia cultural según Galtung, debilita la paz positiva; la educación y la información veraz son la respuesta.",
+    "medio": "El Sol de México",
+    "tiempoLectura": "2 min",
+    "autor": "Patricio Álvarez",
+    "autorSlug": "patricio",
+    "tema": [
+      "México",
+      "Violencia estructural",
+      "Cohesión social"
+    ],
+    "temaSlug": [
+      "mexico",
+      "violencia",
+      "cohesion"
+    ],
+    "fecha": "2026-11-06",
+    "portada": "img/columnas/portada-la-islamofobia-no-necesita-pasaporte.jpg",
+    "link": "publicaciones/columnas/sol/la-islamofobia-no-necesita-pasaporte.html",
+    "original": "https://oem.com.mx/elsoldemexico/analisis/la-islamofobia-no-necesita-pasaporte-32980596"
   }
 ]
