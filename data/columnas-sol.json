@@ -672,5 +672,27 @@
     "portada": "img/columnas/portada-israel-el-desafio-de-construir-paz-en-una-sociedad-dividida.jpg",
     "link": "publicaciones/columnas/sol/israel-el-desafio-de-construir-paz-en-una-sociedad-dividida.html",
     "original": "https://oem.com.mx/elsoldemexico/analisis/israel-el-desafio-de-construir-paz-en-una-sociedad-dividida-33103962"
+  },
+  {
+    "id": "el-auto-necesidad-o-privilegio",
+    "titulo": "El auto, ¿necesidad o privilegio?",
+    "resumen": "Mantener un auto cuesta al menos $3,300 al mes, más de 20% del ingreso para casi la mitad de los trabajadores; aun así el parque vehicular crece mientras el transporte público cobra su costo en tiempo, una forma de violencia estructural que una planeación urbana centrada en el transporte colectivo podría revertir.",
+    "medio": "El Sol de México",
+    "tiempoLectura": "2 min",
+    "autor": "María Paula Flores",
+    "autorSlug": "maria-paula",
+    "autorFoto": "img/maria-paula-flores.jpg",
+    "tema": [
+      "México",
+      "Violencia estructural"
+    ],
+    "temaSlug": [
+      "mexico",
+      "violencia"
+    ],
+    "fecha": "2026-11-20",
+    "portada": "img/columnas/portada-el-auto-necesidad-o-privilegio.jpg",
+    "link": "publicaciones/columnas/sol/el-auto-necesidad-o-privilegio.html",
+    "original": "https://oem.com.mx/elsoldemexico/analisis/el-auto-necesidad-o-privilegio-33215956"
   }
 ]
