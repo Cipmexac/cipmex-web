@@ -648,5 +648,29 @@
     "portada": "img/columnas/portada-la-islamofobia-no-necesita-pasaporte.jpg",
     "link": "publicaciones/columnas/sol/la-islamofobia-no-necesita-pasaporte.html",
     "original": "https://oem.com.mx/elsoldemexico/analisis/la-islamofobia-no-necesita-pasaporte-32980596"
+  },
+  {
+    "id": "israel-el-desafio-de-construir-paz-en-una-sociedad-dividida",
+    "titulo": "Israel: el desafío de construir paz en una sociedad dividida",
+    "resumen": "Tras las elecciones, el presidente Herzog encargó a Gadi Eisenkot formar gobierno aunque el Likud obtuvo más escaños; la fragmentación política, el juicio a Netanyahu y las disputas judiciales y militares ponen a prueba la capacidad de las instituciones de Israel para sostener una paz positiva en una sociedad dividida.",
+    "medio": "El Sol de México",
+    "tiempoLectura": "2 min",
+    "autor": "Alejandra Nurko Benbassat",
+    "autorSlug": "alejandra",
+    "autorFoto": "img/alejandra-nurko.jpg",
+    "tema": [
+      "Mundo",
+      "Geopolítica",
+      "Cohesión social"
+    ],
+    "temaSlug": [
+      "mundo",
+      "geopolitica",
+      "cohesion"
+    ],
+    "fecha": "2026-11-13",
+    "portada": "img/columnas/portada-israel-el-desafio-de-construir-paz-en-una-sociedad-dividida.jpg",
+    "link": "publicaciones/columnas/sol/israel-el-desafio-de-construir-paz-en-una-sociedad-dividida.html",
+    "original": "https://oem.com.mx/elsoldemexico/analisis/israel-el-desafio-de-construir-paz-en-una-sociedad-dividida-33103962"
   }
 ]
