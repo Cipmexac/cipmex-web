@@ -604,6 +604,27 @@
     "original": "https://oem.com.mx/elsoldemexico/analisis/la-paz-se-construye-no-se-cotiza-29185628"
   },
   {
+    "id": "la-violencia-en-nuestra-era",
+    "titulo": "La violencia en nuestra era",
+    "resumen": "El uso diario del celular y la expansión de la violencia digital —ciberacoso, difusión no consentida de imágenes, desinformación y hasta armas impresas en 3D— muestran que las leyes no han frenado el problema; construir paz exige una cultura ética que denuncie a los agresores.",
+    "medio": "El Sol de México",
+    "tiempoLectura": "2 min",
+    "autor": "Sebastian Litmanovich",
+    "autorSlug": "sebastian-litmanovich",
+    "tema": [
+      "México",
+      "Violencia estructural"
+    ],
+    "temaSlug": [
+      "mexico",
+      "violencia"
+    ],
+    "fecha": "2026-03-20",
+    "portada": "img/columnas/portada-la-violencia-en-nuestra-era.jpg",
+    "link": "publicaciones/columnas/sol/la-violencia-en-nuestra-era.html",
+    "original": "https://oem.com.mx/elsoldemexico/analisis/la-violencia-en-nuestra-era-29056952"
+  },
+  {
     "id": "lo-que-no-se-ve-tambien-se-gobierna",
     "titulo": "Lo que no se ve también se gobierna",
     "resumen": "Con diez mil personas marchando en Guadalajara por agua limpia y miles de solicitudes por desabasto en Iztapalapa, la crisis del agua muestra que gobernar también es mantener lo que no se ve y anticiparse a los problemas, en lugar de esperar a que sean visibles.",
