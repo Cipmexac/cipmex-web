@@ -688,6 +688,28 @@
     "original": "https://oem.com.mx/elsoldemexico/analisis/no-todos-los-crimenes-son-iguales-y-tampoco-sus-soluciones-28672589"
   },
   {
+    "id": "el-mayor-riesgo-de-nuestra-epoca",
+    "titulo": "¿El mayor riesgo de nuestra época?",
+    "resumen": "Las redes convierten la guerra en contenido que se consume como espectáculo: memes, fanatismo y likes sustituyen la empatía, y la sociedad aprende a no percibir la violencia como violencia; como recuerdan Arendt y Galtung, la paz empieza cuando volvemos a sentir el sufrimiento ajeno como propio.",
+    "medio": "El Sol de México",
+    "tiempoLectura": "2 min",
+    "autor": "Fernando de la Parra",
+    "autorSlug": "fernando",
+    "autorFoto": "img/fernando-de-la-parra.jpg",
+    "tema": [
+      "Mundo",
+      "Violencia estructural"
+    ],
+    "temaSlug": [
+      "mundo",
+      "violencia"
+    ],
+    "fecha": "2026-02-20",
+    "portada": "img/columnas/portada-el-mayor-riesgo-de-nuestra-epoca.jpg",
+    "link": "publicaciones/columnas/sol/el-mayor-riesgo-de-nuestra-epoca.html",
+    "original": "https://oem.com.mx/elsoldemexico/analisis/el-mayor-riesgo-de-nuestra-epoca-28555537"
+  },
+  {
     "id": "lo-que-no-se-ve-tambien-se-gobierna",
     "titulo": "Lo que no se ve también se gobierna",
     "resumen": "Con diez mil personas marchando en Guadalajara por agua limpia y miles de solicitudes por desabasto en Iztapalapa, la crisis del agua muestra que gobernar también es mantener lo que no se ve y anticiparse a los problemas, en lugar de esperar a que sean visibles.",
