@@ -1,5 +1,27 @@
 [
   {
+    "id": "guasave-a-puerta-cerrada",
+    "titulo": "Guasave, a puerta cerrada",
+    "resumen": "Tras la captura del Chapo Isidro en Guasave, transportistas, párrocos, escuelas y comercios decidieron cerrar sus puertas; esas respuestas cotidianas, que no aparecen en las cifras de homicidios, muestran el costo de la inseguridad y la necesidad de medir la paz con indicadores definidos por las propias comunidades.",
+    "medio": "El Sol de México",
+    "tiempoLectura": "2 min",
+    "autor": "Daniela Manzanarez",
+    "autorSlug": "daniela",
+    "autorFoto": "img/daniela-manzanarez.jpg",
+    "tema": [
+      "México",
+      "Violencia estructural"
+    ],
+    "temaSlug": [
+      "mexico",
+      "violencia"
+    ],
+    "fecha": "2026-11-27",
+    "portada": "img/columnas/portada-guasave-a-puerta-cerrada.jpg",
+    "link": "publicaciones/columnas/sol/guasave-a-puerta-cerrada.html",
+    "original": "https://oem.com.mx/elsoldemexico/analisis/guasave-a-puerta-cerrada-33324317"
+  },
+  {
     "id": "11s-25-anos",
     "titulo": "11-S: 25 años después",
     "resumen": "A 25 años de los atentados del 11 de septiembre, qué aprendimos sobre responder a la violencia con más violencia y qué significa construir paz.",
